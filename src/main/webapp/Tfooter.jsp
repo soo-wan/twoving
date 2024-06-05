@@ -2,7 +2,7 @@
 	<div class="clear">
 		<footer>
 			<hr>
-		<div id="admintag"><a href="">고객센터</a>&nbsp;<a href="">F&Q</a>&nbsp;<a href="">서비스 정책</a>&nbsp;<a href="">고객문의</a></div>
+		<div id="admintag"><a href="twoving.do?command=notice">고객센터</a>&nbsp;<a href="twoving.do?command=faq">F&Q</a>&nbsp;<a href="twoving.do?command=servicepolicy">서비스 정책</a>&nbsp;<a href="twoving.do?command=customerinquiry">고객문의</a></div>
 			<div id="copy">대표이사 : 최주희 │ 사업자정보확인 │ 사업자등록번호 : 188-88-01893 │ 통신판매신고번호 : 2020-서울마포-3641호<br> 
 
 사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동) │ 호스팅사업자 : 씨제이올리브네트웍스(주)<br>
