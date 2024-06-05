@@ -47,7 +47,7 @@
 				</tr>
 				<tr class="faq-content" style="display:none;">
 				 	<td class="faq-tcol" style="display:block; text-align:center;">${mc.subject}</td>
-            		<td class="faq-content-tcol" colspan="3" style="display:block; text-align:center;">${mc.content}</td>
+            		<td class="faq-content-tcol" colspan="3" style="display:block; text-align:center;"><pre>${mc.content}</pre></td>
        			 </tr>
 			</c:forEach>
 		</table>
