@@ -64,5 +64,4 @@ $(function(){
 			</div>		
 		</nav>	
 	</header>
-<h2>테스트3</h2>
 	
