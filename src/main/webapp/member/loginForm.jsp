@@ -41,7 +41,7 @@
 			<!-- <input type="submit" class="btn1" value="LOGIN" onClick="return loginCheck()" /> -->
 			<!-- <button onClick="return loginCheck()" class="btn1" >로그인하기</button> -->
 			<button class="btn1" type="submit" onClick="return loginCheck()" value="LOGIN">로그인하기</button>
-			
+			<div class ="msg" >${message} </div>
 			<!-- <input type="submit" class="btn1" value="LOGIN" /> -->
 			
 			<div class="btn">
