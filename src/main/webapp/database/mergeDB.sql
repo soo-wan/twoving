@@ -1,5 +1,5 @@
 select * from member
---delete from member
+
 CREATE TABLE member
 (
    userid varchar(45) NOT NULL,
