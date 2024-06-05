@@ -53,7 +53,7 @@ $(function(){
          </div>
          </form>   
           &nbsp;&nbsp;&nbsp;&nbsp;
-         <div class="mypage"><a href="#"><img src="images/logo.png"  style="width:35px; height:35px;"></a>
+         <div class="mypage"><a href="#"><img src="images/logo.png"  style="width:35px; height:35px; "></a>
             <div class="profileclick" >
                   <br><br>
                   <div><a href="twoving.do?command=mypage">My페이지</a></div>
