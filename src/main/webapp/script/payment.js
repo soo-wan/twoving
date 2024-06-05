@@ -40,3 +40,28 @@ function allPassTicketView(productname){
 		window.open(url, "allPassTicketView", opt);
 	}
 }
+
+function hoverEffect(element) {
+     element.style.backgroundColor = "red";
+     element.style.color = "white";
+     
+}
+    
+function resetColor(element) {
+     element.style.backgroundColor = "gray";
+     element.style.color = "white";
+     
+}
+
+function colorRedOrGray(element){
+	if(element.style.backgroundColor === 'red'){
+		element.style.backgroundColor = 'gray';
+		element.style.color = 'white';
+	}else if(element.style.backgroundColor === 'gray'){
+		element.style.backgroundColor = 'red';
+		element.style.color = 'white';
+	}
+}
+
+
+   

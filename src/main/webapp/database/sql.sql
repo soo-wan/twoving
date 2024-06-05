@@ -4,8 +4,6 @@ drop table customerinquiry;
 drop table faq;
 drop table payment;
 
-select * from member
-
 CREATE TABLE `twoving`.`member` (
   `userid` VARCHAR(45) NOT NULL,
   `pwd` VARCHAR(45) NOT NULL,
@@ -73,7 +71,7 @@ CREATE TABLE `twoving`.`payment` (
   `subscribeyn` CHAR(1) NOT NULL DEFAULT 'N',
   `productname` VARCHAR(50) NOT NULL,
   `paymentprice` VARCHAR(50) NOT NULL,
-  `paymentmeans` VARCHAR(50) NOT NULL,
+  `paymentmeans` VARCHAR(50) NULL DEFAULT '신용카드',
   `paymentday` DATETIME NOT NULL DEFAULT now(),
   `runperiod1` DATETIME NOT NULL DEFAULT now(),
   `runperiod2` DATETIME NOT NULL DEFAULT now(),
