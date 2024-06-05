@@ -47,6 +47,7 @@
 <br>
 <h1>테스트1</h1>
 <h1>테스트2</h1>
+<h1>테스트3</h1>
 <h2 style="color:white; margin-left:55px;">새로운 컨텐츠</h2>   
 <div class="Bestlist">				
       <c:forEach items="${newList}"  var="productVO">
