@@ -15,29 +15,35 @@
 	<button class="logo" onclick="location.href='twoving.do?command=index'" style="cursor: pointer;">TWOVING</button>
 					<h2>회원정보 수정</h2>
 					<div class="field">
-						<label style="font-size: 130%; text-align: left;">아이디</label><input style="font-size: 130%; height: 85px;" name="userid" type="text" value="${loginUser.userid}" readonly/>
+						<label style="font-size: 130%; text-align: left;">아이디</label>
+						<input style="font-size: 130%; height: 85px;" name="userid" type="text" value="${loginUser.userid}" readonly/>
 					</div>
 					<div class="field">
-						<label style="font-size: 130%; text-align: left;">비밀번호</label><input style="font-size: 130%; height: 85px;" name="pwd" type="password"/>
+						<label style="font-size: 130%; text-align: left;">비밀번호</label>
+						<input style="font-size: 130%; height: 85px;" name="pwd" type="password"/>
 					</div>
 					<div class="field">
-						<label style="font-size: 130%; text-align: left;">비밀번호확인</label><input style="font-size: 130%; height: 85px;" name="pwdCheck" type="password"/>
+						<label style="font-size: 130%; text-align: left;">비밀번호확인</label>
+						<input style="font-size: 130%; height: 85px;" name="pwdCheck" type="password"/>
 					</div>
 					<div class="field">
-						<label style="font-size: 130%; text-align: left;">이름</label><input style="font-size: 130%; height: 85px;" name="name" type="text" value="${loginUser.name}"/>
+						<label style="font-size: 130%; text-align: left;">이름</label>
+						<input style="font-size: 130%; height: 85px;" name="name" type="text" value="${loginUser.name}"/>
 					</div>
 					<div class="field">
-						<label style="font-size: 130%; text-align: left;">이메일</label><input style="font-size: 130%; height: 85px;" name="email" type="text" value="${loginUser.email}"/>
+						<label style="font-size: 130%; text-align: left;">이메일</label>
+						<input style="font-size: 130%; height: 85px;" name="email" type="text" value="${loginUser.email}"/>
 					</div>
 					<div class="field">
-						<label style="font-size: 130%; text-align: left;">휴대폰 번호</label><input style="font-size: 130%; height: 85px;" name="phone" type="text" value="${loginUser.phone}" maxlength='13' placeholder="010-1111-2222"/>
+						<label style="font-size: 130%; text-align: left;">휴대폰 번호</label>
+						<input style="font-size: 130%; height: 85px;" name="phone" type="text" value="${loginUser.phone}" maxlength='13' placeholder="010-1111-2222"/>
 					</div>
 				<input type="button" class="secession" onclick="location.href='twoving.do?command=deleteMember'" value="회원탈퇴" />
 	<div class="btn">
-	<input type="button"  class="btn1" value="확인" onClick="go_updateMember()" />
-  <input type="button"  class="btn2" value="취소" onClick="location.href='twoving.do?command=mypage'"/>
+		<input type="button"  class="btn1" value="확인" onClick="go_updateMember()" />
+  		<input type="button"  class="btn2" value="취소" onClick="location.href='twoving.do?command=mypage'"/>
 	</div>
-	</form>
+</form>
 	
 		
 </body>

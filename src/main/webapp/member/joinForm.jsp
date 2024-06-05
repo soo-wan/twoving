@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<script src="script/jquery-3.7.1.min.js"></script>
 
 <script src="script/member.js"></script>
 <link rel="stylesheet" href="css/join.css">
@@ -18,29 +18,26 @@
 
 				</div>
 				<!--입력폼 시작-->
-					<div class="name">
-					<label for="name" class="name" > 
-					<input id="name"  name="name" class="in-name" required="required"
-						type="text" placeholder="이름" tabindex="1" >
-
-					</label>
-						
-				
-				</div>
-
 				<div class="id" style="margin-top: 10px">
 					<label for="userid" class="userid" > 
-					<input id="userid"  name="userid" class="in-icon-close" required="required"
-						type="text" placeholder="아이디" tabindex="2" >
-
+						<input id="userid"  name="userid" class="in-icon-close" required="required"
+							type="text" placeholder="아이디" tabindex="1" style="width:500px;" >
+						<input type="hidden" name="reid"/>
+						<input value="중복 체크" type="button" class="in-icon-close2" onClick="idcheck()"/>
 					</label>
-					<p class="input-info1" id="userIdMsg">영문 소문자, 숫자 조합 6~12 자리</p>
+					<p class="input-info1" id="userIdMsg" style="color: white; margin-left: 10px; opacity: 65%;">
+					<!-- 아이디 : 영문 소문자, 숫자 조합 6~12 자리 -->
+					아이디 : 영문 소문자, 숫자 조합 4~12 자리
+					</p>
+							<div class="field">
+								<label class="label">ID</label>
+							</div>
 				</div>
 
 				<div class="login__password">
 					<label for="pwd" class="datainput-long layout__flex-left" >
 						<input id="pwd" name="pwd" class="in-icon-close" required="required"
-						type="password" maxlength="15" placeholder="비밀번호" tabindex="3">
+						type="password" maxlength="15" placeholder="비밀번호" tabindex="2" oninput="pwCheck()" >
 
 
 						<!--active 삽입 활성화-->
@@ -52,15 +49,26 @@
 					<label for="passwordConfirm"
 						class="datainput-long layout__flex-left" > 
 						<input id="passwordConfirm" class="in-icon-close" name="pwdCheck" required="required"
-						type="password" maxlength="15" placeholder="비밀번호 확인" tabindex="4">
+						type="password" maxlength="15" placeholder="비밀번호 확인" tabindex="3" oninput="pwCheck()" >
 
 
 						<!--active 삽입 활성화-->
 					</label>
-					<p class="input-info2" id="passwordConfirmMsg">영문, 숫자,
-						특수문자(~!@#$%^&*) 조합 8~15 자리</p>
+					<p class="input-info2" id="passwordConfirmMsg1" style="color: white; margin-left: 10px; opacity: 65%;">
+					<!-- 영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15 자리 -->
+					비밀번호 : 영문 소/대문자, 숫자 조합 6~12 자리
+					</p>
+					<p class="input-info2" id="passwordConfirmMsg2" style="color: white; margin-left: 10px; opacity: 65%;">
+					비밀번호를 입력하세요</p>
 				</div>
 
+				<div class="name">
+					<label for="name" class="name" > 
+					<input id="name"  name="name" class="in-name" required="required"
+						type="text" placeholder="이름" tabindex="4" >
+					</label>
+				</div>
+				
 				<div class="login__email">
 					<label for="email" class="datainput-long layout__flex-left" >
 						<input id="email" class="in-icon-close" type="text" name="email"
@@ -88,7 +96,7 @@
 				</ul>
 
 				<div class="btn-wrap">
-					<input type="submit" id="registBtn" class="join" onClick="go_save()" value="가입하기" />
+					<input type="button" id="registBtn" class="join" onClick="go_save()" value="가입하기" style="color: white;" />
 				</div>
 			</div>
 		</form>

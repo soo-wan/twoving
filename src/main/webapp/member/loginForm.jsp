@@ -21,7 +21,7 @@
 	<article style="">
 		<form method="post" action="twoving.do?command=login" name="loginForm">
 			
-				<h2>TWOBING ID 로그인</h2>
+				<h2>TWOVING ID 로그인</h2>
 				<div class="field">
 					<input name="userid" type="text" placeholder="아이디"/>
 				</div>
@@ -41,7 +41,7 @@
 			<!-- <input type="submit" class="btn1" value="LOGIN" onClick="return loginCheck()" /> -->
 			<!-- <button onClick="return loginCheck()" class="btn1" >로그인하기</button> -->
 			<button class="btn1" type="submit" onClick="return loginCheck()" value="LOGIN">로그인하기</button>
-			<div class ="msg" >${message} </div>
+			<div class ="msg"  style="position:relative; top: 40px; font-size:130%;">${message} </div>
 			<!-- <input type="submit" class="btn1" value="LOGIN" /> -->
 			
 			<div class="btn">

@@ -1,5 +1,5 @@
 select * from member
-
+--delete from member
 CREATE TABLE member
 (
    userid varchar(45) NOT NULL,
@@ -381,7 +381,7 @@ ON DELETE RESTRICT;
 
 
 select* from member;
-
+update member set pwd='1111' where userid='one'
 
 -- 메인화면 컨텐츠
 create or replace view main_pro_view

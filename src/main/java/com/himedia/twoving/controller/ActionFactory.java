@@ -56,6 +56,7 @@ import com.himedia.twoving.product.searchListAction;
 import com.himedia.twoving.product.steamedDeleteAction;
 import com.himedia.twoving.product.steamedInsertAction;
 import com.himedia.twoving.product.steamedListAction;
+import com.twoving.controller.action.member.IdcheckFormAction;
 import com.twoving.controller.action.member.JoinAction;
 import com.twoving.controller.action.member.JoinFormAction;
 import com.twoving.controller.action.member.LoginAction;
@@ -140,6 +141,7 @@ public class ActionFactory {
 		
 		
 		  //admin(오수완)
+		  else if(command.equals("idcheckForm")) ac = new IdcheckFormAction();
 	      //시리즈 영화
 		  else if( command.equals("admin") ) ac = new AdminAction();
 	      else if( command.equals("adminlogin") ) ac = new AdminloginAction();

@@ -57,6 +57,19 @@ body {
 	color: white;
 }
 
+.in-icon-close2 {
+	width: 100px; /* Adjust width as needed */
+	height: 70px;
+	padding: 15px; /* Adjust padding as needed */
+	margin: 0px; /* Adjust margin as needed */
+	border: 1px solid #ccc;
+	background-color: #232323;
+	border-radius: 3px;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+}
+
 .input-info1 {
 	color: #474747;
 }

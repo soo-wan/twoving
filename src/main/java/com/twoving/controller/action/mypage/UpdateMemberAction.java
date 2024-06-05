@@ -15,7 +15,6 @@ public class UpdateMemberAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		
@@ -32,7 +31,6 @@ public class UpdateMemberAction implements Action {
 			MemberDao mdao = MemberDao.getInstance();
 			mdao.updateMember(mvo1);
 			session.setAttribute("loginUser", mvo1);
-			
-			response.sendRedirect("twoving.do?command=index");
+			response.sendRedirect("twoving.do?command=mypage");
 	}
 }}

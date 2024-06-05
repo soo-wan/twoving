@@ -60,13 +60,14 @@ public class MemberDao {
     }
 
     public void updateMember(MemberVO mvo) {
-        String sql = "UPDATE member SET pwd = ?, name = ?, email = ? WHERE userid = ?";
+        String sql = "UPDATE member SET pwd = ?, name = ?, email = ?, phone=? WHERE userid = ?";
         try (Connection con = DBman.getConnection();
              PreparedStatement pstmt = con.prepareStatement(sql)) {
             pstmt.setString(1, mvo.getPwd());
             pstmt.setString(2, mvo.getName());
             pstmt.setString(3, mvo.getEmail());
-            pstmt.setString(4, mvo.getUserid());
+            pstmt.setString(4, mvo.getPhone());
+            pstmt.setString(5, mvo.getUserid());
             pstmt.executeUpdate();
         }catch (SQLException e) { e.printStackTrace();
         } finally { DBman.close(con, pstmt, rs);

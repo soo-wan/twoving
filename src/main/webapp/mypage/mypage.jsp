@@ -17,7 +17,7 @@
 	<div class="box">
 	
 	<div class="box1">
-	<input type="button" class="logo" onclick="location.href='twoving.do?command=index'" style="cursor: pointer;"value="TWOVING" />
+	<input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer;"value="TWOVING" />
 					<div class="box1-2">시리즈</div>
 					<div class="box1-3">영화</div>
 				</div>
