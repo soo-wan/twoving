@@ -8,7 +8,7 @@
 	Calendar cal = Calendar.getInstance();
 	
 	// 현재 날짜에서 30일을 더함
-	cal.add(Calendar.DAY_OF_MONTH, 30-1);
+	cal.add(Calendar.DAY_OF_MONTH, 30);
 	
 	java.util.Date runperiod2Date = cal.getTime();
 	

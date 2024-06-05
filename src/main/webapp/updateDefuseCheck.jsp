@@ -18,43 +18,43 @@
 			<div class="passTicketSelect" style="width: 100%; display:flex; justify-content: space-between;">
 				<c:choose>
 					<c:when test="${paymentVO.productname eq '광고형 스탠다드'}">
-						<div class="advertiseStandard" onClick="colorRedOrGray(this);" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
+						<div class="advertiseStandard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 							<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 							<input type="hidden" name="productname" value='광고형 스탠다드'>
 						</div>
-						<div class="standard" onClick="colorRedOrGray(this);" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+						<div class="standard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 							<input type="hidden" name="productname" value='스탠다드'>
 						</div>
-						<div class="premium" onClick="colorRedOrGray(this);" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#191919;">
+						<div class="premium" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 							<input type="hidden" name="productname" value='프리미엄'>
 						</div>
 					</c:when>
 					<c:when test="${paymentVO.productname eq '스탠다드'}">
-						<div class="advertiseStandard" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
+						<div class="advertiseStandard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 							<input type="hidden" name="productname" value='광고형 스탠다드'>
 						</div>
-						<div class="standard" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
+						<div class="standard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 							<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 							<input type="hidden" name="productname" value='스탠다드'>
 						</div>
-						<div class="premium" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#191919;">
+						<div class="premium" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 							<input type="hidden" name="productname" value='프리미엄'>
 						</div>
 					</c:when>
 					<c:when test="${paymentVO.productname eq '프리미엄'}">
-						<div class="advertiseStandard" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
+						<div class="advertiseStandard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 							<input type="hidden" name="productname" value='광고형 스탠다드'>
 						</div>
-						<div class="standard" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
+						<div class="standard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 							<input type="hidden" name="productname" value='스탠다드'>
 						</div>
-						<div class="premium" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c;">
+						<div class="premium" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c;">
 							<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 							<input type="hidden" name="productname" value='프리미엄'>
 						</div>

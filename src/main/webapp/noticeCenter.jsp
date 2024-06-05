@@ -13,7 +13,7 @@
 		
 		<hr>
 		
-		<div class="notice_table">
+		<div class="notice_table" style="margin-left: -20px;">
 			<table>
 					<tr class="trow">
 						<th style="">번호</th>

@@ -126,6 +126,23 @@ public class PaymentDAO {
 	}
 
 	public void insertPayment(PaymentVO paymentVO) {
+		con = DBman.getConnection();
+		
+		String sql = "insert into payment(productname, paymentprice) values(?,?)";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, paymentVO.getProductname());
+			pstmt.setString(2, paymentVO.getPaymentprice());
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.getConnection();
+		}
+		
 	}
 
 }

@@ -31,13 +31,13 @@
 					<form action="twoving.do?command=qnaList" method="post" name="inquiryForm" style="" class="inquiryClassForm">
 					<div class="field">
 						<span>이름*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="text" value="김동민" name="name" style="color:white; font-weight:bold;" readonly>
+						<input type="text" value="${loginUser.name}" name="name" style="color:white; font-weight:bold; padding:15px;" readonly>
 					</div>
 					<div class="field">
 						<span>이메일*</span>&nbsp;&nbsp;&nbsp;
-						<input type="text" width="100" name="emailid" class="detailInput" id="email-datail1">&nbsp;
+						<input type="text" width="100" name="emailid" class="detailInput" id="email-datail1" style="backgorund-color:gray; color:white; padding:15px;">&nbsp;
 						<span style="color:white;">@</span>&nbsp;
-						<input type="text" width="100" name="emailid2" class="detailInput"  id="email-datail2">&nbsp;&nbsp;&nbsp;
+						<input type="text" width="100" name="emailid2" class="detailInput"  id="email-datail2" style="backgorund-color:gray; color:white; padding:15px;">&nbsp;&nbsp;&nbsp;
 						<select name="email" id="emailList" onChange="emailSelect();">
 							<option value="" selected>직접입력</option>
 							<option value="daum.net">daum.net</option>
@@ -59,11 +59,11 @@
 					&nbsp;&nbsp;&nbsp;
 					<span>-</span>
 					&nbsp;&nbsp;&nbsp;
-					<input type="text" name="phone1" width="150">
+					<input type="text" name="phone1" width="150" style="padding:15px;">
 					&nbsp;&nbsp;&nbsp;
 					<span>-</span>
 					&nbsp;&nbsp;&nbsp;
-					<input type="text" name="phone2" width="150" style="background-color:gray;">
+					<input type="text" name="phone2" width="150" style="background-color:gray; padding:15px;">
 				</div>
 				<br>
 				<div class="field">
@@ -201,7 +201,7 @@
 				</div>
 				<div class="field">
 						<span>이용 콘텐츠</span>&nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="text" name="runcontent" placeholder="이용하실 콘텐츠를 입력해주세요..."  style="width: 400px;">
+						<input type="text" name="runcontent" placeholder="이용하실 콘텐츠를 입력해주세요..."  style="width: 400px; padding:15px;">
 				</div>
 					
 				<div class="field">
@@ -213,12 +213,12 @@
 				
 				<div class="field">
 						<span>이용장소</span>&nbsp;&nbsp;&nbsp;
-						<input type="text" name="runplace" placeholder="이용장소를 선택해주세요(집,버스 등)" style="width: 300px;">
+						<input type="text" name="runplace" placeholder="이용장소를 선택해주세요(집,버스 등)" style="width: 300px; padding:15px;">
 				</div>
 					
 				<div class="field">
 					<span>문의 제목*</span>&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="text" name="inquirytitle" placeholder="문의 제목을 입력해주세요." size=50>
+					<input type="text" name="inquirytitle" placeholder="문의 제목을 입력해주세요." size=50 style="padding:15px;">
 				</div>	
 				
 				<div class="field" style="border-bottom: 1px solid black;">

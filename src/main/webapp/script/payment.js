@@ -56,7 +56,7 @@ function resetColor(element) {
 function colorRedOrGray(element) {
     // 현재 클릭된 div 요소의 배경색을 확인하여 색상을 변경합니다.
     var backgroundColor = element.style.backgroundColor;
-    if (backgroundColor === "rgb(255, 21, 60)") { // 배경색이 빨간색일 경우
+    if (backgroundColor === "#ff153c") { // 배경색이 빨간색일 경우
         element.style.backgroundColor = "#191919"; // 회색으로 변경
         element.style.color = "white"; // 글자색을 흰색으로 변경
     } else { // 그 외의 경우 (회색일 경우)
@@ -64,6 +64,7 @@ function colorRedOrGray(element) {
         element.style.color = "white"; // 글자색을 흰색으로 변경
     }
 }
+ 
 
 function insertPassTicket(){
 	var ans = window.confirm('정말로 이 이용권을 선택하시겠습니까?');
@@ -74,6 +75,7 @@ function insertPassTicket(){
 		document.passTicketForm.submit();
 	}
 }
+
 
 
    
