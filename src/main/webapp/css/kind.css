@@ -23,7 +23,10 @@
 .kinditem img{width:200px; height:300px;  border-radius: 20px;}
 
 
-
+@media (max-width: 1024px){
+	.genretag a{font-size:30%;}	
+	
+}
 
 
 

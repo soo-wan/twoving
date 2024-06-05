@@ -2,8 +2,9 @@ package com.himedia.twoving.product;
 
 import java.io.IOException;
 
+
 import com.himedia.twoving.action.Action;
-import com.himedia.twoving.dao.productDao;
+import com.himedia.twoving.dao.ProductDao;
 import com.himedia.twoving.vo.ProductVO;
 
 import jakarta.servlet.ServletException;
@@ -17,7 +18,7 @@ public class detailAction implements Action {
 		
 		int pseq = Integer.parseInt(request.getParameter("pseq"));
 	      
-	      productDao pdao = productDao.getInstance();
+	      ProductDao pdao = ProductDao.getInstance();
 	      ProductVO pvo = pdao.getProduct(pseq);
 
 		

@@ -1,11 +1,14 @@
 package com.himedia.twoving.product;
 
 import java.io.IOException;
+
+
 import java.util.ArrayList;
 
 import com.himedia.twoving.action.Action;
-import com.himedia.twoving.dao.productDao;
+import com.himedia.twoving.dao.ProductDao;
 import com.himedia.twoving.vo.ProductVO;
+
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -19,7 +22,7 @@ public class kindAction implements Action{
 		int kind = Integer.parseInt(request.getParameter("kind"));
 		
 		
-		productDao pdao = productDao.getInstance();
+		ProductDao pdao = ProductDao.getInstance();
 		ArrayList<ProductVO> list = pdao.selectKindProduct(kind);
 		
 		String kindList[] = {"시리즈","영화"};

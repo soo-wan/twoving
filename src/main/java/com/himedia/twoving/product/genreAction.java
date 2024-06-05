@@ -1,11 +1,13 @@
 package com.himedia.twoving.product;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 
 import com.himedia.twoving.action.Action;
-import com.himedia.twoving.dao.productDao;
+import com.himedia.twoving.dao.ProductDao;
 import com.himedia.twoving.vo.ProductVO;
+
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,10 +22,18 @@ public class genreAction implements Action{
 		String genre = request.getParameter("genre");
 		String kind = request.getParameter("kind");
 		
-		productDao pdao = productDao.getInstance();
-		ArrayList<ProductVO> list = pdao.selectGenreProduct(genre);
+		ProductDao pdao = ProductDao.getInstance();
+		ArrayList<ProductVO> slist = pdao.selectSeriesProduct(genre);
+		ArrayList<ProductVO> mlist = pdao.selectMovieProduct(genre);
 		
-		request.setAttribute("genreProduct", list);
+		
+		
+		
+		
+		request.setAttribute("sProduct", slist);
+		request.setAttribute("mProduct", mlist);
+		
+		
 		request.setAttribute("genre", genre);
 		request.setAttribute("kind", kind);
 		

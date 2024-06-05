@@ -4,7 +4,7 @@
 <br>
 <br>
 <div class="center">
-	<div class="left" onClick="moveLeft()"><img src="images/leftb.png" ></div>
+	<div class="left" onClick="moveLeft()"><img src="images/화살표2왼.jpg" ></div>
 	<div id="img">
 			<div class="mainmain" id="mainmain">
 				<c:forEach items="${mainList}" var="productVO">
@@ -12,7 +12,7 @@
 				</c:forEach>	
 			</div>					
 	</div>
-	<div class="right" onclick="moveRight()"><img src="images/rightb.png" ></div>	
+	<div class="right" onclick="moveRight()"><img src="images/화살표2오.jpg" ></div>	
 </div>
 
 
@@ -33,20 +33,28 @@
 <br>
 
 <h2 style="color:white; margin-left:55px;">인기있는 컨텐츠</h2>   
-<div class="Bestlist">				
-      <c:forEach items="${bestList}"  var="productVO" > 
-                  <div id="item">                        
-                 	 <a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">
-                     	<img src="image2/${productVO.savefilename}" />
-                  	 </a>                                          
-                  </div>
-       </c:forEach>     
+
+<div class="Bestlist">
+		<c:forEach items="${number}" var ="number"><div style="color:white; font-size:70px;">${number}.</div></c:forEach>
 </div>
+<div class="Bestlist">		   
+       <c:forEach items="${bestList}"  var="productVO" >	  
+        <div id="item" style="color:white;">  
+          <a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">
+             <img src="image2/${productVO.savefilename}"/>
+          </a>
+         <h1 style="color:white;">${productVO.title}</h1>                                                             
+       </div>
+                    
+     </c:forEach>  
+</div>
+
 
 <br>
 <br>
+
 <h2 style="color:white; margin-left:55px;">새로운 컨텐츠</h2>   
-<div class="Bestlist">				
+<div class="Newlist">				
       <c:forEach items="${newList}"  var="productVO">
                   <div id="item">                        
                   	<a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">

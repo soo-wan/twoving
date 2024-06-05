@@ -4,27 +4,36 @@
 <html>
 <head>
 
+<script src="script/Tmain.js"></script>
 <link rel="stylesheet" href="css/mypage.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/JavaScript">
+$(function(){
+   $('.mypage').hover(function(){
+                $('.profileclick').slideToggle(300);
+            $(this).toggleClass('active');
+         });
+         });  
+</script>
 </head>
 <body>
    <section>
    <article>
-   <form>
+   <form method="post" name="form">
    <div class="box">
    
    <div class="box1">
    <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer;"value="TWOVING" />
-               <div class="box1-2">시리즈</div>
-               <div class="box1-3">영화</div>
+               <div class="box1-2"><a href="twoving.do?command=kind&kind=0" >시리즈</a></div>
+               <div class="box1-3"><a href="twoving.do?command=kind&kind=1" >영화</a></div>
     </div>
     <div class="box2">
-          <div class="box2-2"><img src="member/돋보기.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
-          <div class="box2-1"><img src="member/logo.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
+          <div class="box2-2"><input type="text" placeholder="검색"  name="key" value="${key}" ><img src="member/돋보기.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
+          <div class="box2-1"><a href="#" onClick="go_search('searchList')"><img src="member/logo.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
 	 </div>
-   
-   <!-- <div class="box1">
+    
+<!--     <div class="box1">
    <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer;"value="TWOVING" />
                <div class="box1-2">시리즈</div>
                <div class="box1-3">영화</div>
@@ -32,13 +41,12 @@
       <div class="box2">
           <div class="box2-2"><img src="member/돋보기.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
           <div class="box2-1"><img src="member/logo.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
-	 </div> -->
+	 </div>  -->
 	 
       </div>
       <div class="box22">
          <div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
-         <div class="box22-2">
-         	<p style="font-size: 160%; font-weight: bold;">${loginUser.name}</p>
+         <div class="box22-2"><p>이름</p>
          <p><a><img src="member/구름.png" width="30px" height="30px" /></a>&nbsp; 나의 이용권&nbsp;&nbsp;
          <a> <input type="button" onClick="location.href='twoving.do?command=ticket'" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></a></p></div>
          

@@ -1,19 +1,23 @@
 package com.himedia.twoving.dao;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.himedia.twoving.util.DBman;
+
 import com.himedia.twoving.vo.ProductVO;
 
-public class productDao {
 
-	private productDao() {}
-	private static productDao itc = new productDao();
-	public static productDao getInstance() {return itc;}
+
+public class ProductDao {
+
+	private ProductDao() {}
+	private static ProductDao itc = new ProductDao();
+	public static ProductDao getInstance() {return itc;}
 
 	Connection con = null;
 	PreparedStatement pstmt = null;
@@ -202,6 +206,66 @@ public class productDao {
 		}catch (SQLException e) { e.printStackTrace();
 		} finally { DBman.close(con, pstmt, rs);  }
 		return list;		
+	}
+
+	
+
+	public ArrayList<ProductVO> selectSeriesProduct(String gnere) {
+		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+		con = DBman.getConnection();
+		String sql = "select * from product where kind=0 and genre = ? ";
+		
+		try {
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1,  gnere);
+				rs = pstmt.executeQuery();
+				while (rs.next()) {
+					ProductVO pvo = new ProductVO();
+				pvo.setPseq(rs.getInt("pseq"));
+				pvo.setTitle(rs.getString("title"));
+				pvo.setImage(rs.getString("image"));
+				pvo.setSavefilename(rs.getString("savefilename"));
+				pvo.setKind(rs.getInt("kind"));
+				pvo.setGenre(rs.getString("genre"));
+				pvo.setAge(rs.getString("age"));
+				pvo.setTime(rs.getString("time"));
+				pvo.setYear(rs.getString("year"));
+				pvo.setContent(rs.getString("content"));				
+				list.add(pvo);
+			}
+		}catch(SQLException e){e.printStackTrace();
+		}finally{DBman.close(con, pstmt, rs);}
+			return list;
+
+	}
+
+
+	public ArrayList<ProductVO> selectMovieProduct(String genre) {
+		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+		con = DBman.getConnection();
+		String sql = "select * from product where kind=1 and genre =? ";
+		
+		try {
+				pstmt = con.prepareStatement(sql);
+				pstmt.setString(1,  genre);
+				rs = pstmt.executeQuery();
+				while (rs.next()) {
+					ProductVO pvo = new ProductVO();
+				pvo.setPseq(rs.getInt("pseq"));
+				pvo.setTitle(rs.getString("title"));
+				pvo.setImage(rs.getString("image"));
+				pvo.setSavefilename(rs.getString("savefilename"));
+				pvo.setKind(rs.getInt("kind"));
+				pvo.setGenre(rs.getString("genre"));
+				pvo.setAge(rs.getString("age"));
+				pvo.setTime(rs.getString("time"));
+				pvo.setYear(rs.getString("year"));
+				pvo.setContent(rs.getString("content"));				
+				list.add(pvo);
+			}
+		}catch(SQLException e){e.printStackTrace();
+		}finally{DBman.close(con, pstmt, rs);}
+			return list;
 	}
 
 }

@@ -1,11 +1,13 @@
 	var num = 0;	
- 		window.onload = function(){changeCss(num);};
+ 		window.onload = function(){changeCss(num+1);};
 
  	var ing = window.setInterval(function(){
 			for( var i=1; i<=6; i++){ 
-            document.getElementById('btn' + i).style.background = 'skyblue';   
+			
+             document.getElementById('btn' + i).style.background = 'skyblue';
+             
             }          
-            document.getElementById('btn' + (num+1)).style.background = 'white';
+          	document.getElementById('btn' + (num+1)).style.background = 'white';  
             
             num++;
             if(num>5) num = 0;
@@ -13,7 +15,7 @@
             var dist =  - 1890*num;
             document.getElementById("mainmain").style.left = dist + 'px' ;
             
-        }, 2000 );
+        }, 1000 );
 
 
 
@@ -53,7 +55,7 @@ function moveRight() {
 	        
 	        var dist = -1890*num;
 	         document.getElementById("mainmain").style.left= dist+'px' ;
-			}, 2000);
+			}, 1000);
 	   }
         
         
@@ -78,14 +80,17 @@ var a =true;
 
 function steamed(){
     
-    if(a ==true){
-        document.getElementById("c").style.background = 'red';
-       /* document.formm.action='twoving.do?command=steamedInsert';*/
-		/*document.formm.submit();*/
+    if(a){
+		document.getElementById("heart").src = "images/redheart.png";
+       /* document.getElementById("c").style.background = 'red';*/
+        /*document.form.action="twoving.do?command=steamedInsert&pseq=" + pseq ;
+        console.log("Form action 설정됨: ", document.form.action);*/
+		/*document.form.submit();*/
      return  a = false;
     } else {
-        document.getElementById("c").style.background = 'white';
-        /*document.formm.action="twoving.do?command=steamedDelete";*/
+        document.getElementById("heart").src = "images/emptyheart.png";
+        /*document.form.action="twoving.do?command=steamedDelete";
+        console.log("Form action 설정됨: ", document.form.action);*/
       return  a = true;
     }
 }

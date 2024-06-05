@@ -1,10 +1,12 @@
 package com.himedia.twoving.product;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 
 import com.himedia.twoving.action.Action;
-import com.himedia.twoving.dao.productDao;
+import com.himedia.twoving.dao.ProductDao;
+
 import com.himedia.twoving.vo.ProductVO;
 
 import jakarta.servlet.ServletException;
@@ -30,7 +32,7 @@ public class searchListAction implements Action {
 		}
 
 		
-		productDao pdao = productDao.getInstance();	
+		ProductDao pdao = ProductDao.getInstance();	
 		ArrayList<ProductVO> searchList = pdao.searchList( key );
 		
 		request.setAttribute("searchList",searchList);

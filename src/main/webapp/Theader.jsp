@@ -23,45 +23,46 @@
 <script src="script/mypage.js"></script>
 <script src="script/Tmain.js"></script>
 
+
 <script type="text/JavaScript">
 $(function(){
-	$('.mypage').click(function(){
+   $('.mypage').hover(function(){
                 $('.profileclick').slideToggle(300);
-				$(this).toggleClass('active');
-			});
+            $(this).toggleClass('active');
+         });
          });  
 </script>
 </head>
 <body>
 <div id="full">
-	<header style="margin-bottom: 10px;">
-		<nav id="rightlink">
-			<div id="logo">			
-				<a href="twoving.do?command=tMain">TWOVING</a>
-			</div>&nbsp;&nbsp;&nbsp;&nbsp;
-			<div id ="Category">
-				<a href="twoving.do?command=kind&kind=0" >시리즈</a>&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="twoving.do?command=kind&kind=1" >영화</a>	
-			</div>
-		</nav>
-		<nav id ="search">							
-			<form method="post" name="form">							
-			<div id = "dbg">
-				<div id="input"><input type="text" placeholder="검색"  name="key" value="${key}"></div>
-				<div><a href="#" onClick="go_search('searchList')"><img src="images/dbg.png" width="50" height="50" ></a></div>							
-			</div>
-			</form>	
-			 &nbsp;&nbsp;&nbsp;&nbsp;
-			<div class="mypage"><a href="#"><img src="images/iconm.png"></a>
-				<div class="profileclick" >
-						<br><br>
-						<div><a href="twoving.do?command=mypage">My페이지</a></div>
-						<br>
-						<div><a href="">고객센터</a></div>
-						<br>
-						<div><a href="">로그아웃</a></div>
-				</div>
-			</div>		
-		</nav>	
-	</header>
+   <header style="margin-bottom: 10px;">
+      <nav id="rightlink">
+         <div id="logo">         
+            <a href="twoving.do?command=tMain">TWOVING</a>
+         </div>&nbsp;&nbsp;&nbsp;&nbsp;
+         <div id ="Category">
+            <a href="twoving.do?command=kind&kind=0" >시리즈</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="twoving.do?command=kind&kind=1" >영화</a>   
+         </div>
+      </nav>
+      <nav id ="search">                     
+         <form method="post" name="form">                     
+         <div id = "dbg">
+            <div id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ></div>
+            <div><a href="#" onClick="go_search('searchList')"><img src="images/돋보기.png" style="width:35px; height:35px;" ></a></div>                     
+         </div>
+         </form>   
+          &nbsp;&nbsp;&nbsp;&nbsp;
+         <div class="mypage"><a href="#"><img src="images/logo.png"  style="width:35px; height:35px;"></a>
+            <div class="profileclick" >
+                  <br><br>
+                  <div><a href="twoving.do?command=mypage">My페이지</a></div>
+                  <br>
+                  <div><a href="twoving.do?command=notice">고객센터</a></div>
+                  <br>
+                  <div><a href="twoving.do?command=logout">로그아웃</a></div>
+            </div>
+         </div>      
+      </nav>   
+   </header>
 	
