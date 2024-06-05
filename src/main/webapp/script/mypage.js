@@ -82,23 +82,23 @@ function go_order(){
 }
 
 function go_updateMember(){
-	if(document.joinForm.pwd.value ==""){
+	if(document.updateForm.pwd.value ==""){
 		alert("비밀번호를 입력해 주세요.");
-		document.joinForm.pwd.focus();
-	}else if(document.joinForm.pwd.value != document.joinForm.pwdCheck.value){
+		document.updateForm.pwd.focus();
+	}else if(document.updateForm.pwd.value != document.updateForm.pwdCheck.value){
 		alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
-		document.joinForm.pwd.focus();	
-	}else if(document.joinForm.name.value ==""){
+		document.updateForm.pwd.focus();	
+	}else if(document.updateForm.name.value ==""){
 		alert("이름을 입력해 주세요.");
-		document.joinForm.name.focus();	
-	}else if(document.joinForm.phone.value ==""){
+		document.updateForm.name.focus();	
+	}else if(document.updateForm.phone.value ==""){
 		alert("전화번호를 입력해 주세요.");
-		document.joinForm.phone.focus();	
-	}else if(document.joinForm.email.value ==""){
+		document.updateForm.phone.focus();	
+	}else if(document.updateForm.email.value ==""){
 		alert("이메일을 입력해 주세요.");
-		document.joinForm.email.focus();	
+		document.updateForm.email.focus();	
 	}else {
-		document.joinForm.submit();	
+		document.updateForm.submit();	
 	}
 }
 

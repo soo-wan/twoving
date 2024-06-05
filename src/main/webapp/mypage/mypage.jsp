@@ -29,16 +29,17 @@
 		</div>
 		<div class="box22">
 			<div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
-			<div class="box22-2"><p>${loginUser.name}</p>
+			<div class="box22-2">
+			<p style="font-size: 160%; font-weight: bold;">${loginUser.name}</p>
 			<p><a><img src="member/구름.png" width="30px" height="30px" /></a>&nbsp; 나의 이용권&nbsp;&nbsp;
-			<a class="ticket" href="twoving.do?command=ticket" onClick="window.open(this.href, '', 'width=550, height=650, top=150, left=690' ); return false;">이용권 구독</a></p></div>
+			<a class="ticket" href="twoving.do?command=ticket" onClick="window.open(this.href, '', 'width=550, height=650, top=150, left=690' ); return false;">이용권 구독</a></p>
+			</div>
 			
 			<div class="box22-3" onClick="location.href='twoving.do?command=updateMemberForm'" style="margin-right: 200px;">
 				<a>
 					<img src="member/톱니바퀴.png" width="30px" height="30px"/>
 				</a>회원정보 수정
 			</div>
-			<h1>하이</h1>
 			
 		</div>
 		<div class="box33">

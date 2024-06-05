@@ -4,6 +4,8 @@ drop table customerinquiry;
 drop table faq;
 drop table payment;
 
+select * from member
+
 CREATE TABLE `twoving`.`member` (
   `userid` VARCHAR(45) NOT NULL,
   `pwd` VARCHAR(45) NOT NULL,

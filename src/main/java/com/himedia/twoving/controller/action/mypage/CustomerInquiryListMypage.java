@@ -20,9 +20,9 @@ public class CustomerInquiryListMypage implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		MemberVO avo = (MemberVO)session.getAttribute("loginUser");
-		/*if( avo == null ) {
+		if( avo == null ) {
 			response.sendRedirect("twoving.do?command=index");
-		} else {*/
+		} else {
 			int page = 1;
 			if(request.getParameter("page") != null) {
 				page = Integer.parseInt(request.getParameter("page"));
@@ -54,6 +54,6 @@ public class CustomerInquiryListMypage implements Action {
 			request.setAttribute("inquiryList", inquiryList);
 			request.setAttribute("paging", paging);
 			request.getRequestDispatcher("mypage/inquiryListMypage.jsp").forward(request, response);
-		//}
+		}
 	}
 }

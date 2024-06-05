@@ -20,8 +20,8 @@ public class AdminProductWriteAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ProductVO pvo = new ProductVO();
-		//System.out.println("1" + request.getParameter("genre") + " 2"+request.getParameter("useyn")  + " 3" + request.getParameter("bestyn"));
-		
+		System.out.println("1" + request.getParameter("genre") + " 2"+request.getParameter("useyn")  + " 3" + request.getParameter("bestyn"));
+		//System.out.println("kind 22 : " + Integer.parseInt(request.getParameter("kind")));
 		pvo.setKind(Integer.parseInt(request.getParameter("kind")));
 		pvo.setGenre(request.getParameter("genre"));
 		pvo.setUseyn(request.getParameter("useyn"));

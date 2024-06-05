@@ -33,9 +33,6 @@ public class UpdateMemberAction implements Action {
 			mdao.updateMember(mvo1);
 			session.setAttribute("loginUser", mvo1);
 			
-			
 			response.sendRedirect("twoving.do?command=index");
-
 	}
-
 }}
