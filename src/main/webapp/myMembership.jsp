@@ -37,7 +37,8 @@
       </div>
       <div class="box22">
          <div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
-         <div class="box22-2"><p>이름</p>
+         <div class="box22-2">
+         	<p style="font-size: 160%; font-weight: bold;">${loginUser.name}</p>
          <p><a><img src="member/구름.png" width="30px" height="30px" /></a>&nbsp; 나의 이용권&nbsp;&nbsp;
          <a> <input type="button" onClick="location.href='twoving.do?command=ticket'" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></a></p></div>
          

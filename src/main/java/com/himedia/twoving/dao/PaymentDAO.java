@@ -125,4 +125,7 @@ public class PaymentDAO {
 		return paymentVO;
 	}
 
+	public void insertPayment(PaymentVO paymentVO) {
+	}
+
 }

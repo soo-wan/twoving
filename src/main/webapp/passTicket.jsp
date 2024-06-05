@@ -8,7 +8,7 @@
 	Calendar cal = Calendar.getInstance();
 	
 	// 현재 날짜에서 30일을 더함
-	cal.add(Calendar.DAY_OF_MONTH, 30);
+	cal.add(Calendar.DAY_OF_MONTH, 30-1);
 	
 	java.util.Date runperiod2Date = cal.getTime();
 	
@@ -28,7 +28,7 @@
 	<article>
 		<div class="box">
    			<div class="box1">
-  			   <input type="button" class="logo" onclick="location.href='twoving.do?command=index'" style="cursor: pointer;"value="TWOVING" />
+  			   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer;"value="TWOVING" />
                <div class="box1-2">시리즈</div>
                <div class="box1-3">영화</div>
       		</div>
@@ -41,7 +41,8 @@
 		
 		 <div class="box22">
 	         	<div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
-	         	<div class="box22-2"><p>이름</p>
+	         	<div class="box22-2">
+	         		<p style="font-size: 160%; font-weight: bold;">${loginUser.name}</p>
 	         	<p><a><img src="member/구름.png" width="30px" height="30px" /></a>&nbsp; 나의 이용권&nbsp;&nbsp;
 	         	<a> <input type="button" onClick="location.href='twoving.do?command=ticket'" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></a></p></div>
 	         
