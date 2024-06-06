@@ -145,4 +145,37 @@ public class PaymentDAO {
 		
 	}
 
+	public PaymentVO getSelectList() {
+		PaymentVO paymentVO = null;
+		
+		con = DBman.getConnection();
+		
+		String sql = "select* from payment where subscribeyn='Y'";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				paymentVO = new PaymentVO();
+				
+				paymentVO.setPmseq(rs.getInt("pmseq"));
+				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
+				paymentVO.setProductname(rs.getString("productname"));
+				paymentVO.setPaymentprice(rs.getString("paymentprice"));
+				paymentVO.setPaymentmeans(rs.getString("paymentmeans"));
+				paymentVO.setPaymentday(rs.getTimestamp("paymentday"));
+				paymentVO.setRunperiod1(rs.getTimestamp("runperiod1"));
+				paymentVO.setRunperiod2(rs.getTimestamp("runperiod2"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return paymentVO;
+	}
+
 }
