@@ -211,14 +211,14 @@ public class ProductDao {
 
 	
 
-	public ArrayList<ProductVO> selectSeriesProduct(String gnere) {
+	public ArrayList<ProductVO> selectSeriesProduct(String genre) {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
 		String sql = "select * from product where kind=0 and genre = ? ";
 		
 		try {
 				pstmt = con.prepareStatement(sql);
-				pstmt.setString(1,  gnere);
+				pstmt.setString(1,  genre);
 				rs = pstmt.executeQuery();
 				while (rs.next()) {
 					ProductVO pvo = new ProductVO();
