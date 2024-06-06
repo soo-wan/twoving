@@ -63,10 +63,13 @@ public class PassTicketListAction implements Action {
 				 
 			  System.out.println("count : " + count);
 				 
-			  paging.setTotalCount(count);
+			 paging.setTotalCount(count);
+			  
+			 PaymentVO paymentVO = paymentDAO.getSelectList();
 			
 			 ArrayList<PaymentVO> passTicket2List = paymentDAO.getAllList(paging);
 			
+			request.setAttribute("paymentVO", paymentVO);
 			request.setAttribute("passTicket2", passTicket2List);
 			request.setAttribute("paging", paging);
 			
