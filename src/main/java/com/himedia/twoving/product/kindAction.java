@@ -24,19 +24,26 @@ public class kindAction implements Action{
 		
 		ProductDao pdao = ProductDao.getInstance();
 		ArrayList<ProductVO> list = pdao.selectKindProduct(kind);
+		ArrayList<ProductVO> blist = pdao.bestList(); 
+	    ArrayList<ProductVO> nlist = pdao.newList();
 		
 		String kindList[] = {"시리즈","영화"};
 		String SgenreList[] = {"사극", "멜로", "예능", "애니메이션", "교양(다큐)", "스포츠", "키즈", "공연", "오리지널", "해외"};
 		String MgenreList[] = {"사극", "멜로", "액션", "히어로", "공포", "범죄", "판타지", "코미디", "애니메이션", "스릴러" };
+
 		
-	
-	
-		
+	    
+	    
 		request.setAttribute("kindProduct", list);
 		request.setAttribute("kind", kindList[kind]);
 		
+		
 		request.setAttribute("Mgenre", MgenreList);
 		request.setAttribute("Sgenre", SgenreList);
+		
+		
+	    request.setAttribute("newList", nlist); 
+	    request.setAttribute("bestList", blist);
 		
 		request.getRequestDispatcher("kind.jsp").forward(request, response);
 	}

@@ -65,25 +65,16 @@ CREATE TABLE `product` (
 /* KIND 라디오 버튼? (0시리즈 1영화) */
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '사극', 'N', 'N', 'N', 'Y', '관상', '영화 관상 입니다', 12, 10,  '2024', '128분', 'facereaderMain.png', 'facereader.jpg', 'facereaderMain.png','facereader.jpg');
+values(1, '액션', 'N', 'N', 'Y', 'Y', '매드맥스', '영화 매드맥스 입니다', 12, 10,  '2024', '128분', 'madmaxMain.png', 'madmax.jpg', 'madmaxMain.png','madmax.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '멜로', 'N', 'N', 'N', 'Y', '파이란', '영화 파이란 입니다', 12, 10,  '2024', '128분', 'pyranMain.png', 'pyran.jpg', 'pyranMain.png','pyran.jpg');
+values(1, '히어로', 'N', 'N', 'Y', 'Y', '데드풀', '영화 데드풀 입니다', 12, 10,  '2024', '128분', 'deadpoolMain.png', 'deadpool.jpg', 'deadpoolMain.png','deadpool.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '액션', 'N', 'N', 'N', 'Y', '매드맥스', '영화 매드맥스 입니다', 12, 10,  '2024', '128분', 'madmaxMain.png', 'madmax.jpg', 'madmaxMain.png','madmax.jpg');
+values(1, '공포', 'N', 'N', 'Y', 'Y', '메건', '영화 메건 입니다', 12, 10,  '2024', '128분', 'meganMain.jpg', 'megan.jpg', 'meganMain.jpg','megan.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '히어로', 'N', 'N', 'N', 'Y', '데드풀', '영화 데드풀 입니다', 12, 10,  '2024', '128분', 'deadpoolMain.png', 'deadpool.jpg', 'deadpoolMain.png','deadpool.jpg');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '공포', 'N', 'N', 'N', 'Y', '영화 메건', '영화 메건 입니다', 12, 10,  '2024', '128분', 'meganMain.jpg', 'megan.jpg', 'meganMain.jpg','megan.jpg');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '사극', 'N', 'N', 'N', 'Y', '왕의 남자', '영화 왕의 남자 입니다', 12, 10,  '2024', '128분', 'kingsmanMain.png', 'kingsman.jpg', 'kingsmanMain.png','kingsman.jpg');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '멜로', 'N', 'N', 'Y', 'Y', '건축학개론', '영화 건축학개론 입니다', 12, 10,  '2024', '128분', 'deadpoolMain.png', 'building.jpg', 'deadpoolMain.png','building.jpg');
+values(1, '사극', 'N', 'N', 'Y', 'Y', '왕의 남자', '영화 왕의 남자 입니다', 12, 10,  '2024', '128분', 'kingsmanMain.png', 'kingsman.jpg', 'kingsmanMain.png','kingsman.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(1, '스릴러', 'N', 'N', 'Y', 'Y', '아이덴티티', '영화 아이덴티티 입니다', 12, 10,  '2024', '128분', 'deadpoolMain.png', 'id.jpg', 'deadpoolMain.png','id.jpg');
@@ -93,6 +84,12 @@ values(1, '스릴러', 'N', 'N', 'Y', 'Y', '그놈 목소리', '영화 그놈 �
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(1, '스릴러', 'N', 'N', 'Y', 'Y', '추격자', '영화 추격자 입니다', 12, 10,  '2024', '128분', 'deadpoolMain.png', 'chaser.jpg', 'deadpoolMain.png','chaser.jpg');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(1, '사극', 'N', 'Y', 'N', 'Y', '관상', '영화 관상 입니다', 12, 10,  '2024', '128분', 'facereaderMain.png', 'facereader.jpg', 'facereaderMain.png','facereader.jpg');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(1, '멜로', 'N', 'Y', 'N', 'Y', '파이란', '영화 파이란 입니다', 12, 10,  '2024', '128분', 'pyranMain.png', 'pyran.jpg', 'pyranMain.png','pyran.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(1, '공포', 'N', 'Y', 'N', 'Y', '인시디어스', '영화 인시디어스 입니다', 12, 10,  '2024', '128분', 'deadpoolMain.png', 'isds.jpg', 'deadpoolMain.png','isds.jpg');
@@ -106,19 +103,21 @@ values(1, '액션', 'N', 'Y', 'N', 'Y', '러브레터', '영화 러브레터 입
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(1, '히어로', 'N', 'Y', 'N', 'Y', '로 건', '영화 로건 입니다', 12, 10,  '2024', '128분', 'deadpoolMain.png', 'logan.jpg', 'deadpoolMain.png','logan.jpg');
 
-
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(1, '코미디', 'N', 'Y', 'N', 'Y', '극한직업', '영화 극한직업 입니다', 12, 10,  '2024', '128분', 'jobMain.png', 'job.jpg', 'jobMain.png','job.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '코미디', 'N', 'N', 'N', 'Y', '극한직업', '영화 극한직업 입니다', 12, 10,  '2024', '128분', 'jobMain.png', 'job.jpg', 'jobMain.png','job.jpg');
+values(1, '사극', 'N', 'Y', 'N', 'Y', '명량', '영화 명량 입니다', 12, 10,  '2024', '128분', 'bossMain.png', 'admiral.jpg', 'bossMain.png','admiral.jpg');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(1, '멜로', 'N', 'N', 'N', 'Y', '건축학개론', '영화 건축학개론 입니다', 12, 10,  '2024', '128분', 'deadpoolMain.png', 'building.jpg', 'deadpoolMain.png','building.jpg');
+
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(1, '코미디', 'N', 'N', 'N', 'Y', '가문의 영광', '영화 가문의 영광 입니다', 12, 10,  '2024', '128분', 'familyMain.png', 'family.jpg', 'familyMain.png','family.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(1, '코미디', 'N', 'N', 'N', 'Y', '투사부일체', '영화 투사부일체 입니다', 12, 10,  '2024', '128분', 'bossMain.png', 'boss.jpg', 'bossMain.png','boss.jpg');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(1, '사극', 'N', 'N', 'N', 'Y', '명량', '영화 명량 입니다', 12, 10,  '2024', '128분', 'bossMain.png', 'admiral.jpg', 'bossMain.png','admiral.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(1, '공포', 'N', 'N', 'N', 'Y', '컨져링', '영화 컨져링 입니다', 12, 10,  '2024', '128분', 'bossMain.png', 'cjr.jpg', 'bossMain.png','cjr.jpg');
@@ -161,20 +160,22 @@ values(1, '애니메이션', 'N', 'N', 'N', 'Y', '쿵푸팬더3', '영화 쿵푸
 
 
 
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '멜로', 'Y', 'N', 'N', 'Y', '나는 대놓고 신데렐라를 꿈꾼다', '나는 대놓고 신데렐라를 꿈꾼다 입니다', 12, 10,  '2024', '15회', 'cinderellamain.png', 'cinderella.png', 'cinderellamain.png','cinderella.png');
+
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'Y', 'N', 'N', 'Y', '여고추리반', '여고추리반 입니다', 12, 10,  '2024', '15회', 'detective.png', 'detectivemain.png', 'detective.png','detectivemain.png');
+values(0, '예능', 'Y', 'N', 'N', 'Y', '놀라운토요일', '놀라운토요일 입니다', 12, 10,  '2024', '15회', 'saturdaymain.jpg', 'saturday.jpg', 'sturdaymain.jpg','saturday.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'Y', 'N', 'N', 'Y', '지락이의 뛰뛰빵빵', '지락이의 뛰뛰빵빵 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'nature.png', 'naturemain.png','nature.png');
+values(0, '멜로', 'Y', 'N', 'N', 'Y', '선재 업고 튀어', '선재업고튀어 입니다', 12, 10,  '2024', '15회', 'sunjaemain.jpg', 'sunjae.png', 'sunjaemain.jpg','sunjae.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '사극', 'Y', 'N', 'N', 'Y', '뿌리깊은나무', '뿌리깊은나무', 12, 10,  '2024', '15회', 'woodmain.png', 'wood.png', 'woodmain.png','wood.png');
+values(0, '예능', 'Y', 'N', 'N', 'Y', '유퀴즈 온더 블럭!', '유퀴즈 온더 블럭! 입니다', 12, 10,  '2024', '15회', 'uqzmain.jpg', 'uqz.png', 'uqzmain.jpg','uqz.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '오리지널', 'Y', 'N', 'N', 'Y', '플레이어2', '플레이어2 입니다', 12, 10,  '2024', '15회', 'player2main.png', 'player2.png', 'player2main.png','player2.png');
+values(0, '사극', 'Y', 'N', 'N', 'Y', '뿌리깊은나무', '뿌리깊은나무', 12, 10,  '2024', '15회', 'woodmain.jpg', 'wood.png', 'woodmain.jpg','wood.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '오리지널', 'Y', 'N', 'N', 'Y', '플레이어2', '플레이어2 입니다', 12, 10,  '2024', '15회', 'player2main.jpg', 'player2.png', 'player2main.jpg','player2.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(0, '교양(다큐)', 'Y', 'N', 'N', 'Y', '인간극장', '인간극장 입니다', 12, 10,  '2024', '15회', 'humanmain.jpg', 'human.png', 'humanmain.jpg','human.png');
@@ -183,29 +184,34 @@ values(0, '교양(다큐)', 'Y', 'N', 'N', 'Y', '인간극장', '인간극장 �
 
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '키즈', 'N', 'N', 'N', 'Y', '스폰지밥', '스폰지밥 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'bob.png', 'detectivemain.png','bob.png');
+values(0, '키즈', 'N', 'Y', 'N', 'Y', '스폰지밥', '스폰지밥 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'bob.png', 'detectivemain.png','bob.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '스포츠', 'N', 'N', 'N', 'Y', '최강야구', '최강야구 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'baseball.png', 'detectivemain.png','baseball.png');
+values(0, '스포츠', 'N', 'Y', 'N', 'Y', '최강야구', '최강야구 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'baseball.png', 'detectivemain.png','baseball.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '오리지널', 'N', 'N', 'N', 'Y', '선재 업고 튀어', '선재 업고 튀어 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'sunjae.png', 'detectivemain.png','sunjae.png');
+values(0, '해외', 'N', 'Y', 'N', 'Y', '헤일로2', '헤일로2 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'halo.png', 'detectivemain.png','halo.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '해외', 'N', 'N', 'N', 'Y', '헤일로2', '헤일로2 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'halo.png', 'detectivemain.png','halo.png');
+values(0, '공연', 'N', 'Y', 'N', 'Y', '백상예술대상', '백상예술대상 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'prize.png', 'detectivemain.png','prize.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '공연', 'N', 'N', 'N', 'Y', '백상예술대상', '백상예술대상 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'prize.png', 'detectivemain.png','prize.png');
+values(0, '교양(다큐)', 'N', 'Y', 'N', 'Y', '책책책!', '책 읽어 드립니다 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'book.png', 'detectivemain.png','book.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '교양(다큐)', 'N', 'N', 'N', 'Y', '책 읽어 드립니다', '책 읽어 드립니다 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'book.png', 'detectivemain.png','book.png');
+values(0, '애니메이션', 'N', 'Y', 'N', 'Y', '귀멸의 칼날', '귀멸의 칼날 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'blade.jpg', 'detectivemain.png','blade.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '애니메이션', 'N', 'N', 'N', 'Y', '귀멸의 칼날', '귀멸의 칼날 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'blade.jpg', 'detectivemain.png','blade.jpg');
+values(0, '예능', 'N', 'Y', 'N', 'Y', '여고추리반', '여고추리반 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'detectivemain.png', 'detectivemain.png','detectivemain.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '예능', 'N', 'Y', 'N', 'Y', '지락이의 뛰뛰빵빵', '지락이의 뛰뛰빵빵 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'nature.png', 'naturemain.png','nature.png');
 
 
 
 select * from product
+
+delete from product where pseq= 5;
 
 ---------------------------------------------------------------------------------------------------------
 drop table notice
@@ -431,12 +437,12 @@ select pseq, title, image, kind, genre, age, time, year, content, savefilename f
 -- 새로운 컨텐츠 
 create or replace view new_pro_view
 as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' order by pseq desc limit 4;
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' order by pseq desc limit 8;
 
 -- 베스트 컨텐츠
 create or replace view best_pro_view
 as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' order by pseq desc limit 4;
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' order by pseq desc limit 7;
 
 --찜목록
 create or replace view steamed_view

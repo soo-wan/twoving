@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 
-.clear { width:100%;  margin: 0 auto;}
-#admintag { margin-left:55px;}
-#admintag a{color:white; font-weight:bold; text-decoration-line:none;}
-#copy {color:white; margin-left:55px;}
+.clear { width:100%; margin-left:200px; }
+#footer{}
+#admintag { }
+#admintag a{color:white; font-weight:bold; text-decoration-line:none; font-size:20px; }
+#copy {color:white; }

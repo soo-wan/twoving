@@ -103,10 +103,22 @@ function steamed(){
 			
 			
 		}*/
+
+$(function(){
+   $('.mypage').click(function(){
+                $('.profileclick').slideToggle(300);
+            $(this).toggleClass('active');
+         });
+         });  		
 		
 		
         
-        
+$(function(){
+   $('#d').click(function(){
+                $('.share').slideToggle(300);
+            $(this).toggleClass('active');
+         });
+         });        
 
 
         

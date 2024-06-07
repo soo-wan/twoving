@@ -21,11 +21,9 @@ public class TmainAction implements Action {
 	      ArrayList<ProductVO> blist = pdao.bestList(); 
 	      ArrayList<ProductVO> nlist = pdao.newList();
 	      
-	      String numberList[] = {"1", "2", "3", "4"};
 	      
-	      request.setAttribute("number", numberList);
-	      request.setAttribute("newList", nlist); 
-	      request.setAttribute("bestList", blist);   
+	      request.setAttribute("bestList", blist);	     
+	      request.setAttribute("newList", nlist); 	         
 	      request.setAttribute("mainList", list);
 		
 		request.getRequestDispatcher("Tmain.jsp").forward(request, response);

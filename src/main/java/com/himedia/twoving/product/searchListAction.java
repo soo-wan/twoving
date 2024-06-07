@@ -23,18 +23,20 @@ public class searchListAction implements Action {
 		
 		String key="";
 		if( request.getParameter("key") != null) {
-    		key = request.getParameter("key");
+			key = request.getParameter("key");
     		session.setAttribute("key", key);
 		}else if( session.getAttribute("key") != null ) {
 			key = (String)session.getAttribute("key");
-		}else {
-			session.removeAttribute("key");
-		}
+		} /*
+			 * else { session.removeAttribute("key"); }
+			 */
 
 		
 		ProductDao pdao = ProductDao.getInstance();	
 		ArrayList<ProductVO> searchList = pdao.searchList( key );
+
 		
+		request.setAttribute("key", key);		
 		request.setAttribute("searchList",searchList);
 		request.getRequestDispatcher("searchlist.jsp").forward(request, response);
 

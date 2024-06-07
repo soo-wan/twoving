@@ -34,29 +34,27 @@
 
 <h2 style="color:white; margin-left:55px;">인기있는 컨텐츠</h2>   
 
-<div class="Bestlist">
-		<c:forEach items="${number}" var ="number"><div style="color:white; font-size:70px;">${number}.</div></c:forEach>
-</div>
-<div class="Bestlist">		   
-       <c:forEach items="${bestList}"  var="productVO" >	  
-        <div id="item" style="color:white;">  
-          <a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">
-             <img src="image2/${productVO.savefilename}"/>
-          </a>
-         <h1 style="color:white;">${productVO.title}</h1>                                                             
-       </div>
-                    
-     </c:forEach>  
+
+<div class="Bestlist">				
+      <c:forEach items="${bestList}"  var="productVO"  varStatus="status"> 
+                  <div id="item1">                        
+                 	 <a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">
+                     	${status.index+1}<img src="image2/${productVO.savefilename}"/>
+                  	 </a>                                          
+                  </div>
+       </c:forEach>     
 </div>
 
 
+<br>
+<br>
 <br>
 <br>
 
 <h2 style="color:white; margin-left:55px;">새로운 컨텐츠</h2>   
 <div class="Newlist">				
       <c:forEach items="${newList}"  var="productVO">
-                  <div id="item">                        
+                  <div id="item2">                        
                   	<a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">
                    		<img src="image2/${productVO.savefilename}" />
                     </a>                                          

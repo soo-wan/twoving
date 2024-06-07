@@ -24,14 +24,7 @@
 <script src="script/Tmain.js"></script>
 
 
-<script type="text/JavaScript">
-$(function(){
-   $('.mypage').hover(function(){
-                $('.profileclick').slideToggle(300);
-            $(this).toggleClass('active');
-         });
-         });  
-</script>
+
 </head>
 <body>
 <div id="full">
@@ -53,10 +46,14 @@ $(function(){
          </div>
          </form>   
           &nbsp;&nbsp;&nbsp;&nbsp;
-         <div class="mypage"><a href="#"><img src="images/logo.png"  style="width:35px; height:35px; "></a>
+         <div class="mypage"><a href="#"><img src="images/logo.png"  style="width:40px; height:40px; "></a>
             <div class="profileclick" >
-                  <br><br>
+                  <br>
                   <div><a href="twoving.do?command=mypage">My페이지</a></div>
+                  <br>
+                  <div><a href="twoving.do?command=mypage">이용권</a></div>
+                  <br>
+                  <div><a href="twoving.do?command=mypage">쿠폰등록</a></div>
                   <br>
                   <div><a href="twoving.do?command=notice">고객센터</a></div>
                   <br>

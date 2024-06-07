@@ -11,17 +11,21 @@
 				style="background-image: url('image2/${productVO.savefilename}');"></div>
 				<div id="container">
 					<div id="containerA">
-						<div id="title" style="-webkit-text-stroke: 0.5px black;">${productVO.title}</div>
-						<div id="tag" style="-webkit-text-stroke: 0.5px black;">${productVO.age}세 &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}</div>
-							
+						<div id="title" style="-webkit-text-stroke: 1px black;">${productVO.title}</div>
+						<div id="tagtag">
+							<div id="tag" style="-webkit-text-stroke: 1px black;">${productVO.age}세 &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}</div>
+							<div class="share">
+								<div class="shareclick"><img src="images/snsicons.png" ></div>
+							</div>					
+						</div>	
 						<div id="linkicon">
 							<div class="a" id="b"><a href="">시청하기</a></div> 
 							<div class="a" id="c"><a href="#" onClick='steamed("${productVO.pseq}")' ><img src = images/emptyheart.png style="width:55px; height:55px;" id="heart"></a><br>찜</div>
 							<%-- <input type="hidden" name="pseq" value="${productVO.pseq}"/> --%>
-							<div class="a" id="d"><a href="#" onClick="share();"><img src = images/공유.jpg style="width:55px; height:55px;"></a><br>공유</div>
+							<div class="a" id="d"><a href="#" onClick="share();"><img src = images/공유.png style="width:55px; height:55px;"></a><br>공유</div>
 						</div>
 								
-						<div id="content" style="-webkit-text-stroke: 0.5px black;">${productVO.content}</div>
+						<div id="content" style="-webkit-text-stroke: 1px black;">${productVO.content}</div>
 					</div>
 						
 					<div id="containerB">							
