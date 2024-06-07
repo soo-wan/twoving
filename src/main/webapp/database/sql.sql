@@ -351,31 +351,31 @@ insert into faq(inquirylist, subject, content) values('해지/환불',
 번거로우시겠지만 모바일 상품권 구매처로 관련 문의 및 환불 상담을 부탁드립니다.');
 
 
-insert into faq(inquirylist, subject, content) values('서비스 이용',
+insert into faq(inquirylist, subject, content) values('서비스/이용',
 '[편의기능] 광고형 스탠다드에서 팝업 플레이어 PIP 버튼(기능)이 없어요.',
 '광고형 요금제로 콘텐츠를 시청하시는 경우, PIP 시청 기능은 라이브 채널만 제공됩니다.
 베이직/스탠다드/프리미엄 이용권으로 변경하시면 VOD 시청 시에도 해당 기능을 사용하실 수 있으며, 상세 내용은 [이용권] 페이지에서 확인 가능합니다.');
 
-insert into faq(inquirylist, subject, content) values('서비스 이용',
+insert into faq(inquirylist, subject, content) values('서비스/이용',
 '[크롬캐스트] 광고형 스탠다드에서 크롬캐스트 연결 버튼(기능)이 없어요.',
 '광고형 요금제로 콘텐츠를 시청하시는 경우, 크롬캐스트 기능이 지원되지 않습니다.
 TV 기기의 이용을 원하시는 경우 티빙 공식 APP을 설치하시면 이용이 가능합니다.
 ＊OS 버전 및 기기사양(메모리), 제조사에 따라 일부 기기에서는 서비스가 정상 동작하지 않을 수 있습니다.
 베이직/스탠다드/프리미엄 이용권으로 변경하시면 크롬캐스트 기능을 사용하실 수 있으며, 상세 내용은 [이용권] 페이지에서 확인 가능합니다.');
 
-insert into faq(inquirylist, subject, content) values('서비스 이용',
+insert into faq(inquirylist, subject, content) values('서비스/이용',
 '[크롬캐스트] KT 티빙 라이트에서 크롬캐스트 연결 버튼(기능)이 없어요.',
 '광고형 요금제로 콘텐츠를 시청하시는 경우, 크롬캐스트 기능이 지원되지 않습니다.
 TV 기기의 이용을 원하시는 경우 티빙 공식 APP을 설치하시면 이용이 가능합니다.
 ＊OS 버전 및 기기사양(메모리), 제조사에 따라 일부 기기에서는 서비스가 정상 동작하지 않을 수 있습니다.
 베이직/스탠다드/프리미엄 이용권으로 변경하시면 크롬캐스트 기능을 사용하실 수 있으며, 상세 내용은 [이용권] 페이지에서 확인 가능합니다.');
 
-insert into faq(inquirylist, subject, content) values('서비스 이용',
+insert into faq(inquirylist, subject, content) values('서비스/이용',
 '[편의기능] KT 티빙 라이트에서 다운로드가 진행이 안돼요.',
 'KT 티빙 라이트 이용권으로 콘텐츠를 시청하시는 경우, 콘텐츠 다운로드 기능은 제공되지 않습니다.
 베이직/스탠다드/프리미엄 이용권으로 변경하시면 해당 기능을 사용하실 수 있으며, 상세 내용은 [이용권] 페이지에서 확인 가능합니다.');
 
-insert into faq(inquirylist, subject, content) values('서비스 이용',
+insert into faq(inquirylist, subject, content) values('서비스/이용',
 '[편의기능] KT 티빙 라이트에서 팝업 플레이어 PIP 버튼(기능)이 없어요.',
 'KT 티빙 라이트 이용권으로 콘텐츠를 시청하시는 경우, PIP 시청 기능은 라이브 채널만 제공됩니다. 
 베이직/스탠다드/프리미엄 이용권으로 변경하시면 해당 기능을 사용하실 수 있으며, 상세 내용은 [이용권] 페이지에서 확인 가능합니다.');

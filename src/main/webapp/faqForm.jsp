@@ -35,7 +35,7 @@
 			<a href="twoving.do?command=passTicket&inquirylist=이용권/결제">이용권/결제</a> | &nbsp;&nbsp;&nbsp;
 			<a href="twoving.do?command=loadingError&inquirylist=재생/오류">재생/오류</a> | &nbsp;&nbsp;&nbsp;
 			<a href="twoving.do?command=nonpay&inquirylist=해지/환불">해지/환불</a> | &nbsp;&nbsp;&nbsp;
-			<a href="twoving.do?command=servicerun&inquirylist=서비스 이용">서비스 이용</a>
+			<a href="twoving.do?command=servicerun&inquirylist=서비스/이용">서비스 이용</a>
 		</div>
 		
 		<table style="display: flex; flex-direction:column;">

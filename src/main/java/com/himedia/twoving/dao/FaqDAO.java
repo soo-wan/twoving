@@ -30,7 +30,7 @@ public class FaqDAO {
 		
 		con = DBman.getConnection();
 		
-		String sql = "select* from faq where subject like concat('%',?,'%') limit ? offset ?";
+		String sql = "select* from faq where subject like concat('%',?,'%') order by qseq desc limit ? offset ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -64,7 +64,7 @@ public class FaqDAO {
 		
 		con = DBman.getConnection();
 		
-		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') limit ? offset ?";
+		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') order by qseq desc limit ? offset ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -100,7 +100,7 @@ public class FaqDAO {
 		
 		con = DBman.getConnection();
 		
-		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') limit ? offset ?";
+		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') order by qseq desc limit ? offset ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -136,7 +136,7 @@ public class FaqDAO {
 		
 		con = DBman.getConnection();
 		
-		String sql = "select* from faq where inquirylist=?  and subject like concat('%',?,'%') limit ? offset ?";
+		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') order by qseq desc limit ? offset ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -172,7 +172,7 @@ public class FaqDAO {
 		
 		con = DBman.getConnection();
 		
-		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') limit ? offset ?";
+		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') order by qseq desc limit ? offset ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -209,7 +209,7 @@ public class FaqDAO {
 		
 		con = DBman.getConnection();
 		
-		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') limit ? offset ?";
+		String sql = "select* from faq where inquirylist=? and subject like concat('%',?,'%') order by qseq desc limit ? offset ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);

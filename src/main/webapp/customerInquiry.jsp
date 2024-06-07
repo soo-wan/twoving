@@ -47,24 +47,24 @@
 						</select>
 					</div>
 					<div class="field">
-					<span>연락처*</span>&nbsp;&nbsp;&nbsp;
-					<select name="phone">
-						<option selected>010</option>
-						<option>011</option>
-						<option>016</option>
-						<option>017</option>
-						<option>018</option>
-						<option>019</option>
-					</select>
-					&nbsp;&nbsp;&nbsp;
-					<span>-</span>
-					&nbsp;&nbsp;&nbsp;
-					<input type="text" name="phone1" width="150" style="padding:15px;">
-					&nbsp;&nbsp;&nbsp;
-					<span>-</span>
-					&nbsp;&nbsp;&nbsp;
-					<input type="text" name="phone2" width="150" style="background-color:gray; padding:15px;">
-				</div>
+						<span>연락처*</span>&nbsp;&nbsp;&nbsp;
+						<select name="phone">
+							<option selected>010</option>
+							<option>011</option>
+							<option>016</option>
+							<option>017</option>
+							<option>018</option>
+							<option>019</option>
+						</select>
+						&nbsp;&nbsp;&nbsp;
+						<span>-</span>
+						&nbsp;&nbsp;&nbsp;
+						<input type="text" name="phone1" maxlength="4" width="150" style="padding:15px;">
+						&nbsp;&nbsp;&nbsp;
+						<span>-</span>
+						&nbsp;&nbsp;&nbsp;
+						<input type="text" name="phone2" width="150" maxlength="4" style="background-color:gray; padding:15px;">
+					</div>
 				<br>
 				<div class="field">
 					<span>문의종류*</span>
