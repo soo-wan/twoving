@@ -43,7 +43,7 @@
 			</table>
 		</div>
 		
-		<div class="rowpage" style="margin:0 auto;">
+		<%-- <div class="rowpage" style="margin:0 auto;">
 			<div class="colpage">
 			<!-- prev 버튼 표시 여부 -->
 			<c:if test="${paging.prev}">
@@ -53,11 +53,11 @@
 			<!-- beginPage 부터 endPage 이전까지 일렬로 페이지를 표시 -->
 			<c:forEach begin="${paging.beginPage}" end="${paging.endPage}" var="index">
 				<c:if test="${paging.page == index}">
-					<span style = "color:white; background-color:gray; width:10; font-weight: bold;">&nbsp;${index}&nbsp;</span>
+					<span style = "color:white; background-color:gray; opacity:0.5; border-radius:5px 5px 5px 5px; width:10; font-weight: bold;">&nbsp;${index}&nbsp;</span>
 				</c:if>
 				&nbsp;
 				<c:if test="${paging.page != index}">
-					<a href="twoving.do?command=notice&page=${index}">&nbsp;${index}&nbsp;</a>
+					<a href="twoving.do?command=notice&page=${index}"><span style="color:white; opacity:0.5; border-radius:5px 5px 5px 5px; width:10; font-weight: bold;">&nbsp;${index}&nbsp;</span></a>
 				</c:if>
 			</c:forEach>
 			
@@ -66,10 +66,10 @@
 				<a href = "twoving.do?command=notice&page=${paging.endPage+1}">다음</a>
 			</c:if>
 		</div>
-				<%-- <jsp:include page="paging/paging.jsp">
-					<jsp:param value="twoving.do?command=notice" name="noticeList"/>
-				</jsp:include> --%>
-	</div>
+	</div> --%>
+	<jsp:include page="paging/paging.jsp">
+			<jsp:param value="twoving.do?command=notice" name="noticeList"/>
+	</jsp:include>
 	</article>
 </section>
 

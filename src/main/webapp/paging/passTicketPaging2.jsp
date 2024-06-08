@@ -11,7 +11,8 @@
 				</c:if>
 				<c:forEach begin="${paging.beginPage}" end="${paging.endPage}" var="index">
 					<c:if test="${paging.page == index}">
-						<span style = "color:white; background-color:gray; width:10; font-weight: bold;">&nbsp;${index}&nbsp;</span>
+						<span style = "background-color:gray; border-radius:5px; width:10; font-weight: bold;"></span>
+						<span style="color:white;">&nbsp;${index}&nbsp;</span>
 					</c:if>
 					<c:if test="${paging.page != index}">
 						<a href="${action}&page=${index}">&nbsp;${index}&nbsp;</a>
