@@ -3,17 +3,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.himedia.twoving.vo.PaymentVO" %>
 
-<%
-	Calendar cal = Calendar.getInstance();
-	
-	// 현재 날짜에서 30일을 더함
-	cal.add(Calendar.DAY_OF_MONTH, 30);
-	
-	java.util.Date runperiod2Date = cal.getTime();
-	
-	request.setAttribute("runperiod2", runperiod2Date);
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,7 +59,7 @@
 				<a href=""><span style="color:gray;">캐시</span></a>
 			</div>
 			<div class="right">
-				<input type="button" value="이용권 구독하기" style="background-color:black; border: 1px solid gray; color: gray; font-weight: bold; padding: 3px; cursor:pointer;">
+				<input type="button" value="이용권 구독하기" onClick="updateDefuseCheck('${paymentVO.productname}');" style="background-color:black; border: 1px solid gray; color: gray; font-weight: bold; padding: 3px; cursor:pointer;">
 			</div>
 		</div>
 		
@@ -106,7 +99,21 @@
 						<td>${payment.paymentprice}</td>
 						<td>${payment.paymentmeans}</td>
 						<td><fmt:formatDate value="${payment.paymentday}"/></td>
-						<td><fmt:formatDate value="${payment.runperiod1}"/> ~ <fmt:formatDate value="${runperiod2}"/></td>
+						<td style="color:white;"><fmt:formatDate value="${payment.runperiod1}"/> ~ 
+						<c:set var="runPeriod2" value="${payment.runperiod2}" />
+							<%
+								java.util.Date runPeriod2 = (java.util.Date) pageContext.findAttribute("runPeriod2");
+								String nextMonthDate = "N/A";
+			                	if (runPeriod2 != null) {
+			                    Calendar cal = Calendar.getInstance();
+			                    cal.setTime(runPeriod2);
+			                    cal.add(Calendar.MONTH, 1);
+			                    nextMonthDate = new java.text.SimpleDateFormat("yyyy.M.d").format(cal.getTime());
+		                	
+		                	%>
+							<%= nextMonthDate %>
+							<% } %>
+						</td>
 					</tr>
 					</c:forEach>
 			</table>
