@@ -278,6 +278,10 @@ span{
 
 }
 
+.bott-box p {
+    color: white;
+}
+
 label{
 	color:white;
 	font-size: 120%;

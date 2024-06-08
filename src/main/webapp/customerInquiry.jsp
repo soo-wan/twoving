@@ -229,10 +229,10 @@
 				
 				
 				<div class="bott" style="display:flex; flex-direction: column;">
-					<span>개인정보 수집 및 동의</span>
+					<span style="font-weight:bold; color:white;">개인정보 수집 및 동의</span>
 					<p>※ 동의하지 않을 경우 고객 문의 답변에 제한이 있을 수 있습니다.</p>
-					<div class="bott-box" style="background-color:gray; padding: 30px;">
-						<p>
+					<div class="bott-box" style="background-color:gray; padding: 30px; opacity: 0.35;">
+						<p style="color:white; font-size: 100%;">
 							개인 정보 수집 및 이용목적<br>
 							1. 개인 정보 수집항목 : 성명, 전화번호, 이메일, 아이디<br>
 							2. 개인 정보 이용목적 : 문의 접수, 고객 불편 사항 확인 및 처리 결과 회신<br>

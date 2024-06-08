@@ -15,11 +15,11 @@
 		
 		<div class="notice_table" style="margin-left: -20px;">
 			<table>
-					<tr class="trow">
-						<th style="">번호</th>
-						<th style="">제목</th>
-						<th style="">등록일</th>
-						<th>조회수</th>
+					<tr class="trow" style="opacity: 0.32;">
+						<th style="color:white;">번호</th>
+						<th style="color:white;">제목</th>
+						<th style="color:white;">등록일</th>
+						<th style="color:white;">조회수</th>
 					</tr>
 					<c:forEach items="${noticeList}" var="notice">
 							<!-- <td style="color:red;">공지</td> -->
