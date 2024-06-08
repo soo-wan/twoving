@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<input type="button"	 class="logo" onclick="location.href='twoving.do?command=index'" value="TWOVING" />
+<input type="button" style="cursor: pointer;" class="logo" onclick="location.href='twoving.do?command=tMain'" value="TWOVING" />
   <h1>회원탈퇴</h1>
   <form>
   <div class="text1"> 탈퇴를 원하시면, 아래 사항을 반드시 확인해주세요.</div>

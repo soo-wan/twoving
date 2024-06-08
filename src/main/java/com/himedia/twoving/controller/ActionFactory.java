@@ -49,6 +49,7 @@ import com.himedia.twoving.controller.action.help.ServiceRunAction;
 import com.himedia.twoving.controller.action.help.UpdateDefuseCheckAction;
 import com.himedia.twoving.controller.action.mypage.CustomerInquiryListMypage;
 import com.himedia.twoving.controller.action.mypage.CustomerInquiryMypageDetail;
+import com.himedia.twoving.controller.action.mypage.DeleteMemberFormAction;
 import com.himedia.twoving.product.detailAction;
 import com.himedia.twoving.product.genreAction;
 import com.himedia.twoving.product.kindAction;
@@ -82,10 +83,10 @@ public class ActionFactory {
 	
 	public Action getAction(String command) {
 		Action ac = null;
-			if(command.equals("index")) ac = new IndexAction();
+		  if(command.equals("index")) ac = new IndexAction();
 			
 		  //main(김재연)
-			else if(command.equals("tMain")) ac = new TmainAction();
+		  else if(command.equals("tMain")) ac = new TmainAction();
 		  else if(command.equals("Tdetail")) ac = new detailAction();
 	      else if(command.equals("genre")) ac = new genreAction();
 	      else if(command.equals("kind")) ac = new kindAction();
@@ -140,8 +141,10 @@ public class ActionFactory {
 		else if(command.equals("insertPassTicket")) ac = new InsertPassTicketAction();
 		
 		
-		  //admin(오수완)
+		  //그 외 추가 화면(오수완)
 		  else if(command.equals("idcheckForm")) ac = new IdcheckFormAction();
+		  else if(command.equals("deleteMemberForm")) ac = new DeleteMemberFormAction();
+		  //admin(오수완)
 	      //시리즈 영화
 		  else if( command.equals("admin") ) ac = new AdminAction();
 	      else if( command.equals("adminlogin") ) ac = new AdminloginAction();

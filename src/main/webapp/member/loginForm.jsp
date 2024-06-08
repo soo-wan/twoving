@@ -20,10 +20,19 @@
     %>
 	<article style="">
 		<form method="post" action="twoving.do?command=login" name="loginForm">
-			
+				
 				<h2>TWOVING ID 로그인</h2>
+				
+				<%	String cookie = "";
+					Cookie[] cookies = request.getCookies(); 
+					if(cookies != null && cookies.length > 0)
+					for (int i = 0; i < cookies.length; i++){
+						if (cookies[i].getName().equals("userId")) { 
+							cookie = cookies[i].getValue();}}
+				%>
+				
 				<div class="field">
-					<input name="userid" type="text" placeholder="아이디"/>
+					<input name="userid" type="text" placeholder="아이디" value="<%=cookie%>"/>
 				</div>
 				<div class="field">
 					<input name="pwd" type="password"  placeholder="비밀번호" />
@@ -32,10 +41,12 @@
 				<div class="edu">
 					${message}
 				</div>
-			
+				
 				<div class="auto">
 					<input type="checkbox" id="remember" checked> 
-					<label for="remember" id="remember2" style=" color:gray; font-weight: bold;"> &nbsp;자동 로그인</label>
+					<label for="remember" id="remember2" style=" color:gray; font-weight: bold;"> &nbsp;
+						아이디 저장
+					</label>
 				</div>
 			
 			<!-- <input type="submit" class="btn1" value="LOGIN" onClick="return loginCheck()" /> -->

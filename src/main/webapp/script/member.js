@@ -1,37 +1,3 @@
-//아이디 정규식
-	var idJ = /^[a-z0-9]{4,12}$/;
-// 비밀번호 정규식
-	var pwJ = /^[A-Za-z0-9]{6,12}$/; 
-// 이메일 검사 정규식
-	var mailJ = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-	
-$(document).ready(function() {
-	$("#userid").blur(function() {
-		if (idJ.test($(this).val())) {
-				console.log(idJ.test($(this).val()));
-				$("#userIdMsg").text('아이디 사용 가능합니다.');
-				$('#userIdMsg').css('color', 'yellow');
-		} else {
-			$('#userIdMsg').text('아이디를 확인해주세요(아이디 : 영문 소문자, 숫자 조합 4~12 자리)');
-			$('#userIdMsg').css('color', 'red');
-		}
-	});
-});
-	
-$(document).ready(function() {	
-	$('#pwd').blur(function(){
-		if(pwJ.test($('#pwd').val())){
-			console.log('true');
-			$('#passwordConfirmMsg1').text('비밀번호 사용 가능합니다.');
-			$('#passwordConfirmMsg1').css('color', 'yellow');
-		} else{
-			console.log('false');
-			$('#passwordConfirmMsg1').text('비밀번호를 확인해주세요(비밀번호 : 영문 소/대문자, 숫자 조합 6~12 자리)');
-			$('#passwordConfirmMsg1').css('color','red');
-		}
-	});
-});
-
 function loginCheck(){
 	if(document.loginForm.userid.value==""){
 		alert("아이디를 입력하세요");
@@ -101,44 +67,88 @@ function pwCheck(){
 function idok(userid){
 	opener.joinForm.userid.value = userid;
 	opener.joinForm.reid.value = userid;
+	opener.joinForm.userid.focus();
 	self.close();
 }
 
+//아이디 정규식
+	var idJ = /^[a-z0-9]{4,12}$/;
+// 비밀번호 정규식
+	var pwJ = /^[A-Za-z0-9]{6,12}$/; 
+// 이메일 검사 정규식
+	var mailJ = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+	
+$(document).ready(function() {
+	$("#userid").blur(function() {
+		if (idJ.test($(this).val())) {
+				$("#userIdMsg").text('아이디 사용 가능합니다.');
+				$('#userIdMsg').css('color', 'yellow');
+		} else {
+			$('#userIdMsg').text('아이디를 확인해주세요(아이디 : 영문 소문자, 숫자 조합 4~12 자리)');
+			$('#userIdMsg').css('color', 'red');
+		}
+	});
+});
+	
+$(document).ready(function() {	
+	$('#pwd').blur(function(){
+		if(pwJ.test($('#pwd').val())){
+			$('#passwordConfirmMsg1').text('비밀번호 사용 가능합니다.');
+			$('#passwordConfirmMsg1').css('color', 'yellow');
+		} else{
+			$('#passwordConfirmMsg1').text('비밀번호를 확인해주세요(비밀번호 : 영문 소/대문자, 숫자 조합 6~12 자리)');
+			$('#passwordConfirmMsg1').css('color','red');
+		}
+	});
+});
 
+$(document).ready(function() {	
+	$('#email').blur(function(){
+		if(mailJ.test($('#email').val())){
+			$('#emailMsg').text('이메일 사용 가능합니다.');
+			$('#emailMsg').css('color', 'yellow');
+		} else{
+			$('#emailMsg').text('이메일 형식을 확인해주세요.');
+			$('#emailMsg').css('color','red');
+		}
+	});
+});
 
-
-
-/*function go_save(){
-	if(document.joinForm.name.value ==""){
-		alert("이름을 입력하여 주세요.");
-		document.joinForm.name.focus();
-	}else if(document.joinForm.userid.value ==""){
+function go_save(){
+	if(document.joinForm.userid.value ==""){
 		alert("아이디를 입력하여 주세요.");
 		document.joinForm.userid.focus();
 	}else if(document.joinForm.reid.value!=document.joinForm.userid.value){
 		alert("아이디 중복확인을 하지 않았습니다");
 		document.joinForm.userid.focus();
-	}else if(!/^[a-zA-Z](?=.*[a-z])(?=.*[0-9]).{4,12}$/.test(document.joinForm.userid.value)){
-		alert("영문 소문자, 숫자 조합 6~12 자리로 입력해주세요.");
+	}else if(!/^[a-z0-9]{4,12}$/.test(document.joinForm.userid.value)){
+		alert("아이디 영문 소문자, 숫자 조합 4~12 자리로 입력해주세요.");
 		document.joinForm.userid.focus();
 	}else if(document.joinForm.pwd.value ==""){
 		alert("비밀번호를 입력해 주세요.");
 		document.joinForm.pwd.focus();
-	}else if(!/^(?=.*[a-zA-Z])(?=.*[~!@#$%^&*])(?=.*[0-9]).{8,15}$/.test(document.joinForm.pwd.value)){
-		alert("영문, 숫자,특수문자(~!@#$%^&*) 조합 8~15 자리로 입력해주세요.");
-		document.joinForm.pwd.focus();
 	}else if(document.joinForm.pwd.value != document.joinForm.pwdCheck.value){
 		alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
 		document.joinForm.pwd.focus();	
+	}else if(!/^[A-Za-z0-9]{6,12}$/.test(document.joinForm.pwd.value)){
+		alert("비밀번호 영문 소/대문자, 숫자 조합 6~12 자리로 입력해주세요.");
+		document.joinForm.pwd.focus();
+	}else if(document.joinForm.name.value ==""){
+		alert("이름을 입력하여 주세요.");
+		document.joinForm.name.focus();
 	}else if(document.joinForm.email.value ==""){
 		alert("이메일을 입력해 주세요.");
+		document.joinForm.email.focus();
+	}else if(!/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i.test(document.joinForm.email.value)){
+		alert("이메일 영문, 숫자,특수문자(~!@#$%^&*) 조합 8~15 자리로 입력해주세요.");
 		document.joinForm.email.focus();
 	}else {
 		document.joinForm.submit();	
 	}
-}*/
+}
 
-function go_save(){
+
+/*function go_save(){
 	if(document.joinForm.userid.value==""){
 		alert("아이디를 입력해 주세요");
 		document.joinForm.userid.focus();
@@ -160,7 +170,7 @@ function go_save(){
 	} else{
 		document.joinForm.submit();
 	}
-}
+}*/
 
 
 $(function(){
@@ -169,9 +179,3 @@ $(function(){
 		$('.gnb').toggle(300, function(){});
 	});
 });
-
-
-
-
-
-

@@ -75,16 +75,10 @@
 						required="required" maxlength="115" placeholder="이메일" tabindex="5">
 
 					</label>
-				
+					<p class="input-info1" id="emailMsg" style="color: white; margin-left: 10px; opacity: 65%;">
+						정확한 이메일을 입력해주세요.
+					</p>
 				</div>
-
-
-
-
-
-
-
-
 
 				<ul class="btn-checks-wrap btn-checks-noline" style="margin-top: 0;">
 
