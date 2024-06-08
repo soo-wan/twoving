@@ -29,9 +29,9 @@
 	<article>
 		<div class="box">
    			<div class="box1">
-  			   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer;"value="TWOVING" />
-               <div class="box1-2">시리즈</div>
-               <div class="box1-3">영화</div>
+  			   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer; color:red;"value="TWOVING" />
+               <div class="box1-2"><a href="twoving.do?command=kind&kind=0" style="white;">시리즈</a></div>
+               <div class="box1-3"><a href="twoving.do?command=kind&kind=1" style="white;">영화</a></div>
       		</div>
 		
 			<div class="box2">
