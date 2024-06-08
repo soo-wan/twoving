@@ -138,6 +138,10 @@ section article .notice_table table .trow{
 	opacity: 0.5;
 }
 
+/* section article .notice_table table .trow_title{
+	
+} */
+
 section article .defuse{
 	padding: 150px;
 }
@@ -197,9 +201,10 @@ section article .policy_wrapper span{
 
 
 .notice_row{
-	 border-bottom: 1px solid gray;
+	 border-bottom: 1px dotted gray;
 	 display:flex;
 	 justify-content: space-between;
+	 padding: 5px;
 }
 
 .notice_col{

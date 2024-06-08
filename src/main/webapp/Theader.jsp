@@ -12,8 +12,8 @@
 <link rel="stylesheet" href="css/Tdetail.css">
 <link rel="stylesheet" href="css/kind.css">
 <link rel="stylesheet" href="css/genre.css">
-<!-- <link rel = "stylesheet" type =  "text/css" href = "css/header_footer.css"/>
-<link rel = "stylesheet" type =  "text/css" href = "css/section.css"/> -->
+<!-- <link rel = "stylesheet" type =  "text/css" href = "css/header_footer.css"/> -->
+<link rel = "stylesheet" type =  "text/css" href = "css/section.css"/>
 <script src="script/jquery-3.7.1.min.js"></script>
 <script src="script/faqForm.js"></script>
 <script src="script/jqueryAction.js"></script>
