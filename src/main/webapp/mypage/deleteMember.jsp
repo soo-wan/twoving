@@ -4,6 +4,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/delete.css">
+<script src="script/member.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -41,7 +42,7 @@
 				<label for="agree" id="agree2" style=" color:gray; font-weight: bold;"> &nbsp;정기 결제 해지와 이용중이던 상품 포기에 동의합니다.</label>
 			</div> 
   <div class="btn">
-  <input type="button"  class="btn1" value="확인" onClick="" />
+  <input type="button"  class="btn1" value="확인" onClick="withdrawal()" />
   <input type="button"  class="btn2" value="취소" onClick="location.href='twoving.do?command=updateMemberForm'"/>
   </div>
   </form>

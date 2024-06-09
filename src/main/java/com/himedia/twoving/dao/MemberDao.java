@@ -82,8 +82,8 @@ public class MemberDao {
         try {
         	pstmt = con.prepareStatement(sql);
         	PreparedStatement pstmt = con.prepareStatement(sql);
-           pstmt.setString(1, userid);
-           pstmt.executeUpdate();
+            pstmt.setString(1, userid);
+            pstmt.executeUpdate();
         } catch (SQLException e) { e.printStackTrace();
         } finally { DBman.close(con, pstmt, rs);
         }

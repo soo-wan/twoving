@@ -20,6 +20,9 @@ values('one','1111','김나리','017-777-7777','acc@abc.com');
 insert into member(userid, pwd, name, phone, email)
 values('two','2222','김둘','017-7321-7777','acc312@abc.com');
 
+insert into member(userid, pwd, name, phone, email)
+values('three','3333','삭제테스트','017-7321-7777','acc312@abc.com');
+
 ALTER TABLE member modify phone varchar(45) 
 
 CREATE TABLE admins

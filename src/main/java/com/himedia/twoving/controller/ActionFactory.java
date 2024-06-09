@@ -64,6 +64,7 @@ import com.twoving.controller.action.member.LoginAction;
 import com.twoving.controller.action.member.LoginFormAction;
 import com.twoving.controller.action.member.MainAction;
 import com.twoving.controller.action.member.indexFormAction;
+import com.twoving.controller.action.member.logoutAction;
 import com.twoving.controller.action.mypage.DeleteMemberAction;
 import com.twoving.controller.action.mypage.FindIdAction;
 import com.twoving.controller.action.mypage.FindPwdAction;
@@ -106,7 +107,6 @@ public class ActionFactory {
 	      else if(command.equals("mypage")) ac = new MypageAction();
 	      else if(command.equals("updateMember")) ac = new UpdateMemberAction();
 	      else if(command.equals("updateMemberForm")) ac = new UpdateMemberFormAction();
-	      else if(command.equals("deleteMember")) ac = new DeleteMemberAction();
 	      else if(command.equals("findId")) ac = new FindIdAction();
 	      else if(command.equals("findPwd")) ac = new FindPwdAction();
 	      else if(command.equals("ticket")) ac = new TicketAction();
@@ -144,6 +144,9 @@ public class ActionFactory {
 		  //그 외 추가 화면(오수완)
 		  else if(command.equals("idcheckForm")) ac = new IdcheckFormAction();
 		  else if(command.equals("deleteMemberForm")) ac = new DeleteMemberFormAction();
+		  else if(command.equals("logout") ) ac = new logoutAction();
+		  else if(command.equals("deleteMember")) ac = new DeleteMemberAction();
+		  
 		  //admin(오수완)
 	      //시리즈 영화
 		  else if( command.equals("admin") ) ac = new AdminAction();

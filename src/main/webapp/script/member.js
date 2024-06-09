@@ -179,3 +179,10 @@ $(function(){
 		$('.gnb').toggle(300, function(){});
 	});
 });
+
+function withdrawal(){
+	var ans = window.confirm("정말로 탈퇴하시겠습니까?");
+	if(ans){
+		location.href="twoving.do?command=deleteMember";	
+	}
+}

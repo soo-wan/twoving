@@ -3,18 +3,37 @@ package com.twoving.controller.action.mypage;
 import java.io.IOException;
 
 import com.himedia.twoving.action.Action;
+import com.himedia.twoving.dao.MemberDao;
+import com.himedia.twoving.vo.MemberVO;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class DeleteMemberAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		MemberVO memberVO = (MemberVO)session.getAttribute("loginUser");
 		
-		//request.getRequestDispatcher("mypage/deleteMember.jsp").forward(request, response);
+		if(memberVO == null) { 
+			response.sendRedirect("twoving.do?command=loginForm");
+		}else {
+			MemberDao mdao = MemberDao.getInstance();
+			
+			//해당 회원의 useyn 을 N 으로
+			mdao.deleteMember(memberVO.getUserid());
+			
+			session.removeAttribute("loginUser");
+			
+			session.setAttribute("message", "회원탈퇴가 완료되었습니다.");
+			
+			RequestDispatcher rd = request.getRequestDispatcher("twoving.do?command=loginForm");
+			rd.forward(request, response);
+		}
 
 	}
-
 }
