@@ -13,8 +13,8 @@ public class logoutAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		session.removeAttribute("loginUser");
-		request.getRequestDispatcher("twoving.do?command=index").forward(request, response);
+			HttpSession session = request.getSession();
+			session.removeAttribute("loginUser");
+			request.getRequestDispatcher("twoving.do?command=index").forward(request, response);
 	}
 }

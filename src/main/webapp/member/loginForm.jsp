@@ -13,7 +13,7 @@
     String message = (String)session.getAttribute("message");
     if(message != null) {
         // 메시지가 존재하면 출력
-        out.println("<p>" + message + "</p>");
+        out.println("<p style='color:red; font-size: 120%;'>" + message + "</p>");
         // 출력 후 세션에서 메시지 삭제
         session.removeAttribute("message");
     }
