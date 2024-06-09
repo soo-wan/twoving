@@ -27,6 +27,7 @@ public class InsertPassTicketAction implements Action {
 		}else {
 			// int pmseq = Integer.parseInt(request.getParameter("pmseq"));
 			
+			String subscribeyn = request.getParameter("subscribeyn");
 			String productname = request.getParameter("productname");
 			String paymentprice = request.getParameter("paymentprice");
 			
@@ -36,6 +37,11 @@ public class InsertPassTicketAction implements Action {
 			paymentVO.setPaymentprice(paymentprice);
 			
 			PaymentDAO paymentDAO = PaymentDAO.getInstance();
+			
+//			if(subscribeyn.equals("Y")) {
+//				paymentDAO.updatePayment(pmseq, subscribeyn);
+//			}
+			
 			paymentDAO.insertPayment(paymentVO);
 			
 			

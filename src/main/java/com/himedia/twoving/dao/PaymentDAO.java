@@ -178,4 +178,24 @@ public class PaymentDAO {
 		return paymentVO;
 	}
 
+//	public void updatePayment(int pmseq, String subscribeyn) {
+//		con = DBman.getConnection();
+//		
+//		String sql="update payment set subscribeyn=? where pmseq=?";
+//		
+//		try {
+//			pstmt = con.prepareStatement(sql);
+//			
+//			pstmt.setString(1, subscribeyn);
+//			pstmt.setInt(2, pmseq);
+//			
+//			
+//			
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} finally {
+//			DBman.close(con, pstmt, rs);
+//		}
+//	}
+
 }

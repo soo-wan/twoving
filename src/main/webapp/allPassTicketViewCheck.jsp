@@ -372,7 +372,7 @@
 		</table>
 	</div>
 	<div class="updatePassTicketBtn" style="margin-top: 15px;">
-			<input type="button" onClick="insertPassTicket();" value="선택하기" style="width:100%; height: 50px; background-color:red; color:white; font-weight:bold; border-radius: 15px 15px 15px 15px; cursor:pointer;">
+			<input type="button" onClick="insertAndUpdatePassTicket();" value="선택하기" style="width:100%; height: 50px; background-color:red; color:white; font-weight:bold; border-radius: 15px 15px 15px 15px; cursor:pointer;">
 	</div>
 	</form>
 </div>
