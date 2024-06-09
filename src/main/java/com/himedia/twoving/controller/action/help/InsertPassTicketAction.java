@@ -25,22 +25,26 @@ public class InsertPassTicketAction implements Action {
 			RequestDispatcher rd = request.getRequestDispatcher("member/loginForm.jsp");
 			rd.forward(request, response);
 		}else {
-			// int pmseq = Integer.parseInt(request.getParameter("pmseq"));
+			int pmseq = Integer.parseInt(request.getParameter("pmseq"));
 			
 			String subscribeyn = request.getParameter("subscribeyn");
 			String productname = request.getParameter("productname");
 			String paymentprice = request.getParameter("paymentprice");
 			
+			
+			System.out.println("productname : " + productname);
 			PaymentVO paymentVO = new PaymentVO();
 			
+			paymentVO.setSubscribeyn(subscribeyn);
 			paymentVO.setProductname(productname);
 			paymentVO.setPaymentprice(paymentprice);
 			
 			PaymentDAO paymentDAO = PaymentDAO.getInstance();
 			
-//			if(subscribeyn.equals("Y")) {
-//				paymentDAO.updatePayment(pmseq, subscribeyn);
-//			}
+			if(subscribeyn.equals("Y")) {
+				System.out.println("현재 subscribeyn : " + subscribeyn);
+				paymentDAO.updatePayment(pmseq);
+			}
 			
 			paymentDAO.insertPayment(paymentVO);
 			

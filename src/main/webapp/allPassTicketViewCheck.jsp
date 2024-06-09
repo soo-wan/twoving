@@ -12,82 +12,72 @@
 		<h1 style="color: white; margin: 0 auto; margin-top: 100px; margin-bottom: 30px;">변경할 이용권을 선택하세요</h1>
 </div>
 <div style="display:flex; flex-direction: column;">
-	<form>
+	<form method="post" name="passTicketForm">
+	<input type="hidden" name="pmseq" value="${paymentVO.pmseq}">
+	<input type="hidden" name="subscribeyn" value="Y">
 	<div class="sub_contents" style="display:flex; flex-direction: column;">
 	<section style="display:flex;">
 		<div class="passTicketSelect" style="width: 100%; display:flex; justify-content: space-between;">
 			<c:choose>
 				<c:when test="${paymentVO.productname eq '광고형 스탠다드'}">
-					<div class="advertiseStandard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:red;">
+					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
-						<input type="hidden" name="productname" value='광고형 스탠다드'>
 					</div>
-					<div class="basic" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
-						<input type="hidden" name="productname" value='베이직'>
 					</div>
-					<div class="standard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
-						<input type="hidden" name="productname" value='스탠다드'>
 					</div>
-					<div class="premium" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 30%;color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:gray;">
+					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%;color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
-						<input type="hidden" name="productname" value='프리미엄'>
 					</div>
+					<input type="hidden" id="productname" name="productname" value=''>
 				</c:when>
 				<c:when test="${paymentVO.productname eq '베이직'}">
-					<div class="advertiseStandard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
-						<input type="hidden" name="productname" value='광고형 스탠다드'>
 					</div>
-					<div class="basic" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:red;">
+					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
-						<input type="hidden" name="productname" value='베이직'>
 					</div>
-					<div class="standard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
-						<input type="hidden" name="productname" value='스탠다드'>
 					</div>
-					<div class="premium" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:gray;">
+					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
-						<input type="hidden" name="productname" value='프리미엄'>
 					</div>
+					<input type="hidden" id="productname" name="productname" value=''>
 				</c:when>
 				<c:when test="${paymentVO.productname eq '스탠다드'}">
-					<div class="advertiseStandard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
-						<input type="hidden" name="productname" value='광고형 스탠다드'>
 					</div>
-					<div class="basic" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)"  style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원')" onMouseOver="" onMouseOut=""  style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
-						<input type="hidden" name="productname" value='베이직'>
 					</div>
-					<div class="standard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:red;">
+					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 						<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
-						<input type="hidden" name="productname" value='스탠다드'>
 					</div>
-					<div class="premium" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:gray;">
+					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
-						<input type="hidden" name="productname" value='프리미엄'>
 					</div>
+					<input type="hidden" id="productname" name="productname" value=''>
 				</c:when>
 				<c:when test="${paymentVO.productname eq '프리미엄'}">
-					<div class="advertiseStandard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
-						<input type="hidden" name="productname" value='광고형 스탠다드'>
 					</div>
-					<div class="basic" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
-						<input type="hidden" name="productname" value='베이직'>
 					</div>
-					<div class="standard" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:gray;">
+					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
-						<input type="hidden" name="productname" value='스탠다드'>
 					</div>
-					<div class="premium" onClick="" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:red;">
+					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c;">
 						<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
-						<input type="hidden" name="productname" value='프리미엄'>
 					</div>
+					<input type="hidden" id="productname" name="productname" value=''>
 				</c:when>
 			</c:choose>
 		</div>
@@ -101,9 +91,8 @@
 					<th>월간요금</th>
 				</tr>
 				<tr>
-					<td style="color:red;">
-						5,500원
-						<input type="hidden" name="paymentprice" value='5,500원'/>	
+					<td style="">
+						5,500원	
 					</td>
 					<td>9,500원</td>
 					<td>13,500원</td>
@@ -113,7 +102,7 @@
 					<th>동시시청</th>
 				</tr>
 				<tr>
-					<td style="color:red;">2대</td>
+					<td style="">2대</td>
 					<td>1대</td>
 					<td>2대</td>
 					<td>4대</td>
@@ -122,7 +111,7 @@
 					<th>프로필</th>
 				</tr>
 				<tr>
-					<td style="color:red;">4개</td>
+					<td style="">4개</td>
 					<td>4개</td>
 					<td>4개</td>
 					<td>4개</td>
@@ -131,7 +120,7 @@
 				<th>화질</th>
 			</tr>
 			<tr>
-				<td style="color:red;">1080p</td>
+				<td style="">1080p</td>
 				<td>720p</td>
 				<td style="margin-left:60px;">1080p</td>
 				<td>1080p(4K 일부)</td>
@@ -140,7 +129,7 @@
 				<th>콘텐츠 다운로드</th>
 			</tr>
 			<tr>
-				<td style="color:red;">15회</td>
+				<td style="">15회</td>
 				<td>200회</td>
 				<td>300회</td>
 				<td>400회</td>
@@ -149,7 +138,7 @@
 				<th>모바일,태블릿,PC,TV지원</th>
 			</tr>
 			<tr>
-				<td style="color:red;"><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
+				<td style=""><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
@@ -158,11 +147,12 @@
 				<th>광고</th>
 			</tr>
 			<tr>
-				<td style="color:red;"><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
+				<td style=""><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 			</tr>
+			<input type="hidden" id="paymentprice" name="paymentprice" value=''/>
 			</c:when>
 			<c:when test="${paymentVO.productname eq '베이직'}">
 				<tr>
@@ -170,9 +160,8 @@
 				</tr>
 				<tr>
 					<td>5,500원</td>
-					<td style="color:red;">
-						9,500원
-						<input type="hidden" name="paymentprice" value='9,500원'/>	
+					<td style="">
+						9,500원	
 					</td>
 					<td>13,500원</td>
 					<td>17,000원</td>
@@ -182,7 +171,7 @@
 				</tr>
 				<tr>
 					<td>2대</td>
-					<td  style="color:red;">1대</td>
+					<td  style="">1대</td>
 					<td>2대</td>
 					<td>4대</td>
 				</tr>
@@ -191,7 +180,7 @@
 				</tr>
 				<tr>
 					<td>4개</td>
-					<td  style="color:red;">4개</td>
+					<td  style="">4개</td>
 					<td>4개</td>
 					<td>4개</td>
 			</tr>
@@ -200,7 +189,7 @@
 			</tr>
 			<tr>
 				<td>1080p</td>
-				<td style="color:red;">720p</td>
+				<td style="">720p</td>
 				<td style="margin-left:60px;">1080p</td>
 				<td>1080p(4K 일부)</td>
 			</tr>
@@ -209,7 +198,7 @@
 			</tr>
 			<tr>
 				<td>15회</td>
-				<td style="color:red;">200회</td>
+				<td style="">200회</td>
 				<td>300회</td>
 				<td>400회</td>
 			</tr>
@@ -218,7 +207,7 @@
 			</tr>
 			<tr>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
-				<td style="color:red;"><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
+				<td style=""><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 			</tr>
@@ -227,10 +216,11 @@
 			</tr>
 			<tr>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
-				<td style="color:red;"><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
+				<td style=""><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 			</tr>
+			<input type="hidden" id="paymentprice" name="paymentprice" value=''/>
 			</c:when>
 			<c:when test="${paymentVO.productname eq '스탠다드'}">
 				<tr>
@@ -239,9 +229,8 @@
 				<tr>
 					<td>5,500원</td>
 					<td>9,500원</td>
-					<td style="color:red;">
+					<td style="">
 						13,500원
-						<input type="hidden" name="paymentprice" value='13,500원'/>	
 					</td>
 					<td>17,000원</td>
 				</tr>
@@ -251,7 +240,7 @@
 				<tr>
 					<td>2대</td>
 					<td>1대</td>
-					<td style="color:red;">2대</td>
+					<td style="">2대</td>
 					<td>4대</td>
 				</tr>
 				<tr>
@@ -260,7 +249,7 @@
 				<tr>
 					<td>4개</td>
 					<td>4개</td>
-					<td style="color:red;">4개</td>
+					<td style="">4개</td>
 					<td>4개</td>
 			</tr>
 			<tr>
@@ -278,7 +267,7 @@
 			<tr>
 				<td>15회</td>
 				<td>200회</td>
-				<td style="color:red;">300회</td>
+				<td style="">300회</td>
 				<td>400회</td>
 			</tr>
 			<tr>
@@ -287,7 +276,7 @@
 			<tr>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
-				<td  style="color:red;"><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
+				<td  style=""><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 			</tr>
 			<tr>
@@ -296,9 +285,10 @@
 			<tr>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
-				<td style="color:red;"><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
+				<td style=""><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 			</tr>
+			<input type="hidden" id="paymentprice" name="paymentprice" value=''/>
 			</c:when>
 			<c:when test="${paymentVO.productname eq '프리미엄'}">
 				<tr>
@@ -308,9 +298,8 @@
 					<td>5,500원</td>
 					<td>9,500원</td>
 					<td>13,500원</td>
-					<td style="color:red;">
+					<td style="">
 						17,000원
-						<input type="hidden" name="paymentprice" value='17,000원'/>	
 					</td>
 				</tr>
 				<tr>
@@ -320,7 +309,7 @@
 					<td>2대</td>
 					<td>1대</td>
 					<td>2대</td>
-					<td style="color:red;">4대</td>
+					<td style="">4대</td>
 				</tr>
 				<tr>
 					<th>프로필</th>
@@ -329,7 +318,7 @@
 					<td>4개</td>
 					<td>4개</td>
 					<td>4개</td>
-					<td style="color:red;">4개</td>
+					<td style="">4개</td>
 			</tr>
 			<tr>
 				<th>화질</th>
@@ -338,7 +327,7 @@
 				<td>1080p</td>
 				<td>720p</td>
 				<td style="margin-left:60px;">1080p</td>
-				<td style="color:red;">1080p(4K 일부)</td>
+				<td style="">1080p(4K 일부)</td>
 			</tr>
 			<tr>
 				<th>콘텐츠 다운로드</th>
@@ -347,7 +336,7 @@
 				<td>15회</td>
 				<td>200회</td>
 				<td>300회</td>
-				<td style="color:red;">400회</td>
+				<td style="">400회</td>
 			</tr>
 			<tr>
 				<th>모바일,태블릿,PC,TV지원</th>
@@ -356,7 +345,7 @@
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
-				<td style="color:red;"><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
+				<td style=""><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 			</tr>
 			<tr>
 				<th>광고</th>
@@ -365,8 +354,9 @@
 				<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 				<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
-				<td style="color:red;"><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
+				<td style=""><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 			</tr>
+			<input type="hidden" id="paymentprice" name="paymentprice" value=''/>
 			</c:when>
 		</c:choose>
 		</table>

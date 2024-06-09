@@ -128,13 +128,14 @@ public class PaymentDAO {
 	public void insertPayment(PaymentVO paymentVO) {
 		con = DBman.getConnection();
 		
-		String sql = "insert into payment(productname, paymentprice) values(?,?)";
+		String sql = "insert into payment(subscribeyn, productname, paymentprice) values(?,?,?)";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
 			
-			pstmt.setString(1, paymentVO.getProductname());
-			pstmt.setString(2, paymentVO.getPaymentprice());
+			pstmt.setString(1, paymentVO.getSubscribeyn());
+			pstmt.setString(2, paymentVO.getProductname());
+			pstmt.setString(3, paymentVO.getPaymentprice());
 			
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -178,24 +179,23 @@ public class PaymentDAO {
 		return paymentVO;
 	}
 
-//	public void updatePayment(int pmseq, String subscribeyn) {
-//		con = DBman.getConnection();
-//		
-//		String sql="update payment set subscribeyn=? where pmseq=?";
-//		
-//		try {
-//			pstmt = con.prepareStatement(sql);
-//			
-//			pstmt.setString(1, subscribeyn);
-//			pstmt.setInt(2, pmseq);
-//			
-//			
-//			
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		} finally {
-//			DBman.close(con, pstmt, rs);
-//		}
-//	}
+	public void updatePayment(int pmseq) {
+		con = DBman.getConnection();
+		
+		String sql="update payment set subscribeyn='N' where pmseq=?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setInt(1, pmseq);
+			
+			pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}		
+	}
 
 }

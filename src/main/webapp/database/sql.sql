@@ -109,6 +109,8 @@ SELECT* FROM notice;
 
 select* from payment;
 
+delete from payment where pmseq=19;
+
 insert into faq(inquirylist, subject, content) values('전체', '	
 [기타] 티빙 고객센터 카카오 챗봇 및 실시간 채팅 상담 이용하기', '새롭게 바뀐 티빙 카카오 챗봇에서 궁금한 점을 빠르게 해결해 보세요. 
 더욱 자세한 내용이 궁금하시다면 상담사 연결을 통해 실시간 채팅 상담 도 가능합니다. 
