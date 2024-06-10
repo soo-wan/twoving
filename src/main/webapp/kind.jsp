@@ -5,7 +5,7 @@
 <section>
 <div class="sub_page">
 		<article style="flex-direction: column;">		
-			<h2 style="color:white;">${kind}</h2>
+			<h2 style="color:white; margin-left:55px;">${kind}</h2>
 			<c:choose>
 				<c:when test="${kind == '시리즈' }">
 					<div id="genre" style="display:flex;">

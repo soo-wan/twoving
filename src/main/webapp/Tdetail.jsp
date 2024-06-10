@@ -8,12 +8,12 @@
 		<article>
 			<form method="post" name="form" id="form">
 				<div id="background" 
-				style="background-image: url('image2/${productVO.savefilename}');"></div>
+				style="background-color : #282828;"></div>
 				<div id="container">
 					<div id="containerA">
-						<div id="title" style="-webkit-text-stroke: 1px black;">${productVO.title}</div>
+						<div id="title" >${productVO.title}</div>
 						<div id="tagtag">
-							<div id="tag" style="-webkit-text-stroke: 1px black;">${productVO.age}세 &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}</div>
+							<div id="tag" >${productVO.age}세 &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}</div>
 							<div class="share">
 								<div class="shareclick"><img src="images/snsicons.png" ></div>
 							</div>					
@@ -36,7 +36,7 @@
 						
 						
 								
-						<div id="content" style="-webkit-text-stroke: 1px black;">${productVO.content}</div>
+						<div id="content" >${productVO.content}</div>
 					</div>
 						
 					<div id="containerB">							

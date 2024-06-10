@@ -49,15 +49,15 @@
          <div class="mypage"><a href="#"><img src="images/logo.png"  style="width:40px; height:40px; "></a>
             <div class="profileclick" >
                   <br>
-                  <div><a href="twoving.do?command=mypage">My페이지</a></div>
+                  <div class="nnn"><a href="twoving.do?command=mypage" >My페이지</a></div>
                   <br>
-                  <div><a href="twoving.do?command=mypage">이용권</a></div>
+                  <div class="nnn"><a href="twoving.do?command=mypage" >이용권</a></div>
                   <br>
-                  <div><a href="twoving.do?command=mypage">쿠폰등록</a></div>
+                  <div class="nnn"><a href="twoving.do?command=mypage" >쿠폰등록</a></div>
                   <br>
-                  <div><a href="twoving.do?command=notice">고객센터</a></div>
+                  <div class="nnn"><a href="twoving.do?command=notice" >고객센터</a></div>
                   <br>
-                  <div><a href="twoving.do?command=logout">로그아웃</a></div>
+                  <div class="nnn"><a href="twoving.do?command=logout" >로그아웃</a></div>
             </div>
          </div>      
       </nav>   

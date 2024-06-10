@@ -4,7 +4,7 @@
 <br>
 <br>
 <div class="center">
-	<div class="left" onClick="moveLeft()"><img src="images/화살표2왼.jpg" ></div>
+	<div class="left" style="cursor: pointer;" onClick="moveLeft()"><img src="images/화살표2왼.jpg" ></div>
 	<div id="img">
 			<div class="mainmain" id="mainmain">
 				<c:forEach items="${mainList}" var="productVO">
@@ -12,7 +12,7 @@
 				</c:forEach>	
 			</div>					
 	</div>
-	<div class="right" onclick="moveRight()"><img src="images/화살표2오.jpg" ></div>	
+	<div class="right" style="cursor: pointer;" onclick="moveRight()"><img src="images/화살표2오.jpg" ></div>	
 </div>
 
 

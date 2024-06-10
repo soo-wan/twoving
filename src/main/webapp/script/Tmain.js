@@ -115,10 +115,20 @@ $(function(){
         
 $(function(){
    $('#d').click(function(){
-                $('.share').slideToggle(300);
+                $('.share').slideToggle(0);
             $(this).toggleClass('active');
          });
-         });        
+         });
+         
+         
+/*$(".nnn").hover(
+             function(){
+                    $(this).css({
+                        "background-color" : "red",
+                        "color" : "white"
+                        
+                    });
+                });*/              
 
 
         
