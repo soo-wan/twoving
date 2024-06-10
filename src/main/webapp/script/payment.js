@@ -58,10 +58,11 @@ function resetColor(element) {
      
 }
 
-function colorRedOrGray(productname, paymentprice) {
+function colorRedOrGray(productname, paymentprice, ptseq) {
 	
 	document.getElementById("productname").value = productname;
 	document.getElementById("paymentprice").value = paymentprice;
+	document.getElementById("ptseq").value = ptseq;
 	
     // 현재 클릭된 div 요소의 배경색을 확인하여 색상을 변경합니다.
     var backgroundColor = element.style.backgroundColor;

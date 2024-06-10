@@ -3,6 +3,7 @@ package com.himedia.twoving.controller.action.help;
 import java.io.IOException;
 
 import com.himedia.twoving.action.Action;
+import com.himedia.twoving.dao.PassTicketDAO;
 import com.himedia.twoving.dao.PaymentDAO;
 import com.himedia.twoving.vo.MemberVO;
 import com.himedia.twoving.vo.PaymentVO;
@@ -26,6 +27,7 @@ public class InsertPassTicketAction implements Action {
 			rd.forward(request, response);
 		}else {
 			int pmseq = Integer.parseInt(request.getParameter("pmseq"));
+			int ptseq = Integer.parseInt(request.getParameter("ptseq"));
 			
 			String subscribeyn = request.getParameter("subscribeyn");
 			String productname = request.getParameter("productname");
@@ -35,11 +37,18 @@ public class InsertPassTicketAction implements Action {
 			System.out.println("productname : " + productname);
 			PaymentVO paymentVO = new PaymentVO();
 			
+			PaymentDAO paymentDAO = PaymentDAO.getInstance();
+			PassTicketDAO passTicketDAO = PassTicketDAO.getInstance();
+			
+			passTicketDAO.updateMemberPassTicket(memberVO.getUserid(), ptseq);
+			
+//			MemberVO memberVO1 = new MemberVO();
+//			memberVO1.setPtseq(ptseq);
+			
 			paymentVO.setSubscribeyn(subscribeyn);
 			paymentVO.setProductname(productname);
 			paymentVO.setPaymentprice(paymentprice);
 			
-			PaymentDAO paymentDAO = PaymentDAO.getInstance();
 			
 			if(subscribeyn.equals("Y")) {
 				System.out.println("현재 subscribeyn : " + subscribeyn);

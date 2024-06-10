@@ -20,61 +20,61 @@
 		<div class="passTicketSelect" style="width: 100%; display:flex; justify-content: space-between;">
 			<c:choose>
 				<c:when test="${paymentVO.productname eq '광고형 스탠다드'}">
-					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
+					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원', 1)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 					</div>
-					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원', 2)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
 					</div>
-					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원', 3)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 					</div>
-					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%;color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
+					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원', 4)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%;color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 					</div>
 					<input type="hidden" id="productname" name="productname" value=''>
 				</c:when>
 				<c:when test="${paymentVO.productname eq '베이직'}">
-					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원', 1)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 					</div>
-					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
+					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원', 2)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
 					</div>
-					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원', 3)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 					</div>
-					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
+					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원', 4)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 					</div>
 					<input type="hidden" id="productname" name="productname" value=''>
 				</c:when>
 				<c:when test="${paymentVO.productname eq '스탠다드'}">
-					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원', 1)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 					</div>
-					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원')" onMouseOver="" onMouseOut=""  style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원', 2)" onMouseOver="" onMouseOut=""  style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
 					</div>
-					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
+					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원', 3)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 						<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 					</div>
-					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
+					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원', 4)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 					</div>
 					<input type="hidden" id="productname" name="productname" value=''>
 				</c:when>
 				<c:when test="${paymentVO.productname eq '프리미엄'}">
-					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원', 1)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 					</div>
-					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="basic" onClick="colorRedOrGray('베이직', '9,500원', 2)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
 					</div>
-					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원', 3)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 					</div>
-					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c;">
+					<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원', 4)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c;">
 						<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 					</div>
 					<input type="hidden" id="productname" name="productname" value=''>
@@ -258,7 +258,7 @@
 			<tr>
 				<td>1080p</td>
 				<td>720p</td>
-				<td style="margin-left:60px; color:red;">1080p</td>
+				<td style="margin-left:60px;">1080p</td>
 				<td>1080p(4K 일부)</td>
 			</tr>
 			<tr>
