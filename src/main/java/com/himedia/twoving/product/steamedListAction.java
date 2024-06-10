@@ -20,16 +20,15 @@ public class steamedListAction implements Action {
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		
-		if(mvo ==null) {
-			response.sendRedirect("twoving.do?command=loginForm");
-		}else {
-			
+		if( mvo == null ) {
+			response.sendRedirect("shop.do?command=loginForm");
+		} else {
 			steamedDao sdao = steamedDao.getInstance();
-			ArrayList<steamedVO> list = sdao.selectCart(mvo.getUserid());
-			
-			
-			request.setAttribute("steamedList", list);
-			request.getRequestDispatcher("steamedtlist.jsp").forward(request, response);
+			ArrayList<steamedVO> list = sdao.steamedview( mvo.getUserid() );
+
+		
+		request.setAttribute("steamedList", list);
+		request.getRequestDispatcher("mypage.jsp").forward(request, response);
 		}
 
 	}

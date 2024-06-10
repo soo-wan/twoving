@@ -411,22 +411,35 @@ insert into member(userid, pwd, name, phone, email)
 values('two','2222','김길동','011-032-7777','aac@abc.com');
 
 
-drop table steamed;
-
 CREATE TABLE `steamed` (
-	`sseq`	int	NOT NULL AUTO_INCREMENT,	
+	`sseq`	int	NOT NULL AUTO_INCREMENT,
 	`pseq`	int	NOT NULL,
 	`userid`	VARCHAR(45)	NOT NULL,
 	`indate`	DATETIME	NOT NULL	DEFAULT now(),
+	`result` char(1) NOT NULL	DEFAULT 'N',
 	PRIMARY KEY (sseq)
 );
-
 
 ALTER TABLE `steamed` ADD CONSTRAINT `FK_product_TO_steamed_1` 
 FOREIGN KEY (`pseq`)
 REFERENCES `product` (`pseq`)
 ON UPDATE RESTRICT
 ON DELETE RESTRICT;
+
+
+select*from steamed; 
+
+delete from steamed whreh sseq=;
+
+drop table steamed;
+
+--찜목록
+create or replace view steamed_view
+as
+select s.sseq, s.pseq, s.userid, s.indate, s.result, p.kind as kind, m.name as mname, p.savefilename as savefilename, p.title as ptitle  from steamed s, product p, member m
+where s.pseq=p.pseq and s.userid=m.userid;
+
+select * from steamed_view;
 
 
 select* from member;
@@ -447,13 +460,7 @@ create or replace view best_pro_view
 as
 select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' order by pseq desc limit 7;
 
---찜목록
-create or replace view steamed_view
-as
-select s.sseq, s.userid, m.name, p.pseq, p.savefilename from steamed s, product p, member m
-where s.pseq=p.pseq and s.userid=m.userid;
 
-select * from steamed_view;
 
 
 

@@ -17,13 +17,24 @@
 							<div class="share">
 								<div class="shareclick"><img src="images/snsicons.png" ></div>
 							</div>					
-						</div>	
-						<div id="linkicon">
-							<div class="a" id="b"><a href="">시청하기</a></div> 
-							<div class="a" id="c"><a href="#" onClick='steamed("${productVO.pseq}")' ><img src = images/emptyheart.png style="width:55px; height:55px;" id="heart"></a><br>찜</div>
-							<%-- <input type="hidden" name="pseq" value="${productVO.pseq}"/> --%>
-							<div class="a" id="d"><a href="#" onClick="share();"><img src = images/공유.png style="width:55px; height:55px;"></a><br>공유</div>
 						</div>
+							
+						<div id="linkicon">
+							<div class="a" id="b"><a href="">시청하기</a></div>
+							<c:choose>
+							<c:when test="${ccc.isEmpty()}">
+							<div class="a" id="c"><a href="twoving.do?command=steamedInsert&pseq=${productVO.pseq}&result=Y"><img src = images/emptyheart.png style="width:55px; height:55px;" id="heart"></a><br>찜</div>				
+							</c:when>
+							<c:otherwise>
+							<div class="a" id="c"><a href="twoving.do?command=steamedDelete&pseq=${productVO.pseq}&result=N"><img src = images/redheart.png style="width:55px; height:55px;" id="heart"></a><br>찜</div>
+							</c:otherwise>
+							</c:choose>
+							<%-- <input type="hidden" name="pseq" value="${productVO.pseq}"/> --%>
+							
+							<div class="a" id="d"><a href="#" ><img src = images/공유.png style="width:55px; height:55px;"></a><br>공유</div>
+						</div>
+						
+						
 								
 						<div id="content" style="-webkit-text-stroke: 1px black;">${productVO.content}</div>
 					</div>

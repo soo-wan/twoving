@@ -76,24 +76,24 @@ function go_search(command){
 }
   
         
-var a =true;   
+/*var a =true;   */
 
-function steamed(){
+/*function steamed(){
     
     if(a){
 		document.getElementById("heart").src = "images/redheart.png";
-       /* document.getElementById("c").style.background = 'red';*/
-        /*document.form.action="twoving.do?command=steamedInsert&pseq=" + pseq ;
-        console.log("Form action 설정됨: ", document.form.action);*/
-		/*document.form.submit();*/
+        document.getElementById("c").style.background = 'red';
+        document.form.action="twoving.do?command=steamedInsert&pseq=" + pseq ;
+        console.log("Form action 설정됨: ", document.form.action);
+		document.form.submit();
      return  a = false;
     } else {
         document.getElementById("heart").src = "images/emptyheart.png";
-        /*document.form.action="twoving.do?command=steamedDelete";
-        console.log("Form action 설정됨: ", document.form.action);*/
+        document.form.action="twoving.do?command=steamedDelete";
+        console.log("Form action 설정됨: ", document.form.action);
       return  a = true;
     }
-}
+}*/
 
 
 		
