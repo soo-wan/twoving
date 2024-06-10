@@ -13,7 +13,7 @@
 	<div style="display:flex; flex-direction: column;">
 		<form method="post" name="passTicketForm">
 			<input type="hidden" name="pmseq" value="${paymentVO.pmseq}">
-			<input type="hidden" name="subscribeyn" value="Y">
+			<input type="hidden" name="subscribeyn" value="${paymentVO.subscribeyn}">
 			<div class="sub_contents" style="display:flex; flex-direction: column;">
 			<section style="display:flex;">
 			<div class="passTicketSelect" style="width: 100%; display:flex; justify-content: space-between;">
@@ -31,25 +31,25 @@
 						<input type="hidden" id="productname" name="productname" value="">
 					</c:when>
 					<c:when test="${paymentVO.productname eq '스탠다드'}">
-						<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
+						<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 						</div>
-						<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
+						<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
 							<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 						</div>
-						<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#191919;">
+						<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 						</div>
 						<input type="hidden" id="productname" name="productname" value="">
 					</c:when>
 					<c:when test="${paymentVO.productname eq '프리미엄'}">
-						<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
+						<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원')" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 						</div>
-						<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
+						<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원')" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 						</div>
-						<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="hoverEffect(this)" onMouseOut="resetColor(this)" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c;">
+						<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원')" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c;">
 							<p style="font-weight: bold; color:white; text-align:center;">프리미엄</p>
 						</div>
 						<input type="hidden" id="productname" name="productname" value="">

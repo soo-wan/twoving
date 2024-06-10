@@ -14,7 +14,7 @@
 <div style="display:flex; flex-direction: column;">
 	<form method="post" name="passTicketForm">
 	<input type="hidden" name="pmseq" value="${paymentVO.pmseq}">
-	<input type="hidden" name="subscribeyn" value="Y">
+	<input type="hidden" name="subscribeyn" value="${paymentVO.subscribeyn}">
 	<div class="sub_contents" style="display:flex; flex-direction: column;">
 	<section style="display:flex;">
 		<div class="passTicketSelect" style="width: 100%; display:flex; justify-content: space-between;">

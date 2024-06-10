@@ -93,7 +93,7 @@ public class PaymentDAO {
 		
 		con = DBman.getConnection();
 		
-		String sql = "select* from payment where productname=?";
+		String sql = "select* from payment where productname=? and subscribeyn='Y'";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
