@@ -19,10 +19,10 @@
 			<div class="passTicketSelect" style="width: 100%; display:flex; justify-content: space-between;">
 				<c:choose>
 					<c:when test="${paymentVO.productname eq '광고형 스탠다드'}">
-						<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원', 1)" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
+						<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원', 1)" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c; position: relative;">
 							<c:choose>
 								<c:when test="${memberVO.ptseq == 1}">
-									<div class="montlyconfirm" style="background-color:white; border-radius: 15px; width:130%; display: inline-block; margin-top: -50px; padding: 5px;" >
+									<div class="montlyconfirm" style="background-color:white; border-radius: 15px; width:80%; display: inline-block; padding: 5px; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);" >
 										<span style="color:red; font-size: 80%;">월간 구독중</span>
 									</div>
 								</c:when>
@@ -55,10 +55,10 @@
 						<div class="advertiseStandard" onClick="colorRedOrGray('광고형 스탠다드', '5,500원', 1)" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 						</div>
-						<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원', 3)" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c;">
+						<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원', 3)" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#ff153c; position: relative;">
 							<c:choose>
 								<c:when test="${memberVO.ptseq == 3}">
-									<div class="montlyconfirm" style="background-color:white; border-radius: 15px; width:130%; display: inline-block; margin-top: -50px; padding: 5px;" >
+									<div class="montlyconfirm" style="background-color:white; border-radius: 15px; width:80%; display: inline-block; padding: 5px; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);" >
 										<span style="color:red; font-size: 80%;">월간 구독중</span>
 									</div>
 								</c:when>
@@ -78,10 +78,10 @@
 						<div class="standard" onClick="colorRedOrGray('스탠다드', '13,900원', 3)" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color:#191919;">
 							<p style="font-weight: bold; color:white; text-align:center;">스탠다드</p>
 						</div>
-						<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원', 4)" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c;">
+						<div class="premium" onClick="colorRedOrGray('프리미엄', '17,000원', 4)" onMouseOver="" onMouseOut="" style="border: 1px solid #4d4d4d; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; background-color:#ff153c; position: relative;">
 							<c:choose>
 								<c:when test="${memberVO.ptseq == 4}">
-									<div class="montlyconfirm" style="background-color:white; border-radius: 15px; width:130%; display: inline-block; margin-top: -50px; padding: 5px;" >
+									<div class="montlyconfirm" style="background-color:white; border-radius: 15px; width:80%; display: inline-block; padding: 5px; position: absolute; top: -20px; left: 50%; transform: translateX(-50%);" >
 										<span style="color:red; font-size: 80%;">월간 구독중</span>
 									</div>
 								</c:when>
