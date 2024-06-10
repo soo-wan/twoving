@@ -13,7 +13,7 @@
 					<div id="containerA">
 						<div id="title" >${productVO.title}</div>
 						<div id="tagtag">
-							<div id="tag" >${productVO.age}세 &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}</div>
+							<div id="tag" >${productVO.age} &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}</div>
 							<div class="share">
 								<div class="shareclick"><img src="images/snsicons.png" ></div>
 							</div>					

@@ -16,7 +16,7 @@
 							<br>
 							<div id="result1">요즘 인기있는 검색어를 추천해 드릴께요.</div>
 							<br><br>
-							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=34">유퀴즈</a></div>
+							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=34">유퀴즈 온더 블럭!</a></div>
 							<br>
 							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=44">여고추리반</a></div>
 							<br>
