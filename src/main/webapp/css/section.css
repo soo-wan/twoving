@@ -69,13 +69,14 @@ section article .costitle{
 	color:white;
 	font-weight: bold;
 	font-size: 150%;
-	
+	margin-top: 30px;
 }
 
 section article .cosmenu_wrapper{
 	display:flex;
 	border-bottom: 1px solid gray;
 	margin-bottom: 30px;
+	margin-left: 50px;
 }
 
 section article .detail_size{
@@ -135,12 +136,12 @@ section article .notice_table table .trow{
 	display:flex;
 	justify-content: space-around;
 	background-color: gray;
-	opacity: 0.5;
+	width: 97%;
 }
 
-/* section article .notice_table table .trow_title{
-	
-} */
+section article .notice_table table .trow_title{
+	margin-left: 13px;
+}
 
 section article .defuse{
 	padding: 150px;
@@ -211,6 +212,7 @@ section article .policy_wrapper span{
 	color: white;
 }
 
+
 .form-box1{
 	display: flex;
 }
@@ -226,7 +228,7 @@ th{
 }
 
 .notice_table .notice_row{
-	width:100%;
+	width:95.5%;
 }
 
 .notice_table .notice_row .notice_col{

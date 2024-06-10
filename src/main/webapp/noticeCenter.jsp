@@ -4,21 +4,21 @@
 
 <section>
 	<article>
-		<div class="costitle">
+		<div class="costitle" style="">
 			<%@ include file="customercenter.jsp" %>
 		</div>
-		<div class="cosmenu_wrapper">
+		<div class="cosmenu_wrapper" style="">
 			<%@ include file="cosmenu_wrapper.jsp" %>
 		</div>
 		
 		<hr>
 		
-		<div class="notice_table" style="margin-left: -20px;">
+		<div class="notice_table" style="margin-left: 18px;">
 			<table>
-					<tr class="trow" style="opacity: 0.32;">
+					<tr class="trow" style="background-color: rgba(255, 255, 255, 0.2);">
 						<th class="trow_title" style="color:white;">번호</th>
 						<th class="trow_title" style="color:white;">제목</th>
-						<th class="trow_title" style="color:white;">등록일</th>
+						<th class="trow_title" style="color:white; margin-left: 20px;">등록일</th>
 						<th class="trow_title" style="color:white;">조회수</th>
 					</tr>
 					<c:forEach items="${noticeList}" var="notice">

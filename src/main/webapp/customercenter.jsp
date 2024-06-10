@@ -8,6 +8,6 @@
 <link rel = "stylesheet" type =  "text/css" href = "css/section.css"/>
 </head>
 <body>
-	<h4 style="color:white; font-weight: bold; font-size: 150%;">고객센터</h4>
+	<h4 style="color:white; font-weight: bold; font-size: 120%; margin-left: 58px;">고객센터</h4>
 </body>
 </html>
