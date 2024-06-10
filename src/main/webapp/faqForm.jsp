@@ -14,22 +14,22 @@
 		
 		<br>
 		
-		<div class="search">
+		<div class="search" style="background-color: rgba(255, 255, 255, 0.2); margin-left: 40px; width: 89%;">
 			<!-- 
 			<div class="qes1">
 				<input type="text" id="searchInput" name="key" value="${key}" placeholder="검색어를 입력해주세요">
 				<a href="javascript:void(0);" id="link"><img src="images/search.png" width="60" onClick="return searchAndRedirect();"></a> 
 			</div>
 			-->
-			<div class="qes2" style="">
-				<span style="font-weight:bold; color:white;">자주 묻는 질문</span>&nbsp;&nbsp;
-				<a href="twoving.do?command=memberCustomerLogin&inquirylist=회원/로그인"><span>로그인이 안돼요</span></a> &nbsp;&nbsp; |  &nbsp;&nbsp;
-				<a href="twoving.do?command=passTicket&inquirylist=이용권/결제"><span>이용권이 있는 계정이 무엇인지 찾고 싶어요</span></a> &nbsp;&nbsp; |  &nbsp;&nbsp;
-				<a href="twoving.do?command=passTicket&inquirylist=이용권/결제"><span>정기결제수단 변경은 어떻게 하나요?</span></a>
+			<div class="qes2" style="color:white; font-weight:bold;">
+				<span style="font-weight:bold;">자주 묻는 질문</span>&nbsp;&nbsp;
+				<a href="twoving.do?command=memberCustomerLogin&inquirylist=회원/로그인"><span style="color:white;">로그인이 안돼요</span></a> &nbsp;&nbsp; |  &nbsp;&nbsp;
+				<a href="twoving.do?command=passTicket&inquirylist=이용권/결제"><span style="color:white;">이용권이 있는 계정이 무엇인지 찾고 싶어요</span></a> &nbsp;&nbsp; |  &nbsp;&nbsp;
+				<a href="twoving.do?command=passTicket&inquirylist=이용권/결제"><span style="color:white;">정기결제수단 변경은 어떻게 하나요?</span></a>
 			</div>
 		</div>
 		
-		<div class="inquiryCategory">
+		<div class="inquiryCategory" style="margin-left: 10px;	">
 			<a href="twoving.do?command=faq">전체</a> | &nbsp;&nbsp;&nbsp;&nbsp;
 			<a href="twoving.do?command=memberCustomerLogin&inquirylist=회원/로그인">회원/로그인</a> | &nbsp;&nbsp;&nbsp;
 			<a href="twoving.do?command=passTicket&inquirylist=이용권/결제">이용권/결제</a> | &nbsp;&nbsp;&nbsp;

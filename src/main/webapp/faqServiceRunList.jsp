@@ -14,7 +14,7 @@
 		
 		<br>
 		
-		<div class="search">
+		<div class="search" style="background-color: rgba(255, 255, 255, 0.2); margin-left: 40px; width: 89%;">
 			<!-- <div class="qes1">
 				<input type="text"  name="searchingname" placeholder="검색어를 입력해주세요">
 				<a href="twoving.do?command=loadingError&inquirylist=재생/오류" onClick=""><img src="images/search.png" width="60"></a>
