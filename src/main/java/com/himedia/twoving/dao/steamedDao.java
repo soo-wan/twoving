@@ -68,14 +68,14 @@ public class steamedDao {
 		return svo;
 	}
 	
-	public ArrayList<steamedVO> steamedview(String userid, int pseq) {
+	public ArrayList<steamedVO> steamedview(String userid , int pseq) {
 		ArrayList<steamedVO> list = new ArrayList<steamedVO>();
 		con = DBman.getConnection();
 		String sql = "select * from steamed_view where userid=? and pseq=?";
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1,userid);
-			pstmt.setInt(2, pseq);
+			pstmt.setInt(2,pseq);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				steamedVO svo = new steamedVO();

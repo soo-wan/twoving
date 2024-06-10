@@ -1,6 +1,7 @@
 package com.himedia.twoving.product;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
 
 import com.himedia.twoving.action.Action;
@@ -17,6 +18,9 @@ public class steamedListAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		int pseq = Integer.parseInt(request.getParameter("pseq"));
+		
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		
@@ -24,7 +28,7 @@ public class steamedListAction implements Action {
 			response.sendRedirect("shop.do?command=loginForm");
 		} else {
 			steamedDao sdao = steamedDao.getInstance();
-			ArrayList<steamedVO> list = sdao.steamedview( mvo.getUserid() );
+			ArrayList<steamedVO> list = sdao.steamedview(mvo.getUserid(), pseq);
 
 		
 		request.setAttribute("steamedList", list);

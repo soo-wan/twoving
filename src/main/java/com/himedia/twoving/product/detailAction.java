@@ -36,7 +36,7 @@ public class detailAction implements Action {
 	    ProductVO pvo = pdao.getProduct(pseq);
 	      
 	    	steamedDao sdao = steamedDao.getInstance();
-	    	ArrayList<steamedVO> list = sdao.steamedview(mvo.getUserid(),pseq);
+	    	ArrayList<steamedVO> list = sdao.steamedview(mvo.getUserid(), pseq);
 		
 		request.setAttribute("result", result);
 		request.setAttribute("ccc", list);
