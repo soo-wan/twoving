@@ -8,12 +8,13 @@ select * from member
 
 CREATE TABLE `twoving`.`member` (
   `userid` VARCHAR(45) NOT NULL,
+  `ptseq` INT NULL,
   `pwd` VARCHAR(45) NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `phone` VARCHAR(45) NOT NULL,
+  `phone` VARCHAR(45) NULL,
   `indate` DATETIME NOT NULL DEFAULT now(),
-  `useyn` CHAR(1) NOT NULL,
+  `useyn` CHAR(1) NULL DEFAULT 'Y',
   PRIMARY KEY (`userid`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -81,6 +82,44 @@ CREATE TABLE `twoving`.`payment` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+
+CREATE TABLE `twoving`.`passticket` (
+  `ptseq` INT NOT NULL AUTO_INCREMENT,
+  `productname` VARCHAR(50) NOT NULL,
+  `monthcost` VARCHAR(50) NOT NULL,
+  `doubleview` VARCHAR(50) NOT NULL,
+  `profile` VARCHAR(50) NOT NULL,
+  `imagequality` VARCHAR(50) NOT NULL,
+  `contentdownload` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`ptseq`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+insert into passticket(productname, monthcost, doubleview, profile, imagequality, contentdownload) values('광고형 스탠다드', '5,500원', '2대', '4개', '1080p', '15회');
+insert into passticket(productname, monthcost, doubleview, profile, imagequality, contentdownload) values('베이직', '9,500원', '1대', '4개', '720p', '200회');
+insert into passticket(productname, monthcost, doubleview, profile, imagequality, contentdownload) values('스탠다드', '13,500원', '2대', '4개', '1080p', '300회');
+insert into passticket(productname, monthcost, doubleview, profile, imagequality, contentdownload) values('프리미엄', '17,000원', '4대', '4개', '1080p(4K 일부)', '400회');
+
+select* from passticket;
+
+ALTER TABLE member
+   ADD FOREIGN KEY (ptseq)
+   REFERENCES passticket (ptseq)
+   ON UPDATE RESTRICT
+   ON DELETE RESTRICT
+;
+
+ALTER TABLE member modify phone varchar(45) 
+
+insert into member(userid, ptseq, pwd, name, phone, email)
+values('one',1, '1111','김나리','017-777-7777','acc@abc.com');
+
+insert into member(userid, ptseq, pwd, name, phone, email)
+values('two',2, '2222','김길동','017-7321-7777','acc312@abc.com');
+
+select* from member;
+
 
 insert into payment(productname, paymentprice, paymentmeans) values( '광고형 스탠다드', '5,500원','Toss Pay');
 insert into payment(productname, paymentprice, paymentmeans) values( '스탠다드', '13,900원','Google Play');
@@ -551,8 +590,209 @@ insert into faq(inquirylist, subject, content) values('이용권/결제',
 기본 결제 수단으로 결제가 실패하는 경우, 보조 결제 수단으로 결제됩니다.');
 
 
+insert into faq(inquirylist, subject, content) values('재생/오류', 
+'[KBO] 중계 시청 시, 라이브 예정입니다 메세지가 확인됩니다.', 
+'KBO 재생 시, 라이브 예정입니다 메시지가 확인되신다면 이용하시는 단말기의 시간 설정이 현재 시간이 아닐 수 있습니다.
+이용하시는 단말기의 시간을 다시 한 번 확인 후 이용해 주시기 바랍니다.
+
+* 단, 티빙은 국내 서비스로 해외 시청 또는 VPN 등으로 IP 우회 이용 시 정상 시청이 어려운 점 참고 부탁드립니다.');
+
+insert into faq(inquirylist, subject, content) values('재생/오류', 
+'[다운로드] 다운로드 후 기간 만료된 콘텐츠는 어떻게 시청하나요?', 
+'모바일/태블릿 기기에 시리즈 및 영화 콘텐츠를 다운로드한 콘텐츠의 이용기간이 만료된 경우 
+다운로드 메뉴의 콘텐츠 우측 상태 버튼을 클릭하여 기간을 연장할 수 있습니다. 
+
+다운로드 콘텐츠 이용기간은 7일 연장 가능하며, 온라인 상태에서만 연장 가능한 점 참고 부탁드립니다.');
+
+insert into faq(inquirylist, subject, content) values('재생/오류', 
+'[다운로드] 콘텐츠 다운로드 화질은 선택할 수 없나요?', 
+'시리즈 및 영화 콘텐츠 다운로드 화질은 아래의 메뉴에서 선택 가능합니다. 
+
+1) 다운로드 화질 선택 방법 
+- 모바일/태블릿 티빙 앱 실행 > MY > 환경설정 > 다운로드 화질선택 > 고화질/일반화질 중 선택 (고화질은 스탠다드 이상만 가능) 
+
+2) 이용권 별 다운로드 화질 제공 
+- 광고형 스탠다드/베이직 : 일반화질 다운로드 가능 
+- 스탠다드/프리미엄 : 고화질, 일반화질 선택하여 다운로드 가능 
+
+* 콘텐츠 고화질 다운로드는 최대 1080p 화질로 다운로드 가능합니다.
+* 제공되는 최대 화질이 720p인 콘텐츠는 고화질로 다운로드해도 720p로 다운로드 될 수 있습니다.');
+
+insert into faq(inquirylist, subject, content) values('재생/오류', 
+'[다운로드] 콘텐츠 다운로드 횟수에 제한이 있나요?', 
+'콘텐츠 다운로드 횟수는 이용권 별로 다르게 제공되며, 상세 제공 횟수는 다음과 같습니다. 
+
+1) 광고형 스탠다드 이용권: 月 15회 다운로드 가능
+2) 베이직 이용권 : 月 200회 다운로드 가능 
+3) 스탠다드 이용권 : 月 300회 다운로드 가능 
+4) 프리미엄 이용권 : 月 400회 다운로드 가능 
+
+* 다운로드 횟수는 다운로드 완료 기준으로 차감됩니다. 
+* 동일한 콘텐츠를 다른 기기에 다운로드하는 경우에도 다운로드 횟수가 차감됩니다. 
+* 다운로드 완료한 콘텐츠를 삭제 후 재다운로드 하는 경우에도 다운로드 횟수가 차감됩니다.');
+
+insert into faq(inquirylist, subject, content) values('재생/오류',
+'[다운로드] 다운로드한 콘텐츠 이용기간 연장 시 다운로드 횟수가 차감되나요?',
+'콘텐츠 다운로드 횟수는 시리즈 또는 영화 콘텐츠를 다운로드 완료한 경우 1회씩 차감되며, 
+이미 다운로드 완료한 콘텐츠의 이용기간이 만료되어 이용기간을 연장하는 경우에는 횟수가 차감되지 않습니다. 
+
+단, 이용기간 만료된 콘텐츠를 삭제 후 재다운로드 하는 경우 다운로드 횟수가 차감됩니다.');	
+
+insert into faq(inquirylist, subject, content) values('재생/오류', 
+'[다운로드] 다운받았던 콘텐츠를 재다운로드해도 다운로드 횟수가 차감되나요?', 
+'다운로드 횟수는 시리즈 및 영화 콘텐츠 다운로드 완료 시 횟수가 차감됩니다. 
+이에 따라 동일한 콘텐츠를 다른 기기에 다운로드 하는 경우에도 횟수가 추가로 차감되며, 
+다운로드한 콘텐츠를 삭제하고 동일 기기에 재다운로드 하는 경우에도 다운로드 횟수가 차감됩니다.');
+
+
+insert into faq(inquirylist, subject, content) values('해지/환불', 
+'[해지] 구글 인앱결제 이용권 해지하고 싶어요.',
+'구글 인앱결제를 통해 구매하신 이용권은 Google Play 스토어로 [구독취소] 신청하셔야 구독해지가 가능합니다.
+■ 구글 인앱결제 이용권 해지 방법 안내
+1) Play 스토어 APP에서 해지하기
+① 안드로이드 기기에서 [Play 스토어] APP 실행
+② 우측 상단 [프로필 아이콘] 클릭
+③ [결제 및 정기결제] 버튼 클릭
+④ [정기결제] 버튼 클릭하여 구독 취소
+2) 티빙 APP에서 해지하기
+① 안드로이드 기기에서 티빙 APP 실행
+② 우측 상단 [프로필 아이콘] 버튼 클릭
+③ [이용권] 메뉴 클릭
+④ 하단 유의사항의 [정기결제] 버튼 클릭하여 Play 스토어 이동
+⑤ 구독 취소할 상품 선택하여 해지 진행
+결제 창 하단에 구글 인앱 구독 유의사항이 기재 되어 있으니 확인 부탁드리며,
+환불이 필요하신 경우 구매 후 48시간 이내에 [Play 스토어 → 우상단 프로필 아이콘 → 고객센터 → Google Play에서 환불 요청하기]로 신청이 필요한 점 참고 부탁드립니다.
+※ 이용권 해지 시 다음 결제일부터 결제 연장되지 않으며, 이용권의 권한 만료일까지는 이용하실 수 있습니다.
+※ 자동 결제 해지는 결제 예정일 최소 24 시간 전에 해지 신청해야 합니다. 
+※ 결제 예정일 전 24 시간 이내에는 자동 결제 를 해지해도 이용권이 결제될 수 있습니다.
+더욱 자세한 문의는 [1:1 게시판 문의] 또는 [tving@cj.net]로 접수해 주시면 빠르게 도움 드리겠습니다.');
+
+insert into faq(inquirylist, subject, content) values('해지/환불', 
+'[해지] 정기결제 해지를 했는데 네이버페이 앱에서 이용중으로 표시됩니다.',
+'티빙에서 이용권 정기결제 해지 시 네이버페이로 구매한 이용권도 정상 해지되며, 다음 결제도래일부터 결제가 일어나지 않습니다.
+다만, 정기결제 해지의 경우 현재 이용권의 만료일까지는 티빙 이용이 가능하시므로 고객님의 네이버페이 앱 내 이용중으로 표시될 수 있습니다.');
+
+insert into faq(inquirylist, subject, content) values('해지/환불', 
+'[해지] 이용권 해지 / 해지 철회가 안돼요.', 
+'이용권 해지 / 해지 철회(취소)에 어려움이 있으신 경우, 다음의 경로를 통해 문의해 주세요.
+1) PC 해지 문의 : TVING WEB 로그인 > 고객센터 > 고객문의 > 환불/해지 신청 카테고리 선택 후 문의 
+2) APP 해지 문의 : TVING APP > 로그인 > MY > 고겍센터 > 1:1문의 > 환불/해지 신청 카테고리 선택 후 문의');
+
+insert into faq(inquirylist, subject, content) values('해지/환불',
+'[해지] 애플 인앱결제 이용권을 해지했는데 결제가 되었어요.',
+'애플 인앱결제 이용권을 애플 내부 정책에따라 이용 기간 종료 최대 24시간 이전에 구독 취소(정기결제 해지)를 하지 않으시면 이용권이 자동으로 갱신됩니다.
+애플 인앱결제 이용권 구독 취소(정기결제 해지)를 원하시는 경우 반드시 이용 기간 종료 24시간 이전까지 진행해주세요.
+■ 애플 인앱결제 정기구독 해지 방법
+1) 애플 앱스토어에서 해지하기
+①  iOS 기기에서 [애플 앱스토어] APP 실행
+② 우측 상단 [프로필 아이콘] 클릭
+③ [구독] 버튼 클릭 후 구독 취소할 상품 선택
+④ 구독 취소 완료
+2) 기기 설정 메뉴에서 해지하기
+① iOS 기기에서 [설정] APP 실행
+② 최상단 [Apple ID] 메뉴 클릭
+③ [구독] 버튼 클릭 후 구독 취소할 상품 선택
+④ 구독 취소 완료
+3) 티빙 APP에서 해지하기
+① iOS 기기에서 티빙 APP 실행
+② 우측 상단 [프로필 아이콘] 버튼 클릭
+③ [이용권] 메뉴 클릭
+④ 하단 유의사항의 [구독관리] 버튼 클릭하여 애플 앱 스토어 이동
+⑤ 구독 취소할 상품 선택하여 해지 진행
+결제 창 하단에 iOS 구독 유의사항이 기재 되어 있으니 확인 부탁드리며,
+Apple 고객센터(080-333-4000)로 이용권 관련 문의 및 해지/환불 상담이 가능합니다.
+※ 이용권 해지 시 다음 결제일부터 결제 연장되지 않으며, 이용권의 권한 만료일까지는 이용하실 수 있습니다.
+※ 자동 결제 해지는 결제 예정일 최소 24시간 전에 해지 신청해야 합니다. 
+※ 결제 예정일 전 24시간 이내에는 자동 결제를 해지해도 이용권이 결제될 수 있습니다.');
+
+insert into faq(inquirylist, subject, content) values('해지/환불', 
+'[환불] 네이버플러스 멤버십 이용권 환불하고 싶어요.',
+'네이버플러스 멤버십으로 구매하신 티빙 이용권의 환불 방법 안내드립니다.
+네이버플러스 멤버십으로 구매한 이용권의 경우, 고객님의 네이버 계정에 등록된 결제 수단으로 결제가 진행되며,
+네이버 주식회사의 이용약관 정책에 따라서 티빙에 이용권 해지 및 환불 권한이 없는 점 양해 부탁드립니다.
+번거로우시겠지만, 이용권 환불 안내가 필요하실 경우 네이버 고객센터(1588-3820) 또는 네이버 플러스 멤버십 스마트봇으로 문의 부탁드립니다.
+더욱 자세한 문의는 [1:1 게시판 문의] 또는 [tving@cj.net]로 접수해 주시면 빠르게 도움 드리겠습니다.
+※ 아래 [네이버플러스 멤버십] 버튼을 클릭하시면 네이버 서비스로 연결됩니다.
+※ 아래 [1:1 게시판 문의하기] 버튼을 클릭하시면 티빙 서비스로 연결되며, 로그인 후 이용 가능합니다.');
+
+insert into faq(inquirylist, subject, content) values('해지/환불', 
+'[환불] 티빙에서 직접 결제한 이용권 환불하고 싶어요.', 
+'티빙 직접결제로 구매하신 티빙 이용권의 환불 방법 안내드립니다.
+■ 환불 요청 방법 안내
+① 1:1 고객문의 게시판 > [환불/해지 신청] 카테고리 선택
+② 환불 요청할 [상품명], [결제월] 및 상세 내용을 입력하여 환불 요청 등록
+■ 환불 진행 절차 안내
+① 티빙 고객센터에서 고객님 계정의 상품 구매 이력과 사용내역을 확인합니다.
+② 사용 내역이 없는 경우, 고객센터에서 고객님이 구매하신 상품의 청약철회 및 결제취소를 진행합니다.
+③ 결제취소된 상품은 고객님이 결제하신 수단으로 환불이 진행됩니다.
+* 사용 내역이 없는 경우 당월 휴대폰과 신용카드 결제 건은 모두 결제 취소로 전액 환불됩니다. 
+  단, 이전월 휴대폰 결제 건의 경우 통신사에서 결제 취소를 지원하지 않아 통장으로 환불됩니다.
+* 신용카드, 간편결제 (네이버페이/카카오페이/토스페이) 결제 건인 경우 최대 당월과 이전월(최대 2개월) 결제분까지 결제취소가 가능합니다.
+* 사용 내역이 있는 경우 사용 기간에 대하여 일할 차감 후 환불됩니다.
+* 연간이용권 등 할인이 적용된 이용권은 정가 기준으로 일할 차감 후 환불됩니다.');
+
+
+insert into faq(inquirylist, subject, content) values('서비스/이용', 
+'[실시간TV] 정주행 채널은 유료인가요?', 
+'정주행 채널은 무료 이용자도 시청이 가능합니다.');
+
+insert into faq(inquirylist, subject, content) values('서비스/이용',
+'[실시간TV] 무료 이용자도 실시간 LIVE 채널 시청할 수 있나요?', 
+'유료 회원만 시청 가능했던 실시간TV 채널을 무료로 시청하실 수 있도록 전환하였습니다.
+■ 전환 일자 : 2023년 12월 1일 금요일
+■ 무료 채널 : tvN, JTBC 등 주요 실시간 LIVE 30개 채널
+단, 4개 채널(OCN, OCN Movies, OCN Movies2, tvN SPORTS 채널)은 유료 서비스로 유지되며,
+스포츠, KCON 등 이벤트성 채널은 무료 시청에 제한이 있을 수 있는 점 참고 부탁드립니다.
+* 실시간TV 채널은 PC/모바일/태블릿 기기에서 이용하실 수 있습니다. (TV 앱 미제공)
+* KBO는 2024년 3월 9일부터 4월 30일까지 한시적으로 무료 시청이 가능합니다. 
+- 2024년 5월 1일부터 LIVE는 유료 채널로 서비스됩니다. (단, VOD 및 하이라이트는 무료 시청 가능)');
+
+insert into faq(inquirylist, subject, content) values('서비스/이용', 
+'[실시간TV] 타임머신 버튼 클릭 시, 이용권을 구독하라고 나와요.',
+'무료 회원님의 경우 기본 재생 기능만 이용이 가능하며, 타임머신 기능 제공되지 않습니다.
+타임머신 기능 이용을 원하신다면 티빙 이용권 구독 후 시청 부탁드립니다.');
+
+insert into faq(inquirylist, subject, content) values('서비스/이용',
+'[서비스 이용] 무료 회원은 어떤 서비스를 이용할 수 있나요?',
+'TVING 무료 회원은 일부 라이브 채널과 정주행 채널을 무료로 시청하실 수 있습니다.
+라이브 채널 중 4개 채널(OCN, OCN Movies, OCN Movies2, tvN SPORTS 채널)은 유료 서비스로 유지되며,
+스포츠, KCON 등 이벤트성 채널은 무료 시청에 제한이 있을 수 있는 점 참고 부탁드립니다.
+* KBO는 2024년 3월 9일부터 4월 30일까지 한시적으로 무료 시청이 가능합니다. 
+- 2024년 5월 1일부터 LIVE는 유료 채널로 서비스됩니다. (단, VOD 및 하이라이트는 무료 시청 가능)');
+
+insert into faq(inquirylist, subject, content) values('서비스/이용',
+'[이벤트] 연간 이용권 특별 할인 기간과 금액이 궁금해요.',
+'연간 이용권 할인 이벤트를 안내드립니다.
+※ 연간 이용권 할인 이벤트 안내
+- 이벤트 기간 : 2023-12-01 ~ 2024-04-30
+- 이벤트 가격
+  : 베이직 연간 (94,800원 → 66,000원)
+   스탠다드 연간 (130,800원 → 90,000원)
+   프리미엄 연간 (166,800원 → 114,000원)
+* 연간 이용권은 PC/모바일웹에서만 구매가 가능합니다. 
+* 연간 이용권은 12월 1일 월간 이용권 신규 구독료 변경 이후에도 4월 30일까지 티빙 페스타 할인가와 동일한 가격으로 구매하실 수 있습니다.
+* 작년 동일 기간에 구매하신 연간 이용권 정기결제 유지 시, 할인 가격으로 결제됩니다.  
+* 할인 기간 동안 월정액 이용권을 연간 이용권으로 변경하셔도 할인 가격이 적용됩니다.  
+* 할인 기간 동안 연간 이용권을 업/다운그레이드 하셔도 할인 가격이 적용됩니다.  
+(단, 다운그레이드 시 사용하신 기간은 12개월 정가 기준 일할 차감됩니다.) ');
+
+insert into faq(inquirylist, subject, content) values('서비스/이용', 
+'[기타] 해외지역에서는 시청이 어렵다는 메시지와 함께 시청이 되지 않습니다.',
+'티빙 서비스는 국내에서만 이용 가능하며, 
+국내에서 시청 중이지만 해외 접속으로 메시지가 발생하는 경우 아래와 같이 확인 부탁드립니다.
+① VPN 프로그램을 사용 중이라면 OFF 하여 다시 확인허가
+② [IP 대역 확인하기] 버튼으로 한국인터넷진흥원 홈페이지에서 사용 중인 IP 국내 IP 여부 확인하기
+- URL : http://whois.nic.or.kr/
+③ 해외 IP로 확인되는 경우, 이용하고 계신 통신사로 문의하여 [IP 재할당] 필요
+국내 IP인 것이 확인되시거나, 이용 중인 인터넷 통신사에서 국내 IP대역으로 재할당 받으신 경우 정상 이용이 가능하십니다.
+위 조치 이후에도 동일 현상이 반복되시는 경우, [IP주소] 기재하여 [1:1 게시판 문의] 또는 [tving@cj.net]로 접수를 부탁드립니다.');
+
+insert into faq(inquirylist, subject, content) values('서비스/이용',
+'[자막] 크롬캐스트나 에어플레이에서도 배리어프리 자막 이용이 가능한가요?',
+'버튼 배리어프리 자막 서비스가 제공되는 콘텐츠 시청 시, 크롬캐스트와 에이플레이 상태에서도 배리어프리 자막 서비스 이용이 가능합니다. 단, 자막 크기 설정은 지원하지 않습니다.');
 
 select* from faq;
+
 
 
 
@@ -583,6 +823,7 @@ insert into customerinquiry(name, email, phone, inquiryList, devicephone, device
 insert into customerinquiry(name, email, phone, inquiryList, devicephone, devicemodelname, runenvironment, runtime1, runtime2, runcontent, inquirytitle, inquirycontent)  values('hong1', 'syh6917@naver.com', '010-1111-1111', '회원/로그인', 'PC', '윈도우11', 'PC', '03:00', '07:00', '드라마', '안녕하세요', '드라마 관련 질문드립니다.');
 
 select* from member;
+
 
 
 -- 신상품 View 생성

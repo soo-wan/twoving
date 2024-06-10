@@ -53,7 +53,7 @@
 		</table>
 		
 		<jsp:include page="paging/serviceRunPaging.jsp">
-			<jsp:param value="twoving.do?command=servicerun&amp;inquirylist=서비스 이용" name="address"/>
+			<jsp:param value="twoving.do?command=servicerun&amp;inquirylist=서비스/이용" name="address"/>
 		</jsp:include>
 		
 		

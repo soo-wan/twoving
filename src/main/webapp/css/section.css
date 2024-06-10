@@ -326,7 +326,9 @@ label{
 .field textarea{
 	background-color: gray;
 	padding : 10px;
-	opacity: 0.3;
+    opacity: 0.5;
+	color: white;
+	font-weight: bold;
 }
 
 .field textarea::placeholder{

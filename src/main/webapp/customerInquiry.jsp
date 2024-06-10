@@ -12,7 +12,7 @@
 			<%@ include file="cosmenu_wrapper.jsp" %>
 		</div>
 		
-		 <div class="search">
+		 <div class="search" style="background-color: rgba(255, 255, 255, 0.2); margin-left: 40px; width: 89%;">
 			<div class="qes2" style="padding : 5px;">
 				<span style="font-weight:bold; color:white;">자주 묻는 질문</span>&nbsp;&nbsp;
 				<a href="twoving.do?command=memberCustomerLogin&inquirylist=회원/로그인"><span>로그인이 안돼요</span></a> &nbsp;&nbsp; |  &nbsp;&nbsp;
