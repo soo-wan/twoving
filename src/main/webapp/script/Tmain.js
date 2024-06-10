@@ -76,12 +76,12 @@ function go_search(command){
 }
 
   
-function count(){
+/*function count(){
 	window.alert("시청횟수가 1증가하였습니다.");
 		
 	document.Tdetail.action = "shop.do?command=Tdetail;
 	
-}
+}*/
 
 
 $(function(){

@@ -4,6 +4,7 @@ import java.sql.Connection;
 
 
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -273,24 +274,18 @@ public class ProductDao {
 	}
 	
 	
-	public void Count(int pseq) {
-		con = DBman.getConnection();
-		
-		String sql = "update product set count = conut+1 where pseq = ?";
-		
-		try {
-			pstmt = con.prepareStatement(sql);
-			
-			//pstmt.setInt(1, count);
-			pstmt.setInt(1, pseq );			
-			pstmt.executeUpdate();
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}finally {
-			DBman.close(con, pstmt, rs);
-		}
-	}
+	/*
+	 * public void Count(int pseq) { con = DBman.getConnection();
+	 * 
+	 * String sql = "update product set count = conut+1 where pseq = ?";
+	 * 
+	 * try { pstmt = con.prepareStatement(sql);
+	 * 
+	 * //pstmt.setInt(1, count); pstmt.setInt(1, pseq ); pstmt.executeUpdate();
+	 * 
+	 * } catch (SQLException e) { e.printStackTrace(); }finally { DBman.close(con,
+	 * pstmt, rs); } }
+	 */
 	
 	
 
