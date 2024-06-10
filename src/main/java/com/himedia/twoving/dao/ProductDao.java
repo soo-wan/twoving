@@ -3,10 +3,12 @@ package com.himedia.twoving.dao;
 import java.sql.Connection;
 
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
 
 import com.himedia.twoving.util.DBman;
 
@@ -27,7 +29,7 @@ public class ProductDao {
 	public ArrayList<ProductVO> bestList() {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
-		String sql = "select * from best_pro_view";
+		String sql = "select * from best_pro_view where count;";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -40,6 +42,7 @@ public class ProductDao {
 				pvo.setSavefilename(rs.getString("savefilename"));
 				pvo.setKind(rs.getInt("kind"));
 				pvo.setGenre(rs.getString("genre"));
+				pvo.setCount(rs.getInt("count"));
 				list.add(pvo);
 			}
 		}catch(SQLException e){e.printStackTrace();
@@ -268,5 +271,27 @@ public class ProductDao {
 		}finally{DBman.close(con, pstmt, rs);}
 			return list;
 	}
+	
+	
+	public void Count(int pseq) {
+		con = DBman.getConnection();
+		
+		String sql = "update product set count = conut+1 where pseq = ?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			//pstmt.setInt(1, count);
+			pstmt.setInt(1, pseq );			
+			pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+	}
+	
+	
 
 }

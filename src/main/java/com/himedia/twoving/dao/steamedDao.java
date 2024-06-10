@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.himedia.twoving.util.DBman;
+import com.himedia.twoving.vo.ProductVO;
 import com.himedia.twoving.vo.steamedVO;
 
 public class steamedDao {
@@ -95,4 +96,32 @@ public class steamedDao {
 		System.out.println(list.size());
 		return list;
 	}
+	
+	
+	public ArrayList<steamedVO> selectKindProduct(int kind){
+		ArrayList<steamedVO> list = new ArrayList<steamedVO>();
+		con = DBman.getConnection();
+		String sql = "select * from steamed_view where kind=?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, kind);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				steamedVO svo = new steamedVO();
+				svo.setSseq(rs.getInt("sseq"));
+				svo.setPseq(rs.getInt("pseq"));
+				svo.setUserid(rs.getString("userid"));
+				svo.setMname(rs.getString("mname"));
+				svo.setPtitle(rs.getString("ptitle"));				
+				svo.setSavefilename(rs.getString("savefilename"));
+				svo.setIndate(rs.getTimestamp("indate"));
+				svo.setKind(rs.getInt("kind"));
+				svo.setResult(rs.getString("result"));
+				list.add(svo);
+			}
+		}catch(SQLException e){e.printStackTrace();
+		}finally{DBman.close(con, pstmt, rs);}
+			return list;
+		}
 }

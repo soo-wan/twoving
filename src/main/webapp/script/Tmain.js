@@ -74,12 +74,15 @@ function go_search(command){
 	document.form.action = url;
 	document.form.submit(); 	
 }
-  
 
-       /* function share(){
-			
-			
-		}*/
+  
+function count(){
+	window.alert("시청횟수가 1증가하였습니다.");
+		
+	document.Tdetail.action = "shop.do?command=Tdetail;
+	
+}
+
 
 $(function(){
    $('.mypage').click(function(){
@@ -116,6 +119,10 @@ $(function(){
                 }
              )            
          });
+         
+         
+         
+         
          
             
 
