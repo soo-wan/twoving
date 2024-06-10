@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 
 public class MemberVO {
    private String userid;
+   private int ptseq;
    private String pwd;
    private String name;
    private String email;
@@ -16,7 +17,13 @@ public class MemberVO {
    public void setUserid(String userid) {
       this.userid = userid;
    }
-   public String getPwd() {
+   public int getPtseq() {
+	return ptseq;
+   }
+	public void setPtseq(int ptseq) {
+		this.ptseq = ptseq;
+	}
+public String getPwd() {
       return pwd;
    }
    public void setPwd(String pwd) {
