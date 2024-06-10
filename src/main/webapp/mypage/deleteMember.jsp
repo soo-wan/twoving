@@ -33,7 +33,7 @@
 	  
 	  <div class="c">
 	  <div class="box2">
-	  <div class="tb3">.</div>
+	  <div class="tb3">${paymentVO.productname}</div>
 	  <div class="tb4">0</div>
 	  </div>
 </div> 

@@ -1,4 +1,4 @@
-package com.himedia.twoving.controller.action.mypage;
+package com.twoving.controller.action.mypage;
 
 import java.io.IOException;
 import java.util.ArrayList;

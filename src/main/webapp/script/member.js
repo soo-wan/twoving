@@ -113,38 +113,46 @@ $(document).ready(function() {
 		}
 	});
 });
-
+	
 function go_save(){
-	if(document.joinForm.userid.value ==""){
-		alert("아이디를 입력하여 주세요.");
-		document.joinForm.userid.focus();
-	}else if(document.joinForm.reid.value!=document.joinForm.userid.value){
-		alert("아이디 중복확인을 하지 않았습니다");
-		document.joinForm.userid.focus();
-	}else if(!/^[a-z0-9]{4,12}$/.test(document.joinForm.userid.value)){
-		alert("아이디 영문 소문자, 숫자 조합 4~12 자리로 입력해주세요.");
-		document.joinForm.userid.focus();
-	}else if(document.joinForm.pwd.value ==""){
-		alert("비밀번호를 입력해 주세요.");
-		document.joinForm.pwd.focus();
-	}else if(document.joinForm.pwd.value != document.joinForm.pwdCheck.value){
-		alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
-		document.joinForm.pwd.focus();	
-	}else if(!/^[A-Za-z0-9]{6,12}$/.test(document.joinForm.pwd.value)){
-		alert("비밀번호 영문 소/대문자, 숫자 조합 6~12 자리로 입력해주세요.");
-		document.joinForm.pwd.focus();
-	}else if(document.joinForm.name.value ==""){
-		alert("이름을 입력하여 주세요.");
-		document.joinForm.name.focus();
-	}else if(document.joinForm.email.value ==""){
-		alert("이메일을 입력해 주세요.");
-		document.joinForm.email.focus();
-	}else if(!/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i.test(document.joinForm.email.value)){
-		alert("이메일 영문, 숫자,특수문자(~!@#$%^&*) 조합 8~15 자리로 입력해주세요.");
-		document.joinForm.email.focus();
-	}else {
-		document.joinForm.submit();	
-	}
+	var checkBox = document.getElementById("agree10");
+    if (checkBox.checked == true) {
+        // 체크박스가 체크되어 있으면 회원가입 처리
+        if(document.joinForm.userid.value ==""){
+			alert("아이디를 입력하여 주세요.");
+			document.joinForm.userid.focus();
+		}else if(document.joinForm.reid.value!=document.joinForm.userid.value){
+			alert("아이디 중복확인을 하지 않았습니다");
+			document.joinForm.userid.focus();
+		}else if(!/^[a-z0-9]{4,12}$/.test(document.joinForm.userid.value)){
+			alert("아이디 영문 소문자, 숫자 조합 4~12 자리로 입력해주세요.");
+			document.joinForm.userid.focus();
+		}else if(document.joinForm.pwd.value ==""){
+			alert("비밀번호를 입력해 주세요.");
+			document.joinForm.pwd.focus();
+		}else if(document.joinForm.pwd.value != document.joinForm.pwdCheck.value){
+			alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
+			document.joinForm.pwd.focus();	
+		}else if(!/^[A-Za-z0-9]{6,12}$/.test(document.joinForm.pwd.value)){
+			alert("비밀번호 영문 소/대문자, 숫자 조합 6~12 자리로 입력해주세요.");
+			document.joinForm.pwd.focus();
+		}else if(document.joinForm.name.value ==""){
+			alert("이름을 입력하여 주세요.");
+			document.joinForm.name.focus();
+		}else if(document.joinForm.email.value ==""){
+			alert("이메일을 입력해 주세요.");
+			document.joinForm.email.focus();
+		}else if(!/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i.test(document.joinForm.email.value)){
+			alert("이메일 영문, 숫자,특수문자(~!@#$%^&*) 조합 8~15 자리로 입력해주세요.");
+			document.joinForm.email.focus();
+		}else {
+			document.joinForm.submit();	
+			//alert("회원가입이 완료되었습니다.");
+		}
+    } 
+  else {
+        alert("약관에 동의해주세요.");
+    }
 }
 
 
@@ -180,9 +188,23 @@ $(function(){
 	});
 });
 
+
+
+   
+     
+		
 function withdrawal(){
-	var ans = window.confirm("정말로 탈퇴하시겠습니까?");
-	if(ans){
-		location.href="twoving.do?command=deleteMember";	
+	var checkBox = document.getElementById("agree");
+	console.log("이게먼데"+checkBox.checked)
+	if (checkBox.checked == true) {
+		var ans = window.confirm("정말로 탈퇴하시겠습니까?");
+		if(ans){
+			location.href="twoving.do?command=deleteMember"; 
+		}else{
+			return;
+		}
+    }
+  	else {
+		alert("약관에 동의해주세요.");
 	}
 }

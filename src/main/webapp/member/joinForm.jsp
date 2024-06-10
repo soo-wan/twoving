@@ -82,11 +82,9 @@
 
 				<ul class="btn-checks-wrap btn-checks-noline" style="margin-top: 0;">
 
-					<li class="btn-checks btn-checks-small  " id="agree-li-10"><input
-						type="checkbox" id="agree10" name="termsCheck"
-						class="agree-item
-                             required-agree ">
-						<label for="agree10" class="agree"> [필수] 서비스 이용약관 동의 </label></li>
+					<li class="btn-checks btn-checks-small  " id="agree-li-10">
+					<input type="checkbox" id="agree10" name="termsCheck" class="agree-item required-agree ">
+					<label for="agree10" class="agree"> [필수] 서비스 이용약관 동의 </label></li>
 				</ul>
 
 				<div class="btn-wrap">
