@@ -54,20 +54,23 @@ import com.himedia.twoving.product.searchListAction;
 import com.himedia.twoving.product.steamedDeleteAction;
 import com.himedia.twoving.product.steamedInsertAction;
 import com.himedia.twoving.product.steamedListAction;
+import com.twoving.controller.action.member.FindIdAction;
+import com.twoving.controller.action.member.FindIdFormAction;
+import com.twoving.controller.action.member.FindPwdAction;
+import com.twoving.controller.action.member.FindPwdFormAction;
 import com.twoving.controller.action.member.IdcheckFormAction;
 import com.twoving.controller.action.member.JoinAction;
 import com.twoving.controller.action.member.JoinFormAction;
 import com.twoving.controller.action.member.LoginAction;
 import com.twoving.controller.action.member.LoginFormAction;
 import com.twoving.controller.action.member.MainAction;
+import com.twoving.controller.action.member.VerifyCodeAction;
 import com.twoving.controller.action.member.indexFormAction;
 import com.twoving.controller.action.member.logoutAction;
 import com.twoving.controller.action.mypage.CustomerInquiryListMypage;
 import com.twoving.controller.action.mypage.CustomerInquiryMypageDetail;
 import com.twoving.controller.action.mypage.DeleteMemberAction;
 import com.twoving.controller.action.mypage.DeleteMemberFormAction;
-import com.twoving.controller.action.mypage.FindIdAction;
-import com.twoving.controller.action.mypage.FindPwdAction;
 import com.twoving.controller.action.mypage.MypageAction;
 import com.twoving.controller.action.mypage.TicketAction;
 import com.twoving.controller.action.mypage.UpdateMemberAction;
@@ -107,8 +110,6 @@ public class ActionFactory {
 	      else if(command.equals("mypage")) ac = new MypageAction();
 	      else if(command.equals("updateMember")) ac = new UpdateMemberAction();
 	      else if(command.equals("updateMemberForm")) ac = new UpdateMemberFormAction();
-	      else if(command.equals("findId")) ac = new FindIdAction();
-	      else if(command.equals("findPwd")) ac = new FindPwdAction();
 	      else if(command.equals("ticket")) ac = new TicketAction();
 	      
 		
@@ -146,6 +147,11 @@ public class ActionFactory {
 		  else if(command.equals("deleteMemberForm")) ac = new DeleteMemberFormAction();
 		  else if(command.equals("logout") ) ac = new logoutAction();
 		  else if(command.equals("deleteMember")) ac = new DeleteMemberAction();
+		  else if(command.equals("findIdForm")) ac = new FindIdFormAction();
+	      else if(command.equals("findPwdForm")) ac = new FindPwdFormAction();
+	      else if(command.equals("findId")) ac = new FindIdAction();
+	      else if(command.equals("findPwd")) ac = new FindPwdAction();
+	      else if(command.equals("verifyCode")) ac = new VerifyCodeAction();
 		  
 		  //admin(오수완)
 	      //시리즈 영화

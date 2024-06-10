@@ -1,4 +1,4 @@
-package com.twoving.controller.action.mypage;
+package com.twoving.controller.action.member;
 
 import java.io.IOException;
 
@@ -8,13 +8,10 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class FindIdAction implements Action {
+public class FindIdFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		request.getRequestDispatcher("mypage/findId.jsp").forward(request, response);
-		
 	}
-
 }

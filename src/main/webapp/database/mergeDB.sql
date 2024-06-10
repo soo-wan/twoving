@@ -1,4 +1,8 @@
 select * from member
+select * from payment
+--결제내역
+
+--이용권구독에 대한 테이블
 
 CREATE TABLE member
 (
@@ -12,8 +16,6 @@ CREATE TABLE member
    PRIMARY KEY (userid)
 );
 
-drop table member
-
 insert into member(userid, pwd, name, phone, email)
 values('one','1111','김나리','017-777-7777','acc@abc.com');
 
@@ -23,7 +25,13 @@ values('two','2222','김둘','017-7321-7777','acc312@abc.com');
 insert into member(userid, pwd, name, phone, email)
 values('three','3333','삭제테스트','017-7321-7777','acc312@abc.com');
 
-ALTER TABLE member modify phone varchar(45) 
+ALTER TABLE member modify phone varchar(45)
+
+update member set pwd = "1111" where userid='one'
+update member set useyn='Y' where userid='one'
+--update member set email="ohsoowan@naver.com" where userid='one'
+--update member set email="syh6917@naver.com" where userid='one'
+update member set userid="one1" where userid='one'
 
 CREATE TABLE admins
 (
@@ -41,8 +49,6 @@ select * from product where pseq=3
 
 select * from product 
 order by 1 desc
-
-drop table product;
 
 CREATE TABLE `product` (
    `pseq`   int   NOT NULL AUTO_INCREMENT,
@@ -210,18 +216,9 @@ values(0, '예능', 'N', 'Y', 'N', 'Y', '여고추리반', '여고추리반 입�
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
 values(0, '예능', 'N', 'Y', 'N', 'Y', '지락이의 뛰뛰빵빵', '지락이의 뛰뛰빵빵 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'nature.png', 'naturemain.png','nature.png');
 
-
-
 select * from product
 
-delete from product where pseq= 5;
-
 ---------------------------------------------------------------------------------------------------------
-drop table notice
-
-select * from notice
-select * from notice where title like concat('%', ?, '%') "
-            + " order by nseq desc limit ? offset 
             
 --NOTICE--
 CREATE TABLE `twoving`.`notice` (
@@ -279,9 +276,6 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 select * from customerinquiry
     
-update customerinquiry set inquirylist="사이트이용", inquirytitle="야구볼때", indate="2024-06-02 10:38:24.0",
-devicephone="아이폰", devicemodelname="아이폰10", runenvironment="와이파이",
-reply=null where ciseq=5
 insert into customerinquiry(name, email, phone, inquiryList, devicephone, devicemodelname, runtime1, runtime2, runcontent, inquirytitle, inquirycontent,reply)  
 values('hong1', 'syh6917@naver.com', '010-1111-1111', '회원/로그인', 'PC', '윈도우11', '03:00', '07:00', '드라마', '안녕하세요', '드라마 관련 질문드립니다.','답.변');
 
@@ -293,6 +287,10 @@ values('hong2', 'aaa1234@naver.com', '010-2222-3333', '환불/해지신청', '�
 
 insert into customerinquiry(name, email, phone, inquiryList, devicephone, devicemodelname, runtime1, runtime2, runcontent, inquirytitle, inquirycontent, runenvironment,runplace)  
 values('hong2', 'aaa1234@naver.com', '010-2332-3333', '환불/해지신청', '아이폰', '통신사3G', '01:00', '09:00', '영화', '영화 제목2', '영화 문의2','와이파이','집');
+
+update customerinquiry set inquirylist="사이트이용", inquirytitle="야구볼때", indate="2024-06-02 10:38:24.0",
+devicephone="아이폰", devicemodelname="아이폰10", runenvironment="와이파이",
+reply=null where ciseq=1
 --------------------------------------------------------------------------------------------------------
 --faq
 select * from faq
@@ -385,8 +383,6 @@ insert into faq(inquirylist, subject, content) values('해지/환불',
 * 네이버/통신사 등 제휴처 상품을 이용 중인 경우 각 제휴처로 문의가 필요합니다. '
 );
 
-drop table member;
-
 
 
 ALTER TABLE member modify phone varchar(45) 
@@ -410,6 +406,8 @@ values('one','1111','김나리','017-777-7777','acc@abc.com');
 insert into member(userid, pwd, name, phone, email)
 values('two','2222','김길동','011-032-7777','aac@abc.com');
 
+
+drop table steamed;
 
 CREATE TABLE `steamed` (
 	`sseq`	int	NOT NULL AUTO_INCREMENT,
@@ -440,29 +438,3 @@ select s.sseq, s.pseq, s.userid, s.indate, s.result, p.kind as kind, m.name as m
 where s.pseq=p.pseq and s.userid=m.userid;
 
 select * from steamed_view;
-
-
-select* from member;
-update member set pwd='1111' where userid='one'
-
--- 메인화면 컨텐츠
-create or replace view main_pro_view
-as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where mainyn='Y' order by pseq desc limit 6;
-
--- 새로운 컨텐츠 
-create or replace view new_pro_view
-as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' order by pseq desc limit 8;
-
--- 베스트 컨텐츠
-create or replace view best_pro_view
-as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' order by pseq desc limit 7;
-
-
-
-
-
-
-

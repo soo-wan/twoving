@@ -1,3 +1,13 @@
+function go_pwFind(){
+	if(!/^[a-z0-9]{4,12}$/.test(document.findPwd.userId.value)){
+			alert("아이디 : 영문 소문자, 숫자 조합 4~12 자리로 입력해주세요.");
+			document.findPwd.userId.focus();
+	}else{
+		alert("이메일 인증 메일이 전송 완료되었습니다.");
+		document.findPwd.submit();
+	}
+}
+
 function go_cart(){
 	if(document.formm.quantity.value==""){
 		alert("수량을 입력하세요");

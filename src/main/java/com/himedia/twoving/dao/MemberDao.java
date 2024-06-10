@@ -87,4 +87,36 @@ public class MemberDao {
         } finally { DBman.close(con, pstmt, rs);
         }
      }
+
+	public String getMemberId(String email) {
+		String id = null;
+		con = DBman.getConnection();
+		String sql = "select userid from member where email=?"; 
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				id = rs.getString("userid");
+			}
+		} catch (SQLException e) {e.printStackTrace();
+		} finally { DBman.close(con, pstmt, rs); }
+		return id;
+	}
+
+	public String getMemberEmail(String userId) {
+		String email = null;
+		con = DBman.getConnection();
+		String sql = "select email from member where userid=?"; 
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, userId);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				email = rs.getString("email");
+			}
+		} catch (SQLException e) {e.printStackTrace();
+		} finally { DBman.close(con, pstmt, rs); }
+		return email;
+	}
 }

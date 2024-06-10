@@ -8,17 +8,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form>
-  <input type="button"	 class="logo" onclick="location.href='twoving.do?command=index'" value="TWOVING" />
+<form action="twoving.do?command=findId" method="post" name="findId">
+  <input type="button"	 class="logo" onclick="location.href='twoving.do?command=index'" value="TWOVING" style="cursor: pointer;" />
   <h1>아이디 찾기</h1>
   <div class="all">
-  <div class="text"><p>이메일로 찾기</p>
-  							<p style="color: gray;">가입 시 등록한 이메일을 입력해주세요</p></div>
-  
-  <input type="text" placeholder="이메일" class="box1" />
-  <br>
-  <input type="button" class="box2" value="확인" />
+  <div class="text" style="width:600px;">
+  		<p>이메일로 찾기</p>
+  		<p style="color: gray;">가입 시 등록한 이메일을 입력해주세요</p>
   </div>
-  </form>
+  
+  <input type="email" style="width:600px; font-size: 120%;" placeholder="이메일" class="box1" id="email" name="email" required />
+  <br>
+  <input type="submit" class="box2" value="확인"  style="cursor: pointer;"/>
+  </div>
+</form>
 </body>
 </html>
