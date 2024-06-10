@@ -4,7 +4,7 @@
  
 <section>
 	<article>
-		<div class="coltitle">
+		<div class="costitle">
 			<%@ include file="customercenter.jsp" %>
 		</div>
 		
