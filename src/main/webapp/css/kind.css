@@ -9,7 +9,7 @@
 
 #productproduct{ display: flex;   flex-wrap: wrap;  justify-content: space-between; width:100%; height:100%; }		
    
-#productproduct a{font-weight: bold ; font-size:100px; color:white; text-decoration-line:none;  }   
+#productproduct a{font-weight: bold ; font-size:85px; color:white; text-decoration-line:none;  }   
 
 .productproduct{margin: 5px 5px; width:250px; height:300px; display: flex; border-radius: 20px; }
 .productproduct:hover {transform : translateY(-20px); transition-duration: 0.5s; transition-delay: 0.3s;}

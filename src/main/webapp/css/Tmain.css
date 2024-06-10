@@ -27,7 +27,7 @@
         
 .Bestlist { display:flex; width:100%; justify-content:space-around; align-items:center; flex-wrap: wrap; }
 #item1 {display:flex; width:250px; height:300px;  border-radius: 20px; margin: 5px 5px; }
-#item1 a{font-weight: bold ; font-size:100px; color:white; text-decoration-line:none;  }
+#item1 a{font-weight: bold ; font-size:85px; color:white; text-decoration-line:none;  }
 #item1 img{width:200px; height:300px; border-radius: 20px;}
 
 #item1:hover {transform : translateY(-20px); transition-duration: 0.5s; transition-delay: 0.3s;}
