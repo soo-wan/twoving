@@ -42,9 +42,6 @@ public class InsertPassTicketAction implements Action {
 			
 			passTicketDAO.updateMemberPassTicket(memberVO.getUserid(), ptseq);
 			
-//			MemberVO memberVO1 = new MemberVO();
-//			memberVO1.setPtseq(ptseq);
-			
 			paymentVO.setSubscribeyn(subscribeyn);
 			paymentVO.setProductname(productname);
 			paymentVO.setPaymentprice(paymentprice);

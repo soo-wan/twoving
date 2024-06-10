@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.himedia.twoving.util.DBman;
+import com.himedia.twoving.vo.MemberVO;
 
 public class PassTicketDAO {
 	private PassTicketDAO() {
@@ -41,5 +42,41 @@ public class PassTicketDAO {
 		} finally {
 			DBman.close(con, pstmt, rs);
 		}
+	}
+
+	public MemberVO selectMemberPassTicket(String userid) {
+		MemberVO memberVO = null;
+		
+		con = DBman.getConnection();
+		
+		String sql = "select* from member where userid=?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, userid);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				memberVO = new MemberVO();
+				
+				memberVO.setUserid(rs.getString("userid"));
+				memberVO.setPtseq(rs.getInt("ptseq"));
+				memberVO.setPwd(rs.getString("pwd"));
+				memberVO.setName(rs.getString("name"));
+				memberVO.setEmail(rs.getString("email"));
+				memberVO.setIndate(rs.getTimestamp("indate"));
+				memberVO.setUseyn(rs.getString("useyn"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return memberVO;
+		
 	}
 }
