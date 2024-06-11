@@ -11,7 +11,7 @@ CREATE TABLE `twoving`.`member` (
   `ptseq` INT NULL,
   `pwd` VARCHAR(45) NOT NULL,
   `name` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
   `phone` VARCHAR(45) NULL,
   `indate` DATETIME NOT NULL DEFAULT now(),
   `useyn` CHAR(1) NULL DEFAULT 'Y',
@@ -169,6 +169,8 @@ insert into payment(productname, paymentprice, paymentmeans) values( '광고형 
 SELECT* FROM notice;
 
 select* from payment;
+
+select* from member;
 
 delete from payment where pmseq=8;
 

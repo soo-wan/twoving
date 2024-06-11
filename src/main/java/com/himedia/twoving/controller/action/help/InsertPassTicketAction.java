@@ -32,31 +32,34 @@ public class InsertPassTicketAction implements Action {
 			String subscribeyn = request.getParameter("subscribeyn");
 			String productname = request.getParameter("productname");
 			String paymentprice = request.getParameter("paymentprice");
-
-			System.out.println("productname : " + productname);
-			PaymentVO paymentVO = new PaymentVO();
-			
-			paymentVO.setUserid(memberVO.getUserid());
-			paymentVO.setSubscribeyn(subscribeyn);
-			paymentVO.setProductname(productname);
-			paymentVO.setPaymentprice(paymentprice);
 			
 			PaymentDAO paymentDAO = PaymentDAO.getInstance();
-			PassTicketDAO passTicketDAO = PassTicketDAO.getInstance();
-			
-			paymentDAO.insertPayment(paymentVO);
-			
+
 			if(subscribeyn.equals("Y")) {
 				System.out.println("현재 subscribeyn : " + subscribeyn);
 				paymentDAO.updatePayment(pmseq);
 			}
 			
+			System.out.println("productname : " + productname);
+			PaymentVO paymentVO = new PaymentVO();
+			
+			paymentVO.setUserid(memberVO.getUserid());
+			paymentVO.setSubscribeyn(subscribeyn);
+			
+			
+			paymentVO.setProductname(productname);
+			paymentVO.setPaymentprice(paymentprice);
+			
+			PassTicketDAO passTicketDAO = PassTicketDAO.getInstance();
+			
+			paymentDAO.insertPayment(paymentVO);
+			
 			passTicketDAO.updateMemberPassTicket(memberVO.getUserid(), ptseq);
 			
 			
-			
-			RequestDispatcher rd = request.getRequestDispatcher("insertPassTicketSuccess.jsp");
-			rd.forward(request, response);
+			response.sendRedirect("insertPassTicketSuccess.jsp");
+			// RequestDispatcher rd = request.getRequestDispatcher("insertPassTicketSuccess.jsp");
+			// rd.forward(request, response);
 		}
 		
 	}
