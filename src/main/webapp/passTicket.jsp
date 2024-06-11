@@ -20,71 +20,89 @@
  
  <section>
 	<article>
-		<div class="box">
-   			<div class="box1">
-  			   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer; color:red;"value="TWOVING" />
-               <div class="box1-2"><a href="twoving.do?command=kind&kind=0" style="white;">시리즈</a></div>
-               <div class="box1-3"><a href="twoving.do?command=kind&kind=1" style="white;">영화</a></div>
-      		</div>
-		
-			<div class="box2">
-	         	<div class="box2-2"><img src="member/돋보기.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
-	        	 <div class="box2-1"><img src="member/logo.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
-	        </div>
-		</div>
-		
-		 <div class="box22">
-	         	<div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
-	         	<div class="box22-2">
-	         		<p style="font-size: 160%; font-weight: bold;">이름 ${loginUser.name}</p>
-	         	<img src="member/구름.png" width="30px" height="30px" />&nbsp;나의 이용권 
-	         		<c:choose>
-	         			<c:when test="${passTicketVO.ptseq == 1}">
-	         				&nbsp; 광고형 스탠다드
-	         			</c:when>
-	         			<c:when test="${passTicketVO.ptseq == 2}">
-	         				&nbsp; 베이직
-	         			</c:when>
-	         			<c:when test="${passTicketVO.ptseq == 3}">
-							&nbsp; 스탠다드		
-	         			</c:when>
-	         			<c:when test="${passTicketVO.ptseq == 4}">
-	         				&nbsp; 프리미엄
-	         			</c:when>
-	         		</c:choose>
-	         	&nbsp;&nbsp;
-	         	<input type="button" onClick="updateDefuseCheck('${paymentVO.productname}')" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></p></div>
-	         
-	         	<div class="box22-3" onClick="location.href='twoving.do?command=updateMemberForm'">
-	         		<a><img src="member/톱니바퀴.png" width="30px" height="30px" /></a>회원정보 수정
-	         	</div>
-         </div>
+		  <div class="box">
+   
+   <div class="box1">
+   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer; color:red;" value="TWOVING" />
+               <div class="box1-2"><a href="twoving.do?command=kind&kind=0"  style="color:white;">시리즈</a></div>
+               <div class="box1-3"><a href="twoving.do?command=kind&kind=1" style="color:white;">영화</a></div>
+    </div>
+    <div class="box2">
+          <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
+          <div class="box2-1" ><a href="#"><img src="member/logo.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;
+          	<div class="profileclick" >
+                  <br><br>
+                  <div><a href="twoving.do?command=mypage">My페이지</a></div>
+                  <br>
+                  <div><a href="twoving.do?command=notice">고객센터</a></div>
+                  <br>
+                  <div><a href="twoving.do?command=logout">로그아웃</a></div>
+            </div>
+          
+          </div>
+	 </div>
+    
+<!--     <div class="box1">
+   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer;"value="TWOVING" />
+               <div class="box1-2">시리즈</div>
+               <div class="box1-3">영화</div>
+       </div>
+      <div class="box2">
+          <div class="box2-2"><img src="member/돋보기.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
+          <div class="box2-1"><img src="member/logo.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
+	 </div>  -->
+	 
+      </div>
+      <div class="box22">
+         <div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
+         <div class="box22-2"><span>이름</span>&nbsp;&nbsp; ${loginUser.name}
+         <p><a><img src="member/구름.png" width="30px" height="30px" /></a>&nbsp; 나의 이용권&nbsp;&nbsp;
+         <a> <input type="button" onClick="location.href='twoving.do?command=ticket'" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></a></p></div>
          
-         <div class="box44">
-      		<div class="box44-2">찜 &nbsp;</div>
-      		<div class="box44-3">이용권 내역 &nbsp;</div>
-      		<div class="box44-4">문의 내역 &nbsp;</div>
-		</div>
+         <div class="box22-3" onClick="location.href='twoving.do?command=updateMemberForm'"><a><img src="member/톱니바퀴.png" width="30px" height="30px" /></a>회원정보 수정</div>
+         
+      </div>
+      <div class="box33">
+      <div class="box33-1">
+         이용권을 구독하고 <a>twoving</a> 등 인기 TV프로그램과 다양한 영화를 자유롭게 시청하세요!
+      </div>
+      </div>
+      
+      <div class="box44">
+      
+   
+      
+      <div class="box44-2" onClick="location.href='twoving.do?command=steamedList'">찜 &nbsp;</div>
+      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권/캐시 내역 &nbsp;</div>
+      <div class="box44-4" onclick="location.href='twoving.do?command=customerInquiryListMypage'">문의 내역 &nbsp;</div>
+
+      
+      
+      </div>
 		
 		
 		<div class="passTicketandcash" style="margin-left: -940px;">
 			<div class="left">
-				<a href=""><span style="color:gray; margin-left: 15px;">이용권</span></a> &nbsp;&nbsp;
+				<a href=""><span style="color:gray; margin-left: 15px;">이용권</span></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+				<a href=""><span style="color:gray;">캐시</span></a>
+			</div>
+			<div class="right">
+				<input type="button" value="이용권 구독하기" onClick="updateDefuseCheck('${paymentVO.productname}');" style="background-color:black; border: 1px solid gray; color: gray; font-weight: bold; padding: 3px; cursor:pointer;">
 			</div>
 		</div>
 		
-		<div class="paymentTable" style="position:absolute; border: 1px solid white; width:100%;">
+		<div class="paymentTable" style="position:absolute; border: none; width:100%;">
 			<table style="display:flex; flex-direction: column; width: 100%;">
-				<tr style="background-color:gray; opacity: 0.3; padding: 15px; width: 100%; color: white;">
-					<th style="width: 100%; color:white; font-weight: bold;">상태</th>
-					<th style="color:white; font-weight: bold;">상품명</th>
-					<th style="color:white; font-weight: bold;">결제금액</th>
-					<th style="color:white; font-weight: bold;">결제수단</th>
-					<th style="color:white; font-weight: bold;">결제일</th>
-					<th style="color:white; font-weight: bold;">이용기간</th>
+				<tr style="background-color:#353535; width: 100%; color: white; height: 60px;">
+					<th style="width: 100%;">상태</th>
+					<th>상품명</th>
+					<th>결제금액</th>
+					<th>결제수단</th>
+					<th>결제일</th>
+					<th>이용기간</th>
 				</tr>
 					<c:forEach items="${passTicket2}" var="payment">
-					<tr>
+					<tr style="height: 60px;">
 						<td>
 							<c:choose>
 								<c:when test="${payment.subscribeyn == 'N'}">
@@ -119,7 +137,8 @@
 			                    cal.setTime(runPeriod2);
 			                    cal.add(Calendar.MONTH, 1);
 			                    nextMonthDate = new java.text.SimpleDateFormat("yyyy.M.d").format(cal.getTime());
-		             		%>
+		                	
+		                	%>
 							<%= nextMonthDate %>
 							<% } %>
 						</td>
