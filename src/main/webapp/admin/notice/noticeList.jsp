@@ -37,7 +37,7 @@
 			<div class="row">
 				<div class="col" style="flex:0.5;">${noticeVO.nseq}</div>
 				<div class="col" style="flex:6;">
-					<a href="#" onClick="go_detail2( '${noticeVO.nseq}' )"> 
+					<a href="#" onClick="go_detail2( '${noticeVO.nseq}' )" style="color:black; font-size: 100%;"> 
 						${noticeVO.title}
 							
 						<c:if test="${noticeVO.noticeyn=='Y'}">

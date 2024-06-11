@@ -17,7 +17,7 @@
 			</div>
 			<div class="field" >
 				<label>공지 유무</label>
-				<div style="border:1px solid black; width:100px; text-align: left;">
+				<div style="border:1px solid gray; width:100px; text-align: left;">
 					<c:if test="${noticeVO.noticeyn=='Y'}">
 						<input type="radio" name="noticeyn" value="Y" checked>공지 글
 						<input type="radio" name="noticeyn" value="N">일반 글

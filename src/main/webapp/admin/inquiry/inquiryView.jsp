@@ -7,40 +7,40 @@
 <article>
 	<form name="inquiryViewFrm" method="post"  enctype="multipart/form-data">
 	<input type="hidden" name="ciseq" value="${cvo.ciseq}" />
-			<h1> 고객문의 상세 보기 </h1>
-			<div class="field" >
+			<h1 style="border-bottom: 2px solid black;"> 고객문의 상세 보기 </h1>
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>이름</label><div>${cvo.name}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<%-- <label>이메일</label><div>${cvo.emailid}@${cvo.emailid2}</div> --%>
 					<label>이메일</label><div>${cvo.email}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<%-- <label>연락처</label><div>${cvo.phone}-${cvo.phone1}-${cvo.phone2}</div> --%>
 					<label>연락처</label><div>${cvo.phone}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>문의종류</label><div>${cvo.inquiryList}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>디바이스</label><div>${cvo.devicephone} / ${cvo.devicemodelname}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>통신환경</label><div>${cvo.runenvironment}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>이용장소</label><div>${cvo.runplace}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>이용시간</label><div>${cvo.runtime1}~${cvo.runtime2}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>이용컨텐츠</label><div>${cvo.runcontent}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>문의제목</label><div>${cvo.inquirytitle}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>문의내용</label><div><pre>${cvo.inquirycontent}</pre></div>
 			</div>
 			

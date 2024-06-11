@@ -37,7 +37,7 @@
 				<div class="col" style="flex:0.5;">${faqVO.qseq}</div>
 				<div class="col" style="flex:2;">${faqVO.inquirylist}</div>
 				<div class="col" style="flex:6">
-					<a href="#" onClick="go_detail3( '${faqVO.qseq}' )"> 
+					<a href="#" onClick="go_detail3( '${faqVO.qseq}' )"style="color: black; font-size: 100%;"> 
 						${faqVO.subject}
 					</a>	
 				</div>

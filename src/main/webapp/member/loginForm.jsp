@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/header_footer.css">
 <button type="submit" class="logo" style="cursor: pointer;"
 	onclick="location.href='twoving.do?command=index'">TWOVING</button>
-<section style="margin-left: 658px;">
+<section>
 
     <% 
     // 세션에 저장된 메시지 확인

@@ -25,7 +25,7 @@ public class NoticeAction implements Action {
 		MemberVO memberVO = (MemberVO)session.getAttribute("loginUser");
 		
 		if(memberVO == null) {
-			RequestDispatcher rd = request.getRequestDispatcher("loginForm.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("member/loginForm.jsp");
 			rd.forward(request, response);
 		}else {
 			int page = 1;

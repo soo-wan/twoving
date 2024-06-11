@@ -12,12 +12,9 @@
 			
 			<h1 style="text-align: center;"> 시리즈 / 영화 수정 </h1>
 			
-			<!-- 라디오 버튼 불러오기 -->
-				<!-- <input type="radio" name="kind" value="0" checked>시리즈
-					<input type="radio" name="kind" value="1">영화 -->
 			<div class="field" >
 				<label>구분</label>
-				<div style="border:1px solid black; width:100px; text-align: left;">
+				<div style="border:1px solid gray; width:100px">
 					<c:choose>
 						<c:when test='${productVO.kind==0}'>
 							<input type="radio" name="kind" value="0" checked="checked">시리즈
@@ -30,51 +27,33 @@
 					</c:choose>
 				</div>
 			</div>
-			<div class="field" >
+			
+			<div class="field" style="" >
 				<label>장르</label>
-				<select name="genre" id="genre" style="width:100px;">
-				    <option value="사극">사극</option>
-				    <option value="멜로">멜로</option>
-				    <option value="예능">예능</option>
-				    <option value="액션">액션</option>
-				    <option value="히어로">히어로</option>
-				    <option value="교양(다큐)">교양(다큐)</option>
-				    <option value="스포츠">스포츠</option>
-				    <option value="키즈">키즈</option>
-				    <option value="공연">공연</option>
-				    <option value="오리지널">오리지널</option>
-				    <option value="해외">해외</option>
-				    <option value="공포">공포</option>
-				    <option value="범죄">범죄</option>
-				    <option value="판타지">판타지</option>
-				    <option value="코미디">코미디</option>
-				    <option value="애니메이션">애니메이션</option>
-				    <option value="스릴러">스릴러</option>
+				<select name="genre" id="genre" style="width:100px; margin:auto; margin-right:70%;">
+			<option value="사극">사극</option>
+                <option value="멜로">멜로</option>
+                <option value="예능">예능</option>
+                <option value="액션">액션</option>
+                <option value="히어로">히어로</option>
+                <option value="교양(다큐)">교양(다큐)</option>
+                <option value="스포츠">스포츠</option>
+                <option value="키즈">키즈</option>
+                <option value="공연">공연</option>
+                <option value="오리지널">오리지널</option>
+                <option value="해외">해외</option>
+                <option value="공포">공포</option>
+                <option value="범죄">범죄</option>
+                <option value="판타지">판타지</option>
+                <option value="코미디">코미디</option>
+                <option value="애니메이션">애니메이션</option>
+                <option value="스릴러">스릴러</option>
 			  	</select>	
 			</div>
-			<!-- 
-				<div class="field">
-					<label>상품분류</label>
-					<div>
-						<select name="kind" style="width:200px; height:20px; font-size: 105%;">
-							<option value="">선택하세요</option>
-							<c:forEach items="${kindList}" var="kind" varStatus="status">
-								<c:choose>
-									<c:when test="${status.count==productVO.kind}">
-										<option value="${status.count}" selected>${kind}</option>
-									</c:when>
-									<c:otherwise>
-										<option value="${status.count}">${kind}</option>
-									</c:otherwise>
-								</c:choose>
-							</c:forEach>
-						</select>
-					</div>
-				</div>
-			 -->
+			
 			 <div class="field" >
 				<label style="color:blue;">사용 유무</label>
-				<div style="border:1px solid black; width:100px; text-align: left;">
+				<div style="border:1px solid gray; width:100px; text-align: left;">
 					<c:choose>
 						<c:when test='${productVO.useyn=="Y"}'>
 							<input type="radio" name="useyn" value="Y" checked>Y
@@ -89,7 +68,7 @@
 			</div>
 			<div class="field" >
 				<label style="color:red;">New 유무</label>
-				<div style="border:1px solid black; width:100px; text-align: left;">
+				<div style="border:1px solid gray; width:100px; text-align: left;">
 					<c:choose>
 						<c:when test='${productVO.newyn=="Y"}'>
 							<input type="radio" name="newyn" value="Y" checked>Y
@@ -104,7 +83,7 @@
 			</div>
 			<div class="field" >
 				<label style="color:green;">Best 유무</label>
-				<div style="border:1px solid black; width:100px; text-align: left;">
+				<div style="border:1px solid gray; width:100px; text-align: left;">
 					<c:choose>
 						<c:when test='${productVO.bestyn=="Y"}'>
 							<input type="radio" name="bestyn" value="Y" checked>Y
@@ -120,14 +99,14 @@
 			<!-- select 불러오기 -->
 			<div class="field" >
 					<label>관람 나이 제한</label>
-					<select name="age" id="age">
+					<select name="age" id="age"style="width:100px; margin:auto; margin-right:70%;">
 					    <option value="ALL">ALL</option>
 					    <option value="12">12</option>
 					    <option value="15">15</option>
 					    <option value="18">18</option>
 			  		</select>	
 			</div>
-			<div class="field" >
+			<div class="field">
 					<label>년도</label> <input type="text" name="year" value="${productVO.year}" />
 			</div>
 			<div class="field" >
@@ -144,7 +123,7 @@
 			<div class="field">
 				<label>시리즈/영화 이미지</label>
 				<input type="file" name="image">
-			</div>
+			</div> 
 			<div class="field" >
 					<label>기존 이미지</label>
 					<img src="image2/${productVO.savefilename}" width="200">

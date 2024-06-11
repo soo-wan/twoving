@@ -20,6 +20,7 @@
 					<a href="twoving.do?command=adminLogout">
 						<img src="admin/images/logout.png" style="width:50px;">
 					</a>
+					<a  href="twoving.do?command=admin" style="color:black; margin-right: 410px; margin-top: 10px;font-size: 150%;" >TWOVING admin</a>
 					<!-- <input class="btn" type="button" value="로그아웃"  style="font-size: 120%;" 
 							onClick="location.href='twoving.do?command=adminLogout'">	 -->
 			</div>

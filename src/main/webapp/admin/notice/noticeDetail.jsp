@@ -6,14 +6,14 @@
 
 <article>
 	<form name="noticeWriteFrm" method="post"  enctype="multipart/form-data">
-			<h1> 공지사항 상세 보기 </h1>
-			<div class="field" >
+			<h1 style="border-bottom: 2px solid black;'"> 공지사항 상세 보기 </h1>
+			<div class="field" style="border-bottom: 1px dotted  black;">
 					<label>제목</label><div>${NoticeVO.title}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted  black;">
 					<label>내용</label><div><pre>${NoticeVO.content}</pre></div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted  black;">
 				<c:if test="${NoticeVO.noticeyn=='Y'}">
 					<label>공지 유무</label><div style="color : red; font-weight: bold;">공지글</div>
 				</c:if>

@@ -6,14 +6,14 @@
 
 <article>
 	<form name="noticeWriteFrm" method="post"  enctype="multipart/form-data">
-			<h1> FAQ 상세 보기 </h1>
-			<div class="field" >
+			<h1 style="border-bottom: 2px solid black;"> FAQ 상세 보기 </h1>
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>분류</label><div>${faqVO.inquirylist}</div>
 			</div>
-			<div class="field" >
+			<div class="field"style="border-bottom: 1px dotted black;" >
 					<label>제목</label><div>${faqVO.subject}</div>
 			</div>
-			<div class="field" >
+			<div class="field" style="border-bottom: 1px dotted black;">
 					<label>내용</label><div><pre>${faqVO.content}</pre></div>
 			</div>
 			<div class="btn" >

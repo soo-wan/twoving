@@ -32,7 +32,7 @@
 				<div class="col" style="flex:2.5;">${inquiryVO.email}</div>
 				<div class="col" style="flex:2;">${inquiryVO.phone}</div>
 				<div class="col" style="flex:6;">
-					<a href="#" onClick="go_detail4( '${inquiryVO.ciseq}' )"> 
+					<a href="#" onClick="go_detail4( '${inquiryVO.ciseq}' )" style="color: black; font-size: 100%;"> 
 						${inquiryVO.inquirytitle}
 					</a>
 					<c:choose>

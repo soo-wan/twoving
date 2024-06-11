@@ -40,8 +40,8 @@
 					<c:if test="${productVO.kind eq '1'}">영화</c:if>
 				</div>
 				<div class="col" style="flex:2;">${productVO.genre}</div>
-				<div class="col" style="flex:4;">
-					<a href="#" onClick="go_detail( '${productVO.pseq}' )">
+				<div class="col" style="flex:4; ">
+					<a href="#" onClick="go_detail( '${productVO.pseq}' )" style="color:black; font-size: 100%">
 						${productVO.title}
 					</a>	
 				</div>

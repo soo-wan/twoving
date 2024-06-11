@@ -13,7 +13,7 @@
 						<span style="color:red">${index}&nbsp;</span>
 					</c:if>
 					<c:if test="${index!=paging.page}">
-						<a href="${action}&page=${index}">${index}&nbsp;</a>
+						<a href="${action}&page=${index}" style="color:black; font-size: 100%;">${index}&nbsp;</a>
 					</c:if>
 				</c:forEach>
 				<c:if test="${paging.next}">
