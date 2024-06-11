@@ -71,7 +71,7 @@
          			&nbsp;프리미엄
          		</c:when>
          	</c:choose>
-         <a> <input type="button" onClick="location.href='twoving.do?command=ticket'" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></a></p></div>
+         <a> <input type="button" onClick="updateDefuseCheck('${paymentVO.productname}')" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></a></p></div>
          
          <div class="box22-3" onClick="location.href='twoving.do?command=updateMemberForm'"><a><img src="member/톱니바퀴.png" width="30px" height="30px" /></a>회원정보 수정</div>
          
@@ -111,50 +111,50 @@
 					<th>결제일</th>
 					<th>이용기간</th>
 				</tr>
-					<c:forEach items="${passTicket2}" var="payment">
-					<tr style="height: 60px;">
-						<td>
-							<c:choose>
-								<c:when test="${payment.subscribeyn == 'N'}">
-									<span style="color:gray; font-weight:bold;">만료</span>
-								</c:when>
-								<c:otherwise>
-									<span style="color:red; font-weight:bold;">구독중</span>
-								</c:otherwise>
-							</c:choose>
-						</td>
-						<td>
-							<c:choose>
-								<c:when test="${payment.subscribeyn == 'Y'}">
-									${payment.productname}<br>
-									<input type="button" value="변경/해지"  onClick="updateDefuseCheck('${payment.productname}');" style="background-color:black; border: 1px solid gray; color: gray; margin-top: 3px; cursor:pointer;">
-								</c:when>
-								<c:otherwise>
-									${payment.productname}
-								</c:otherwise>
-							</c:choose>
-						</td>
-						<td>${payment.paymentprice}</td>
-						<td>${payment.paymentmeans}</td>
-						<td><fmt:formatDate value="${payment.paymentday}"/></td>
-						<td style="color:white;"><fmt:formatDate value="${payment.runperiod1}"/> ~ 
-						<c:set var="runPeriod2" value="${payment.runperiod2}" />
-							<%
-								java.util.Date runPeriod2 = (java.util.Date) pageContext.findAttribute("runPeriod2");
-								String nextMonthDate = "N/A";
-			                	if (runPeriod2 != null) {
-			                    Calendar cal = Calendar.getInstance();
-			                    cal.setTime(runPeriod2);
-			                    cal.add(Calendar.MONTH, 1);
-			                    nextMonthDate = new java.text.SimpleDateFormat("yyyy.M.d").format(cal.getTime());
-		                	
-		                	%>
-							<%= nextMonthDate %>
-							<% } %>
-						</td>
-					</tr>
-					</c:forEach>
-			</table>
+							<c:forEach items="${passTicket2}" var="payment">
+									<tr style="height: 60px;">
+									<td>
+									<c:choose>
+										<c:when test="${payment.subscribeyn == 'N'}">
+											<span style="color:gray; font-weight:bold;">만료</span>
+										</c:when>
+										<c:otherwise>
+											<span style="color:red; font-weight:bold;">구독중</span>
+										</c:otherwise>
+									</c:choose>
+								</td>
+								<td>
+									<c:choose>
+										<c:when test="${payment.subscribeyn == 'Y'}">
+											${payment.productname}<br>
+											<input type="button" value="변경/해지"  onClick="updateDefuseCheck('${payment.productname}');" style="background-color:black; border: 1px solid gray; color: gray; margin-top: 3px; cursor:pointer;">
+										</c:when>
+										<c:otherwise>
+											${payment.productname}
+										</c:otherwise>
+									</c:choose>
+								</td>
+								<td>${payment.paymentprice}</td>
+								<td>${payment.paymentmeans}</td>
+								<td><fmt:formatDate value="${payment.paymentday}"/></td>
+								<td style="color:white;"><fmt:formatDate value="${payment.runperiod1}"/> ~ 
+								<c:set var="runPeriod2" value="${payment.runperiod2}" />
+									<%
+										java.util.Date runPeriod2 = (java.util.Date) pageContext.findAttribute("runPeriod2");
+										String nextMonthDate = "N/A";
+					                	if (runPeriod2 != null) {
+					                    Calendar cal = Calendar.getInstance();
+					                    cal.setTime(runPeriod2);
+					                    cal.add(Calendar.MONTH, 1);
+					                    nextMonthDate = new java.text.SimpleDateFormat("yyyy.M.d").format(cal.getTime());
+				                	
+				                	%>
+									<%= nextMonthDate %>
+									<% } %>
+								</td>
+								</tr>
+							</c:forEach>
+				</table>
 			
 			<jsp:include page="paging/passTicketPaging2.jsp">
 				<jsp:param value="twoving.do?command=passTicketList" name="address"/>

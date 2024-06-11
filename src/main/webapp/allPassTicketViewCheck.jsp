@@ -92,7 +92,7 @@
 					<div class="advertiseStandard" onClick="colorRedOrGray2('광고형 스탠다드', '5,500원', 1)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">광고형<br> 스탠다드</p>
 					</div>
-					<div class="basic" onClick="colorRedOrGray2('베이직', '9,500원', 2)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
+					<div class="basic" onClick="colorRedOrGray2('베이직', '9,500원', 2)" onMouseOver="	" onMouseOut="" style="border: 1px solid gray; width: 43%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">
 						<p style="font-weight: bold; color:white; text-align:center;">베이직</p>
 					</div>
 					<div class="standard" onClick="colorRedOrGray2('스탠다드', '13,900원', 3)" onMouseOver="" onMouseOut="" style="border: 1px solid gray; width: 30%; color:white; border-radius:15px 15px 15px 15px; padding: 40px; margin-right: 10px; background-color: #191919;">

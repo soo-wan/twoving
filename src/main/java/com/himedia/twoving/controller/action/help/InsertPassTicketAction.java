@@ -52,6 +52,7 @@ public class InsertPassTicketAction implements Action {
 				paymentDAO.updatePayment(pmseq);
 			}
 			
+			
 			paymentDAO.insertPayment(paymentVO);
 			
 			

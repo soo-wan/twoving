@@ -45,6 +45,7 @@ public class PaymentDAO {
 				PaymentVO paymentVO = new PaymentVO();
 				
 				paymentVO.setPmseq(rs.getInt("pmseq"));
+//				paymentVO.setUserid(rs.getString("userid"));
 				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
 				paymentVO.setProductname(rs.getString("productname"));
 				paymentVO.setPaymentprice(rs.getString("paymentprice"));
@@ -106,6 +107,7 @@ public class PaymentDAO {
 				paymentVO = new PaymentVO();
 				
 				paymentVO.setPmseq(rs.getInt("pmseq"));
+//				paymentVO.setUserid(rs.getString("userid"));
 				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
 				paymentVO.setProductname(rs.getString("productname"));
 				paymentVO.setPaymentprice(rs.getString("paymentprice"));
@@ -162,6 +164,7 @@ public class PaymentDAO {
 				paymentVO = new PaymentVO();
 				
 				paymentVO.setPmseq(rs.getInt("pmseq"));
+//				paymentVO.setUserid(rs.getString("userid"));
 				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
 				paymentVO.setProductname(rs.getString("productname"));
 				paymentVO.setPaymentprice(rs.getString("paymentprice"));
@@ -196,6 +199,86 @@ public class PaymentDAO {
 		} finally {
 			DBman.close(con, pstmt, rs);
 		}		
+	}
+
+	public ArrayList<PaymentVO> getList() {
+		ArrayList<PaymentVO> list = new ArrayList<PaymentVO>();
+		
+		con = DBman.getConnection();
+		
+		String sql = "select* from payment";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				PaymentVO paymentVO = new PaymentVO();
+				
+				paymentVO.setPmseq(rs.getInt("pmseq"));
+//				paymentVO.setUserid(rs.getString("userid"));
+				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
+				paymentVO.setProductname(rs.getString("productname"));
+				paymentVO.setPaymentprice(rs.getString("paymentprice"));
+				paymentVO.setPaymentmeans(rs.getString("paymentmeans"));
+				paymentVO.setPaymentday(rs.getTimestamp("paymentday"));
+				paymentVO.setRunperiod1(rs.getTimestamp("runperiod1"));
+				paymentVO.setRunperiod2(rs.getTimestamp("runperiod2"));
+				
+				list.add(paymentVO);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	return list;
+	}
+
+	public PaymentVO getOneSelectList(String userid) {
+		PaymentVO paymentVO = null;
+		
+		con = DBman.getConnection();
+		
+		String sql = "select* from payment where userid=?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				paymentVO = new PaymentVO();
+				
+				paymentVO.setPmseq(rs.getInt("pmseq"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return paymentVO;
+		
+	}
+
+	public void updateReversePayment(int pmseq) {
+		con = DBman.getConnection();
+		
+		String sql="update payment set subscribeyn='Y' where pmseq=?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setInt(1, pmseq);
+			
+			pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}				
 	}
 
 }

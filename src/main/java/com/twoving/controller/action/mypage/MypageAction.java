@@ -5,9 +5,11 @@ import java.util.ArrayList;
 
 import com.himedia.twoving.action.Action;
 import com.himedia.twoving.dao.PassTicketDAO;
+import com.himedia.twoving.dao.PaymentDAO;
 import com.himedia.twoving.dao.ProductDao;
 import com.himedia.twoving.vo.MemberVO;
 import com.himedia.twoving.vo.PassTicketVO;
+import com.himedia.twoving.vo.PaymentVO;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -31,10 +33,13 @@ public class MypageAction implements Action {
 			PassTicketDAO passTicketDAO = PassTicketDAO.getInstance();
 			
 			PassTicketVO passTicketVO = passTicketDAO.selectOnePassTicket(memberVO.getUserid());
+			PaymentDAO paymentDAO = PaymentDAO.getInstance();
 			
+			PaymentVO paymentVO = paymentDAO.getSelectList();
 			 ArrayList<Integer> kindList = pdao.getKindList();
 		      
 		     request.setAttribute("kindList", kindList);
+		     request.setAttribute("paymentVO", paymentVO);
 		     request.setAttribute("passTicketVO", passTicketVO);
 			
 			request.getRequestDispatcher("mypage/mypage.jsp").forward(request, response);

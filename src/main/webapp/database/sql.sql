@@ -110,6 +110,15 @@ ALTER TABLE member
    ON DELETE RESTRICT
 ;
 
+ALTER TABLE payment
+   ADD FOREIGN KEY (userid)
+   REFERENCES member (userid)
+   ON UPDATE RESTRICT
+   ON DELETE RESTRICT
+;
+
+insert into payment(userid, subscribeyn, productname, paymentprice) values('one', 'Y', '프리미엄', '17,000원');
+
 ALTER TABLE member modify phone varchar(45) 
 
 insert into member(userid, ptseq, pwd, name, phone, email)
@@ -119,6 +128,7 @@ insert into member(userid, ptseq, pwd, name, phone, email)
 values('two',2, '2222','김길동','017-7321-7777','acc312@abc.com');
 
 select* from member;
+select* from payment;
 
 
 insert into payment(productname, paymentprice, paymentmeans) values( '광고형 스탠다드', '5,500원','Toss Pay');
@@ -792,6 +802,8 @@ insert into faq(inquirylist, subject, content) values('서비스/이용',
 '버튼 배리어프리 자막 서비스가 제공되는 콘텐츠 시청 시, 크롬캐스트와 에이플레이 상태에서도 배리어프리 자막 서비스 이용이 가능합니다. 단, 자막 크기 설정은 지원하지 않습니다.');
 
 select* from faq;
+
+select* from payment where userid='one' order by pmseq desc;
 
 
 
