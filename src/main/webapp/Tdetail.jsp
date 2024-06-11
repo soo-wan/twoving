@@ -11,7 +11,7 @@
 				style="background-color : #282828;"></div>
 				<div id="container">
 					<div id="containerA">
-						<div id="title" style="margin:0px;" >${productVO.title}</div>
+						<div id="title">${productVO.title}</div>
 						<div id="tagtag" style="margin:0px; padding:0px;">
 							<div id="tag" >${productVO.age} &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}</div>
 							<div class="share">
