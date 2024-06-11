@@ -25,7 +25,7 @@
 				<span style="font-weight:bold;">자주 묻는 질문</span>&nbsp;&nbsp;
 				<a href="twoving.do?command=memberCustomerLogin&inquirylist=회원/로그인"><span style="color:white;">로그인이 안돼요</span></a> &nbsp;&nbsp; |  &nbsp;&nbsp;
 				<a href="twoving.do?command=passTicket&inquirylist=이용권/결제"><span style="color:white;">이용권이 있는 계정이 무엇인지 찾고 싶어요</span></a> &nbsp;&nbsp; |  &nbsp;&nbsp;
-				<a href="twoving.do?command=passTicket&inquirylist=이용권/결제"><span style="color:white;">정기결제수단 변경은 어떻게 하나요?</span></a>
+				<a href="twoving.do?command=passTicket&inquirylist=재생/오류"><span style="color:white;">시리즈와 영화 콘텐츠 다운로드는 어떻게 하나요?</span></a>
 			</div>
 		</div>
 		
