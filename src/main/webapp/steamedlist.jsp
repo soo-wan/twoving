@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
 
 <!DOCTYPE html>
 <html>
@@ -14,8 +16,11 @@
    
    <div class="box1">
    <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer; color:red;" value="TWOVING" />
-               <div class="box1-2"><a href="twoving.do?command=kind&kind=0"  style="color:white;">시리즈</a></div>
-               <div class="box1-3"><a href="twoving.do?command=kind&kind=1" style="color:white;">영화</a></div>
+           <div id="Category">&nbsp;&nbsp;&nbsp;&nbsp;
+            <c:forEach var="kind" items="${kind}">
+                <a href="twoving.do?command=kind&kind=${kind}">${kind == 0 ? '시리즈' : '영화'}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </c:forEach>
+			</div>
     </div>
     <div class="box2">
           <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
@@ -59,15 +64,26 @@
       </div>
       
       <div class="box44">
-      
-   
-      
-      <div class="box44-2" onClick="location.href='twoving.do?command=steamedList'">찜 &nbsp;</div>
+      <div class="box44-2" onClick="location.href='twoving.do?command=steamedList&kind=0'">찜 &nbsp;</div>
       <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권/캐시 내역 &nbsp;</div>
       <div class="box44-4" onclick="location.href='twoving.do?command=customerInquiryListMypage'">문의 내역 &nbsp;</div>
       </div>
-      <jsp:include page="../paging/passTicketPaging2.jsp">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="poiu" ><!-- style="margin-left: -940px;" -->
+      		<br>	
+			<div class="fdsa">
+				<a href="twoving.do?command=steamedList&kind=0"><span style="color:gray; margin-left: 15px;">시리즈</span></a> &nbsp;&nbsp; | &nbsp;&nbsp;
+				<a href="twoving.do?command=steamedList&kind=1"><span style="color:gray;">영화</span></a>				
+			</div>
+			<br>
+			<div id="hahaha">
+			<c:forEach var = "ssteamed" items="${steamedList1 }">
+						<div id="ssteamed"><a href=""><img src="image2/${ssteamed.savefilename}"></a></div>
+					</c:forEach>
+			</div>					
+	 </div>
+      <%-- <jsp:include page="../paging/passTicketPaging2.jsp">
 				<jsp:param value="twoving.do?command=steamedList" name="address"/>
-			</jsp:include>
+			</jsp:include> --%>
 </body>
 </html>

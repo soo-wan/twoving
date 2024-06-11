@@ -7,6 +7,7 @@ body {
 	margin: 0;
 	padding: 0;
 	display: flex;
+	flex-direction:column;
 	align-items: center;
 	height: 100vh;
 	text-align: center;
@@ -120,7 +121,7 @@ body {
 }
 
 a {
-	color: red;
+	
 	font-size: 120%;
 	font-weight: bold;
 	text-decoration: none;
@@ -229,8 +230,17 @@ a {
 		text-decoration-line: none;
 }
 
+#Category a{ color:white; text-decoration-line:none; font-size:100%;}
+
 
 .profileclick {display:none;position:absolute; top: 52px;  background-color:grey;
 	width: 200px; height:300px; border:1px solid white;  right:55px; text-align:center; z-index:10;}
 
 .profileclick div a{ color:white; text-decoration-line:none; font-size:100%;}
+
+
+.poiu {display:flex; width:100%; height:100%; flex-direction:column; z-index:3; }
+.fdsa {display:flex; width:100%; }
+#hahaha{display:flex; width:100%; margin-left:10px; /* flex-wrap:wrap; */}
+#ssteamed { display:flex; width:200px; height:300px; margin-left:5px; margin-bottom:5px;}
+#ssteamed a img {display:flex; width:200px; height:300px; }

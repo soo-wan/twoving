@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.himedia.twoving.action.Action;
+import com.himedia.twoving.dao.ProductDao;
 import com.himedia.twoving.dao.steamedDao;
 import com.himedia.twoving.vo.MemberVO;
 import com.himedia.twoving.vo.ProductVO;
@@ -20,7 +21,6 @@ public class steamedListAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int pseq = Integer.parseInt(request.getParameter("pseq"));
 		int kind = Integer.parseInt(request.getParameter("kind"));
 		
 		HttpSession session = request.getSession();
@@ -30,14 +30,19 @@ public class steamedListAction implements Action {
 			response.sendRedirect("shop.do?command=loginForm");
 		} else {
 			steamedDao sdao = steamedDao.getInstance();
-			ArrayList<steamedVO> list = sdao.steamedview(mvo.getUserid(), pseq);
-			ArrayList<steamedVO> Alist = sdao.selectKindProduct(kind);			
-			String kindList[] = {"시리즈","영화"};
+			ProductDao pdao = ProductDao.getInstance();
+			
+			ArrayList<Integer> kindList = pdao.getKindList();
+			ArrayList<steamedVO> list = sdao.steamedview2(mvo.getUserid());
+			ArrayList<steamedVO> Alist = sdao.selectKindProduct(kind);
+			
+			
 
-		request.setAttribute("kind", kindList[kind]);
-		request.setAttribute("steamedList", list);
+		request.setAttribute("kind", kindList);
+		request.setAttribute("steamedList", list);		
 		request.setAttribute("steamedList1", Alist);
-		request.getRequestDispatcher("mypage.jsp").forward(request, response);
+		
+		request.getRequestDispatcher("steamedlist.jsp").forward(request, response);
 		}
 
 	}

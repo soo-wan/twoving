@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>	
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,9 +30,12 @@ $(function(){
    <div class="box">
    
    <div class="box1">
-   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer; color:red;" value="TWOVING" />
-               <div class="box1-2"><a href="twoving.do?command=kind&kind=0"  style="color:white;">시리즈</a></div>
-               <div class="box1-3"><a href="twoving.do?command=kind&kind=1" style="color:white;">영화</a></div>
+   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer; color:red;" value="TWOVING" />               
+        <div id="Category" style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;
+            <c:forEach var="kind" items="${kindList}">
+                <a href="twoving.do?command=kind&kind=${kind}">${kind == 0 ? '시리즈' : '영화'}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </c:forEach>
+		</div>
     </div>
     <div class="box2">
           <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
@@ -74,15 +79,11 @@ $(function(){
       </div>
       
       <div class="box44">
-      
-   
-      
-      <div class="box44-2" onClick="location.href='twoving.do?command=steamedList'">찜 &nbsp;</div>
-      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권 내역 &nbsp;</div>
+           
+      <div class="box44-2" onClick="location.href='twoving.do?command=steamedList&kind=0'">찜 &nbsp;</div>
+      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권/캐시 내역 &nbsp;</div>
       <div class="box44-4" onclick="location.href='twoving.do?command=customerInquiryListMypage'">문의 내역 &nbsp;</div>
-
-      
-      
+    
       </div>
    </form>
    
