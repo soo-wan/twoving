@@ -56,7 +56,7 @@ public class NoticeDAO {
 		
 		con = DBman.getConnection();
 		
-		String  sql = "select* from notice order by nseq desc limit ? offset ?";
+		String  sql = "select* from notice order by noticeyn desc, nseq desc limit ? offset ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);

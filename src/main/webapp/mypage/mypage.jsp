@@ -78,7 +78,7 @@ $(function(){
    
       
       <div class="box44-2" onClick="location.href='twoving.do?command=steamedList'">찜 &nbsp;</div>
-      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권/캐시 내역 &nbsp;</div>
+      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권 내역 &nbsp;</div>
       <div class="box44-4" onclick="location.href='twoving.do?command=customerInquiryListMypage'">문의 내역 &nbsp;</div>
 
       

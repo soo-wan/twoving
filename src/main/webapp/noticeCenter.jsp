@@ -16,17 +16,17 @@
 		<div class="notice_table" style="margin-left: 18px;">
 			<table>
 					<tr class="trow" style="background-color: rgba(255, 255, 255, 0.2);">
-						<th class="trow_title" style="color:white;">번호</th>
-						<th class="trow_title" style="color:white;">제목</th>
-						<th class="trow_title" style="color:white; margin-left: 20px;">등록일</th>
-						<th class="trow_title" style="color:white;">조회수</th>
+						<th class="trow_title" style="color:gray;">번호</th>
+						<th class="trow_title" style="color:gray;">제목</th>
+						<th class="trow_title" style="color:gray; margin-left: 20px;">등록일</th>
+						<th class="trow_title" style="color:gray;">조회수</th>
 					</tr>
 					<c:forEach items="${noticeList}" var="notice">
 							<!-- <td style="color:red;">공지</td> -->
 							<tr class="notice_row">
 								<c:choose>
 									<c:when test="${notice.noticeyn eq 'Y'}">
-										<td class="notice_col" style=" color:red; font-weight:bold">공지</td>
+										<td class="notice_col" style="color:red; font-weight:bold">공지</td>
 										<td class="notice_col"><a style="color:gray;" href="twoving.do?command=noticeDetail&nseq=${notice.nseq}">${notice.title}</a></td> <!-- 게시물 DB 데이터 끌고 와서 EL 문법으로 저장 -->
 						 				<td class="notice_col"><fmt:formatDate value="${notice.indate}"/></td> <!-- 게시물 DB 데이터 끌고 와서 EL 문법으로 저장 -->
 										<td class="notice_col">${notice.readcount}</td> <!-- 게시물 DB 데이터 끌고 와서 EL 문법으로 저장 -->

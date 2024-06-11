@@ -41,7 +41,7 @@
 				<input type="button" class="secession" onclick="location.href='twoving.do?command=deleteMemberForm'" value="회원탈퇴" />
 	<div class="btn">
 		<input type="button"  class="btn1" value="확인" onClick="go_updateMember()" />
-  		<input type="button"  class="btn2" value="취소" onClick="location.href='twoving.do?command=mypage'"/>
+  		<input type="button"  class="btn2" value="취소" onClick="location.href='twoving.do?command=passTicketList'"/>
 	</div>
 </form>
 	

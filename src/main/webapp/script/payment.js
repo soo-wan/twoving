@@ -74,6 +74,23 @@ function colorRedOrGray(productname, paymentprice, ptseq) {
         element.style.color = "white"; // 글자색을 흰색으로 변경
     }
 }
+
+function colorRedOrGray2(productname, paymentprice, ptseq){
+	
+	document.getElementById("productname").value = productname;
+	document.getElementById("paymentprice").value = paymentprice;
+	document.getElementById("ptseq").value = ptseq;
+	
+    // 현재 클릭된 div 요소의 배경색을 확인하여 색상을 변경합니다.
+    var backgroundColor = element.style.backgroundColor;
+    if (backgroundColor === "#ff153c") { // 배경색이 빨간색일 경우
+        element.style.backgroundColor = "#191919"; // 회색으로 변경
+        element.style.color = "white"; // 글자색을 흰색으로 변경
+    } else { // 그 외의 경우 (회색일 경우)
+        element.style.backgroundColor = "#ff153c"; // 빨간색으로 변경
+        element.style.color = "white"; // 글자색을 흰색으로 변경
+    }
+}
  
 
 function insertAndUpdatePassTicket(){
