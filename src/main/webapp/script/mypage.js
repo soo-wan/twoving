@@ -105,7 +105,7 @@ $(function(){
          });
          });
          
-$(function(){
+/*$(function(){
 	$(".kjy").hover(
                 function(){
                     $(this).css({
@@ -122,7 +122,7 @@ $(function(){
                     });
                 }
              )            
-         });         
+         });        */ 
 
 
 /*function go_cart(){
