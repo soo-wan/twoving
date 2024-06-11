@@ -88,7 +88,7 @@ public class ActionFactory {
 	}
 	
 	public Action getAction(String command) {
-		Action ac = null;
+		  Action ac = null;
 		  if(command.equals("index")) ac = new IndexAction();
 			
 		  //main(김재연)
@@ -143,7 +143,7 @@ public class ActionFactory {
 		else if(command.equals("allPassTicketView")) ac = new AllPassTicketViewAction();
 		else if(command.equals("insertPassTicket")) ac = new InsertPassTicketAction();
 		
-		
+		//------------------------------------------------------------오수완--------------------------------------------------
 		  //그 외 추가 화면(오수완)
 		  else if(command.equals("idcheckForm")) ac = new IdcheckFormAction();
 		  else if(command.equals("deleteMemberForm")) ac = new DeleteMemberFormAction();

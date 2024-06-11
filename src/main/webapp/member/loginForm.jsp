@@ -43,7 +43,7 @@
 				</div>
 				
 				<div class="auto">
-					<input type="checkbox" id="remember" name="remember" checked> 
+					<input type="checkbox" id="remember" name="remember"> 
 					<label for="remember" id="remember2" style=" color:gray; font-weight: bold;"> &nbsp;
 						아이디 저장
 					</label>

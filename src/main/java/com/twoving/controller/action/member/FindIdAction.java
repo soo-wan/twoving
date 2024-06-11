@@ -21,6 +21,6 @@ public class FindIdAction implements Action {
 		
 		request.setAttribute("memberId", memberId);
 		
-		request.getRequestDispatcher("member/.jsp").forward(request, response); //폼 만든거에 보냄
+		request.getRequestDispatcher("mypage/findIdResult.jsp").forward(request, response); 
 	}
 }

@@ -7,19 +7,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="script/mypage.js"></script>
-<script>
-function idcheck(){
-	if(document.findPwd.userid.value==""){
-		alert("아이디를 입력하고 중복체크를 진행하세요");
-		document.findPwd.userid.focus();
-		return;
-	}
-	var url = "twoving.do?command=pwdIdcheckForm&userid=" + document.findPwd.userid.value;
-	var opt ="toolbar=no, menubar=no, resizable=no, width=500, height=250, scrollbars=no";
-	
-	window.open(url,"idcheck",opt);
-}
-</script>
 </head>
 <body>
 <form action="SendEmailServlet" method="post" name="findPwd">
