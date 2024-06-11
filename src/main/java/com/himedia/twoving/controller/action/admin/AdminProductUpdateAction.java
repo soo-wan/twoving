@@ -34,7 +34,7 @@ public class AdminProductUpdateAction implements Action {
 		
 		HttpSession session = request.getSession();
 		ServletContext context = session.getServletContext();
-		String uploadFilePath = context.getRealPath("product_images");
+		String uploadFilePath = context.getRealPath("image2");
 		
 		File uploadDir = new File(uploadFilePath);
 		if(!uploadDir.exists()) uploadDir.mkdir();

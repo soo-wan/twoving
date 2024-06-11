@@ -140,7 +140,7 @@
 			</div>
 			<div class="field" >
 					<label>기존 이미지</label>
-					<img src="product_images/${productVO.savefilename}" width="200">
+					<img src="image2/${productVO.savefilename}" width="200">
 			</div>
 			
 			<div class="field">
@@ -149,7 +149,7 @@
 			</div>
 			<div class="field" >
 					<label>기존이미지(디테일)</label>
-					<img src="product_images/${productVO.savefilename2}" width="200">
+					<img src="image2/${productVO.savefilename2}" width="200">
 			</div>
 			
 			<div class="btn">
