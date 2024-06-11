@@ -37,7 +37,22 @@
 	         	<div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
 	         	<div class="box22-2">
 	         		<p style="font-size: 160%; font-weight: bold;">${loginUser.name}</p>
-	         	<p><img src="member/구름.png" width="30px" height="30px" />&nbsp; 나의 이용권&nbsp;&nbsp;
+	         	<img src="member/구름.png" width="30px" height="30px" />&nbsp;나의 이용권 
+	         		<c:choose>
+	         			<c:when test="${passTicketVO.ptseq == 1}">
+	         				&nbsp; 광고형 스탠다드
+	         			</c:when>
+	         			<c:when test="${passTicketVO.ptseq == 2}">
+	         				&nbsp; 베이직
+	         			</c:when>
+	         			<c:when test="${passTicketVO.ptseq == 3}">
+							&nbsp; 스탠다드		
+	         			</c:when>
+	         			<c:when test="${passTicketVO.ptseq == 4}">
+	         				&nbsp; 프리미엄
+	         			</c:when>
+	         		</c:choose>
+	         	&nbsp;&nbsp;
 	         	<input type="button" onClick="updateDefuseCheck('${paymentVO.productname}')" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></p></div>
 	         
 	         	<div class="box22-3" onClick="location.href='twoving.do?command=updateMemberForm'">
@@ -55,11 +70,7 @@
 		
 		<div class="passTicketandcash" style="margin-left: -940px;">
 			<div class="left">
-				<a href=""><span style="color:gray; margin-left: 15px;">이용권</span></a> &nbsp;&nbsp; | &nbsp;&nbsp;
-				<a href=""><span style="color:gray;">캐시</span></a>
-			</div>
-			<div class="right">
-				<input type="button" value="이용권 구독하기" onClick="updateDefuseCheck('${paymentVO.productname}');" style="background-color:black; border: 1px solid gray; color: gray; font-weight: bold; padding: 3px; cursor:pointer;">
+				<a href=""><span style="color:gray; margin-left: 15px;">이용권</span></a> &nbsp;&nbsp;
 			</div>
 		</div>
 		

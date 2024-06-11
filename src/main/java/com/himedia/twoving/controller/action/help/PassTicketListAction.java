@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.himedia.twoving.action.Action;
+import com.himedia.twoving.dao.PassTicketDAO;
 import com.himedia.twoving.dao.PaymentDAO;
 import com.himedia.twoving.util.Paging;
 import com.himedia.twoving.vo.MemberVO;
+import com.himedia.twoving.vo.PassTicketVO;
 import com.himedia.twoving.vo.PaymentVO;
 
 import jakarta.servlet.RequestDispatcher;
@@ -58,6 +60,9 @@ public class PassTicketListAction implements Action {
 			  paging.setPage(page);
 			 
 			  PaymentDAO paymentDAO = PaymentDAO.getInstance();
+			  PassTicketDAO passTicketDAO = PassTicketDAO.getInstance();
+			  
+			  PassTicketVO passTicketVO = passTicketDAO.selectOnePassTicket(memberVO.getUserid());
 				
 			  int count = paymentDAO.getAllCount();
 				 
@@ -70,6 +75,7 @@ public class PassTicketListAction implements Action {
 			 ArrayList<PaymentVO> passTicket2List = paymentDAO.getAllList(paging);
 			
 			request.setAttribute("paymentVO", paymentVO);
+			request.setAttribute("passTicketVO", passTicketVO);
 			request.setAttribute("passTicket2", passTicket2List);
 			request.setAttribute("paging", paging);
 			

@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 import com.himedia.twoving.util.DBman;
 import com.himedia.twoving.vo.MemberVO;
+import com.himedia.twoving.vo.PassTicketVO;
 
 public class PassTicketDAO {
 	private PassTicketDAO() {
@@ -78,5 +79,33 @@ public class PassTicketDAO {
 		
 		return memberVO;
 		
+	}
+
+	public PassTicketVO selectOnePassTicket(String userid) {
+		PassTicketVO passTicketVO = null;
+		
+		con = DBman.getConnection();
+		
+		String sql = "select* from member where userid=?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, userid);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				passTicketVO = new PassTicketVO();
+				
+				passTicketVO.setPtseq(rs.getInt("ptseq"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return passTicketVO;
 	}
 }
