@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +35,22 @@
 	  
 	  <div class="c">
 	  <div class="box2">
-	  <div class="tb3">${paymentVO.productname}</div>
+	  <div class="tb3">
+	  	<c:choose>
+	         			<c:when test="${passTicketVO.ptseq == 1}">
+	         				광고형 스탠다드
+	         			</c:when>
+	         			<c:when test="${passTicketVO.ptseq == 2}">
+	         				베이직
+	         			</c:when>
+	         			<c:when test="${passTicketVO.ptseq == 3}">
+							스탠다드		
+	         			</c:when>
+	         			<c:when test="${passTicketVO.ptseq == 4}">
+	         				프리미엄
+	         			</c:when>
+	         </c:choose>
+	  </div>
 	  <div class="tb4">0</div>
 	  </div>
 </div> 

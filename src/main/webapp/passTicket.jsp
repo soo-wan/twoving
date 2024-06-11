@@ -76,12 +76,12 @@
 		<div class="paymentTable" style="position:absolute; border: 1px solid white; width:100%;">
 			<table style="display:flex; flex-direction: column; width: 100%;">
 				<tr style="background-color:gray; opacity: 0.3; padding: 15px; width: 100%; color: white;">
-					<th style="width: 100%; color:white; font-weight: bold; opacity:1;">상태</th>
-					<th style="color:white; font-weight: bold; opacity:1;">상품명</th>
-					<th style="color:white; font-weight: bold; opacity:1;">결제금액</th>
-					<th style="color:white; font-weight: bold; opacity:1;">결제수단</th>
-					<th style="color:white; font-weight: bold; opacity:1;">결제일</th>
-					<th style="color:white; font-weight: bold; opacity:1;">이용기간</th>
+					<th style="width: 100%; color:white; font-weight: bold;">상태</th>
+					<th style="color:white; font-weight: bold;">상품명</th>
+					<th style="color:white; font-weight: bold;">결제금액</th>
+					<th style="color:white; font-weight: bold;">결제수단</th>
+					<th style="color:white; font-weight: bold;">결제일</th>
+					<th style="color:white; font-weight: bold;">이용기간</th>
 				</tr>
 					<c:forEach items="${passTicket2}" var="payment">
 					<tr>
@@ -119,8 +119,7 @@
 			                    cal.setTime(runPeriod2);
 			                    cal.add(Calendar.MONTH, 1);
 			                    nextMonthDate = new java.text.SimpleDateFormat("yyyy.M.d").format(cal.getTime());
-		                	
-		                	%>
+		             		%>
 							<%= nextMonthDate %>
 							<% } %>
 						</td>
