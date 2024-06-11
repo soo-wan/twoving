@@ -69,26 +69,32 @@ function go_updateMember(){
 	}else if(document.updateForm.pwd.value != document.updateForm.pwdCheck.value){
 		alert("비밀번호와 비밀번호 확인이 일치하지 않습니다.");
 		document.updateForm.pwd.focus();	
+	}else if(!/^[A-Za-z0-9]{6,12}$/.test(document.updateForm.pwd.value)){
+		alert("비밀번호 : 영문 소/대문자, 숫자 조합 6~12 자리로 입력해주세요.");
+		document.updateForm.pwd.focus();
 	}else if(document.updateForm.name.value ==""){
 		alert("이름을 입력해 주세요.");
 		document.updateForm.name.focus();	
-	}else if(document.updateForm.phone.value ==""){
-		alert("전화번호를 입력해 주세요.");
-		document.updateForm.phone.focus();	
 	}else if(document.updateForm.email.value ==""){
 		alert("이메일을 입력해 주세요.");
 		document.updateForm.email.focus();	
+	}else if(!/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i.test(document.updateForm.email.value)){
+		alert("이메일 형식에 맞게 입력해주세요.");
+		document.updateForm.email.focus();
+	}else if(document.updateForm.phone.value ==""){
+		alert("전화번호를 입력해 주세요.");
+		document.updateForm.phone.focus();	
 	}else {
 		document.updateForm.submit();	
 	}
 }
 
-function withdraw(){
+/*function withdraw(){
    var ans = confirm("정말로 탈퇴하시겠습니까?");
    if(ans){
       location.href="shop.do?command=deleteMember"
    }
-}
+}*/
 
 
 

@@ -195,7 +195,6 @@ $(function(){
 		
 function withdrawal(){
 	var checkBox = document.getElementById("agree");
-	console.log("이게먼데"+checkBox.checked)
 	if (checkBox.checked == true) {
 		var ans = window.confirm("정말로 탈퇴하시겠습니까?");
 		if(ans){
