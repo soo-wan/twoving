@@ -75,10 +75,8 @@ $(function(){
       
       <div class="box44">
       
-   
-      <div class="box44-1">시청 내역 &nbsp;</div>
       <div class="box44-2">찜 &nbsp;</div>
-      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권/캐시 내역 &nbsp;</div>
+      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권 내역 &nbsp;</div>
       <div class="box44-4">문의 내역 &nbsp;</div>
 
       

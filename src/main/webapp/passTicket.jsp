@@ -36,7 +36,7 @@
 		 <div class="box22">
 	         	<div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
 	         	<div class="box22-2">
-	         		<p style="font-size: 160%; font-weight: bold;">${loginUser.name}</p>
+	         		<p style="font-size: 160%; font-weight: bold;">이름 ${loginUser.name}</p>
 	         	<img src="member/구름.png" width="30px" height="30px" />&nbsp;나의 이용권 
 	         		<c:choose>
 	         			<c:when test="${passTicketVO.ptseq == 1}">
@@ -61,7 +61,6 @@
          </div>
          
          <div class="box44">
-      		<div class="box44-1">시청 내역 &nbsp;</div>
       		<div class="box44-2">찜 &nbsp;</div>
       		<div class="box44-3">이용권 내역 &nbsp;</div>
       		<div class="box44-4">문의 내역 &nbsp;</div>
@@ -76,13 +75,13 @@
 		
 		<div class="paymentTable" style="position:absolute; border: 1px solid white; width:100%;">
 			<table style="display:flex; flex-direction: column; width: 100%;">
-				<tr style="background-color:gray; width: 100%; color: white;">
-					<th style="width: 100%;">상태</th>
-					<th>상품명</th>
-					<th>결제금액</th>
-					<th>결제수단</th>
-					<th>결제일</th>
-					<th>이용기간</th>
+				<tr style="background-color:gray; opacity: 0.3; padding: 15px; width: 100%; color: white;">
+					<th style="width: 100%; color:white; font-weight: bold; opacity:1;">상태</th>
+					<th style="color:white; font-weight: bold; opacity:1;">상품명</th>
+					<th style="color:white; font-weight: bold; opacity:1;">결제금액</th>
+					<th style="color:white; font-weight: bold; opacity:1;">결제수단</th>
+					<th style="color:white; font-weight: bold; opacity:1;">결제일</th>
+					<th style="color:white; font-weight: bold; opacity:1;">이용기간</th>
 				</tr>
 					<c:forEach items="${passTicket2}" var="payment">
 					<tr>
