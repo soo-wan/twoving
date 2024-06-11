@@ -72,6 +72,8 @@ import com.twoving.controller.action.mypage.CustomerInquiryMypageDetail;
 import com.twoving.controller.action.mypage.DeleteMemberAction;
 import com.twoving.controller.action.mypage.DeleteMemberFormAction;
 import com.twoving.controller.action.mypage.MypageAction;
+import com.twoving.controller.action.mypage.PwdIdcheckFormAction;
+import com.twoving.controller.action.mypage.ResetPasswordAction;
 import com.twoving.controller.action.mypage.TicketAction;
 import com.twoving.controller.action.mypage.UpdateMemberAction;
 import com.twoving.controller.action.mypage.UpdateMemberFormAction;
@@ -152,6 +154,8 @@ public class ActionFactory {
 	      else if(command.equals("findId")) ac = new FindIdAction();
 	      else if(command.equals("findPwd")) ac = new FindPwdAction();
 	      else if(command.equals("verifyCode")) ac = new VerifyCodeAction();
+	      else if(command.equals("resetPassword")) ac = new ResetPasswordAction();
+	      else if(command.equals("pwdIdcheckForm")) ac = new PwdIdcheckFormAction();
 		  
 		  //admin(오수완)
 	      //시리즈 영화

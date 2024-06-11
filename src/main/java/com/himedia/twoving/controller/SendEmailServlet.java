@@ -32,11 +32,11 @@ public class SendEmailServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");	
-		String userId = request.getParameter("userId");
-		
+		String userid = request.getParameter("userid");
+		//System.out.println("아이디 : " + userid);
 		MemberDao mdao = MemberDao.getInstance();
-		String email = mdao.getMemberEmail(userId);
-		System.out.println("이메일 : " + email);
+		String email = mdao.getMemberEmail(userid);
+		//System.out.println("이메일 : " + email);
 		
 	    // POST 요청을 처리하는 메소드
         // 사용자가 입력한 이메일 주소를 가져옴
@@ -46,7 +46,7 @@ public class SendEmailServlet extends HttpServlet {
         
         // 네이버 이메일 계정과 비밀번호
         final String user = "ohsoowan@naver.com"; // 네이버 이메일 계정
-        final String password = "`dtd15321"; // 네이버 이메일 계정 비밀번호
+        final String password = "@twoving2"; // 네이버 이메일 계정 비밀번호
 
         // 인증 코드를 생성하여 세션에 저장
         String authCode = generateAuthCode();
@@ -63,7 +63,6 @@ public class SendEmailServlet extends HttpServlet {
         // 세션 생성 및 SMTP 인증 설정
         Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-            	System.out.println("여기까진됨");
                 return new PasswordAuthentication(user, password);
             }
         });
@@ -83,8 +82,10 @@ public class SendEmailServlet extends HttpServlet {
             System.out.println("Email sent successfully");
 
             // 인증 코드 입력 페이지로 리디렉션
-			 response.sendRedirect("mypage/verify_code.jsp"); 
-            //response.getWriter().println("<script>window.open('mypage/verify_code.jsp', '새창', 'width=600, height=400, top=100, left=100');</script>");
+             //request.setAttribute("userid", userid);
+             //request.getRequestDispatcher("mypage/verify_code.jsp").forward(request, response);
+			 response.sendRedirect("mypage/verify_code.jsp?userid="+userid); 
+             //response.getWriter().println("<script>window.open('mypage/verify_code.jsp', '새창', 'width=600, height=400, top=100, left=100');</script>");
         } catch (MessagingException e) {
             e.printStackTrace();
         }

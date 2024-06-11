@@ -119,4 +119,19 @@ public class MemberDao {
 		} finally { DBman.close(con, pstmt, rs); }
 		return email;
 	}
+
+	public void updateMemberPwd(String userid, String pwd) {
+		Connection con = DBman.getConnection();
+        con = DBman.getConnection();
+        String sql = "update member set pwd=? where userid =?";
+        try {
+        	pstmt = con.prepareStatement(sql);
+        	PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, pwd);
+            pstmt.setString(2, userid);
+            pstmt.executeUpdate();
+        } catch (SQLException e) { e.printStackTrace();
+        } finally { DBman.close(con, pstmt, rs);
+        }
+	}
 }
