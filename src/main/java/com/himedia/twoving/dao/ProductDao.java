@@ -30,7 +30,7 @@ public class ProductDao {
 	public ArrayList<ProductVO> bestList() {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
-		String sql = "select * from best_pro_view order by time desc";
+		String sql = "select * from best_pro_view";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -54,7 +54,7 @@ public class ProductDao {
 	public ArrayList<ProductVO> newList() {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
-		String sql = "select * from new_pro_view order by pseq asc";
+		String sql = "select * from new_pro_view";
 
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -78,7 +78,7 @@ public class ProductDao {
 	public ArrayList<ProductVO> bestList2() {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
-		String sql = "select * from best_pro_view2 order by pseq desc";
+		String sql = "select * from best_pro_view2";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -102,7 +102,7 @@ public class ProductDao {
 	public ArrayList<ProductVO> newList2() {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
-		String sql = "select * from new_pro_view2 order by pseq desc";
+		String sql = "select * from new_pro_view2";
 
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -211,6 +211,35 @@ public class ProductDao {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
 		String sql = "select * from main_pro_view";
+
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				ProductVO pvo = new ProductVO();
+				pvo.setPseq(rs.getInt("pseq"));
+				pvo.setTitle(rs.getString("title"));
+				pvo.setImage(rs.getString("image"));
+				pvo.setSavefilename(rs.getString("savefilename"));
+				pvo.setKind(rs.getInt("kind"));
+				pvo.setGenre(rs.getString("genre"));
+				pvo.setAge(rs.getString("age"));
+				pvo.setTime(rs.getString("time"));
+				pvo.setYear(rs.getString("year"));
+				pvo.setContent(rs.getString("content"));				
+				list.add(pvo);
+			}
+		}catch(SQLException e){e.printStackTrace();
+		}finally{DBman.close(con, pstmt, rs);}
+			return list;
+	}
+	
+	
+	public ArrayList<ProductVO> useyn() {
+		
+		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+		con = DBman.getConnection();
+		String sql = "select * from product where useyn='Y' limit 7";
 
 		try {
 			pstmt = con.prepareStatement(sql);

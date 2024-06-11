@@ -5,24 +5,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+
+<script src="script/mypage.js"></script>
 <script src="script/member.js"></script>
 <script src="script/Tmain.js"></script>
 <script src="script/payment.js"></script>
+<script src="script/jquery-3.7.1.min.js"></script>
 
 <link rel="stylesheet" href="css/mypage.css">
 <link rel="stylesheet" href="css/header_footer.css">
+<link rel="stylesheet" type="text/css" href="css/mypage.css">
 
 
-<meta charset="UTF-8">
+
 <title>Insert title here</title>
-<script type="text/JavaScript">
+<!-- <script type="text/JavaScript">
 $(function(){
    $('.box2-1').hover(function(){
                 $('.profileclick').slideToggle(300);
             $(this).toggleClass('active');
          });
          });  
-</script>
+</script> -->
 </head>
 <body>
    <section>
@@ -41,13 +46,13 @@ $(function(){
     <div class="box2">
           <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
           <div class="box2-1" ><a href="#"><img src="member/logo.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;
-          	<div class="profileclick" >
-                  <br><br>
-                  <div><a href="twoving.do?command=mypage">My페이지</a></div>
+          	<div class="profileclick">
+                  <br><br><br><br><br><br>
+                  <div class ="kjy"><a href="twoving.do?command=mypage">My페이지</a></div>
                   <br>
-                  <div><a href="twoving.do?command=notice">고객센터</a></div>
+                  <div class ="kjy"><a href="twoving.do?command=notice">고객센터</a></div>
                   <br>
-                  <div><a href="twoving.do?command=logout">로그아웃</a></div>
+                  <div class ="kjy"><a href="twoving.do?command=logout">로그아웃</a></div>
             </div>
           
           </div>

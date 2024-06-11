@@ -32,6 +32,12 @@
 <br>
 <br>
 
+<%-- <c:choose>
+<c:when test="">
+
+
+</c:when>
+<c:otherwise> --%>
 <h2 style="color:white; margin-left:55px;">인기있는 시리즈 Top7</h2>   
 
 
@@ -96,6 +102,9 @@
                   </div>                 
       </c:forEach>
 </div>
+<%-- </c:otherwise>
+</c:choose> --%>
+
 
 
 <%@ include file="Tfooter.jsp" %>

@@ -303,7 +303,7 @@ CREATE TABLE `product` (
 
 select * from product
 
-delete from product where pseq=37;
+delete from product where kind=0;
 
 drop table product;
 delete from product;
@@ -459,67 +459,67 @@ values(0, '사극', 'Y', 'Y', 'Y', 'Y', '뿌리깊은나무', '한글을 창제�
 세종을 재해석 하려한다.', 12, 10,  '2024', '15회', 'woodmain.jpg', 'wood.png', 'woodmain.jpg','wood.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '오리지널', 'Y', 'Y', 'Y', 'Y', '플레이어2', '사기꾼, 해커, 파이터, 드라이버! 더 강력해진 ′꾼′들이 돌아왔다! ′가진 놈′들을 시원하게 털어버리는 팀플레이 액션 사기극', 12, 10,  '2024', '15회', 'player2main.jpg', 'player2.png', 'player2main.jpg','player2.png');
+values(0, '오리지널', 'Y', 'Y', 'Y', 'N', '플레이어2', '사기꾼, 해커, 파이터, 드라이버! 더 강력해진 ′꾼′들이 돌아왔다! ′가진 놈′들을 시원하게 털어버리는 팀플레이 액션 사기극', 12, 10,  '2024', '15회', 'player2main.jpg', 'player2.png', 'player2main.jpg','player2.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '교양(다큐)', 'Y', 'Y', 'Y', 'Y', '인간극장', '보통사람들의 특별한 이야기, 특별한 사람들의 평범한 이야기 다큐미니시리즈 인간극장이 지켜온 가치이자 프로그램의 정체성입니다. 결코 평범하지 않은 삶의 이야기를 가진 보통 사람들, 그리고 사회적인 명성을 가진, 이른바 잘나가는 사람들의 아주 평범한 이야기! 인간극장 무대에선 누구나 그저 자연인 그대로 남자, 여자, 아버지, 어머니, 부모, 자식일 뿐이죠. 인간본연의 五慾七情이 가장 잘 드러난 삶의 무대, 인간극장 그 주인공은 바로 당신입니다.', 12, 10,  '2024', '15회', 'humanmain.jpg', 'human.png', 'humanmain.jpg','human.png');
+values(0, '교양(다큐)', 'Y', 'Y', 'Y', 'N', '인간극장', '보통사람들의 특별한 이야기, 특별한 사람들의 평범한 이야기 다큐미니시리즈 인간극장이 지켜온 가치이자 프로그램의 정체성입니다. 결코 평범하지 않은 삶의 이야기를 가진 보통 사람들, 그리고 사회적인 명성을 가진, 이른바 잘나가는 사람들의 아주 평범한 이야기! 인간극장 무대에선 누구나 그저 자연인 그대로 남자, 여자, 아버지, 어머니, 부모, 자식일 뿐이죠. 인간본연의 五慾七情이 가장 잘 드러난 삶의 무대, 인간극장 그 주인공은 바로 당신입니다.', 12, 10,  '2024', '15회', 'humanmain.jpg', 'human.png', 'humanmain.jpg','human.png');
 
-
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '키즈', 'N', 'Y', 'Y', 'Y', '스폰지밥', '네모바지 스폰지밥은 비키니 시티라고 불리는 깊은 바닷속 해저 마을에 사는 스폰지밥이 주인공인 만화 시리즈다. 스폰지밥 친구인 분홍색 불가사리 뚱이와 함께, 가장 발칙하고 신나는 모험을 경험하게 된다. 스폰지밥은 매우 활기차고 낙천적인 성격으로 바닷속에서 최고의 버거를 만드는 식당 ′집게리아′에서 주방장으로 일하고 있다.', 12, 10,  '2024', '15회', 'detectivemain.png', 'bob.png', 'detectivemain.png','bob.png');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '스포츠', 'N', 'Y', 'Y', 'Y', '최강야구', '장시원, 최태규, 김은지, 김주아, 김세홍, 김현수, 최소망, 김가원, 김하영, 배진영, 안지혜, 서성우, 전성현, 이해원 장진경, 한기탁, 임진, 오수현, 박진희, 이효정, 이규민, 김주연, 송규호, 김성진, 김해윤, 김시원, 김호진, 박지현, 김정아, 차윤진, 고은미, 금보라, 한아름, 최희진, 문혜빈, 나지영, 이수아 김성근, 박용택, 송승준, 이택근, 정성훈, 이대호, 정근우, 장원삼, 서동욱, 오주원, 유희관, 정의윤, 김문호, 이대은, 신재영, 이홍구, 박재욱, 최수현, 선성권, 황영묵, 원성준, 고영우, 정현수, 유태웅, 김민주, 이광길, 오세훈, 김선우, 정용검 Win or Nothing. 오직 승리만을 추구하는 사상 최강의 야구팀이 탄생했다. 야구에 미친 자들의 모든 걸 건 진짜 승부.', 12, 10,  '2024', '15회', 'detectivemain.png', 'baseball.png', 'detectivemain.png','baseball.png');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '해외', 'N', 'Y', 'Y', 'Y', '헤일로2', '코버넌트가 코어를 향해 진격하며 인류의 가장 중요한 근거지에 다다르고, UNSC의 본거지인 리치 행성과 본부, 군사 기지까지 발각되며 힘겨운 싸움이 시작된다.', 12, 10,  '2024', '15회', 'detectivemain.png', 'halo.png', 'detectivemain.png','halo.png');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '공연', 'N', 'Y', 'Y', 'Y', '백상예술대상', '1965년부터 한국 대중문화 예술의 발전과 예술인의 사기진작을 위해 제정한 백상예술대상이 올해로 60회째를 맞이합니다. 본 상은 지난 1년간 방영, 상영 또는 공연된 TV/영화/연극 부문의 제작진과 출연자에게 시상하는 국내 유일의 종합 예술상입니다.', 12, 10,  '2024', '15회', 'detectivemain.png', 'prize.png', 'detectivemain.png','prize.png');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '교양(다큐)', 'N', 'Y', 'Y', 'Y', '책 읽어 드립니다', '스테디셀러 책들을 알기 쉽게 풀어주는 독서 프로그램', 12, 10,  '2024', '15회', 'detectivemain.png', 'book.png', 'detectivemain.png','book.png');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '애니메이션', 'N', 'Y', 'Y', 'Y', '귀멸의 칼날', '귀살대 최강의 검사 ‘주’들과 귀살대원들. 다가오는 키부츠지 무잔과의 결전을 위한 ‘합동 강화 훈련’이 개막한다. 각자의 마음을 담아, 탄지로와 주들의 새로운 이야기가 막을 올린다.', 12, 10,  '2024', '15회', 'detectivemain.png', 'blade.jpg', 'detectivemain.png','blade.jpg');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'N', 'Y', 'Y', 'Y', '여고추리반', '무서운 저주가 떠도는 학교로 전학 간 추리반 학생들이 학교에 숨겨진 진실에 다가갈수록 더욱더 거대한 사건을 마주하면서 벌어지는 미스터리 어드벤처', 12, 10,  '2024', '15회', 'detectivemain.png', 'detectivemain.png', 'detectivemain.png','detectivemain.png');
-
-insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'N', 'Y', 'Y', 'Y', '지락이의 뛰뛰빵빵', '지락이들 입맛 따라 100% 제멋대로 즐기는 더 자유롭고 더 리얼한 힐링 여행기! 지구오락실 스핀오프 <지락이의 뛰뛰빵빵>', 12, 10,  '2024', '15회', 'naturemain.png', 'nature.png', 'naturemain.png','nature.png');
 
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '해외', 'N', 'Y', 'Y', 'Y', '프롬', '′프롬′은 누구든 발을 들이면 나갈 수 없는 악몽 같은 마을의 미스터리를 다룬 작품이다. 어쩔 수 없이 마을에 사는 주민들은 어떻게든 평범한 삶을 잃지 않으려 하고, 나갈 방법을 찾는다. 거기다 해가 지면 나타나는 끔찍한 생명체같이 주변 숲에 도사리는 위협에서도 살아남아야 한다.', 12, 10,  '2024', '15회', 'naturemain.png', 'from.png', 'naturemain.png','from.png');
+values(0, '키즈', 'N', 'Y', 'Y', 'N', '스폰지밥', '네모바지 스폰지밥은 비키니 시티라고 불리는 깊은 바닷속 해저 마을에 사는 스폰지밥이 주인공인 만화 시리즈다. 스폰지밥 친구인 분홍색 불가사리 뚱이와 함께, 가장 발칙하고 신나는 모험을 경험하게 된다. 스폰지밥은 매우 활기차고 낙천적인 성격으로 바닷속에서 최고의 버거를 만드는 식당 ′집게리아′에서 주방장으로 일하고 있다.', 12, 10,  '2024', '15회', 'detectivemain.png', 'bob.png', 'detectivemain.png','bob.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '애니메이션', 'N', 'Y', 'Y', 'Y', '코난', '멈추지 않는 두뇌플레이. 코난의 2024 시즌 에피소드!', 12, 10,  '2024', '15회', 'naturemain.png', 'conan.png', 'naturemain.png','conan.png');
+values(0, '스포츠', 'N', 'Y', 'Y', 'N', '최강야구', '장시원, 최태규, 김은지, 김주아, 김세홍, 김현수, 최소망, 김가원, 김하영, 배진영, 안지혜, 서성우, 전성현, 이해원 장진경, 한기탁, 임진, 오수현, 박진희, 이효정, 이규민, 김주연, 송규호, 김성진, 김해윤, 김시원, 김호진, 박지현, 김정아, 차윤진, 고은미, 금보라, 한아름, 최희진, 문혜빈, 나지영, 이수아 김성근, 박용택, 송승준, 이택근, 정성훈, 이대호, 정근우, 장원삼, 서동욱, 오주원, 유희관, 정의윤, 김문호, 이대은, 신재영, 이홍구, 박재욱, 최수현, 선성권, 황영묵, 원성준, 고영우, 정현수, 유태웅, 김민주, 이광길, 오세훈, 김선우, 정용검 Win or Nothing. 오직 승리만을 추구하는 사상 최강의 야구팀이 탄생했다. 야구에 미친 자들의 모든 걸 건 진짜 승부.', 12, 10,  '2024', '15회', 'detectivemain.png', 'baseball.png', 'detectivemain.png','baseball.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '애니메이션', 'N', 'Y', 'Y', 'Y', '짱구는 못말려', '예쁜 누나와 초코비를 좋아하는 5살 짱구와 살인적인 발 냄새를 가진 아버지 그리고 세일과 미남을 좋아하는 엄마, 귀여운 여동생 짱아와 강아지 흰둥이가 함께 하는 짱구 가족과 유치원 친구들의 일상을 그린 애니메이션', 12, 10,  '2024', '15회', 'naturemain.png', 'sinjang.png', 'naturemain.png','singjang.png');
+values(0, '해외', 'N', 'Y', 'Y', 'N', '헤일로2', '코버넌트가 코어를 향해 진격하며 인류의 가장 중요한 근거지에 다다르고, UNSC의 본거지인 리치 행성과 본부, 군사 기지까지 발각되며 힘겨운 싸움이 시작된다.', 12, 10,  '2024', '15회', 'detectivemain.png', 'halo.png', 'detectivemain.png','halo.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '오리지널', 'N', 'Y', 'Y', 'Y', '히어로는 아닙니다만', '남다른 능력을 지녔지만 아무도 구하지 못했던 남자가 마침내 운명의 그녀를 구해내는 판타지 로맨스', 12, 10,  '2024', '15회', 'naturemain.png', 'hero.png', 'naturemain.png','hero.png');
+values(0, '공연', 'N', 'Y', 'Y', 'N', '백상예술대상', '1965년부터 한국 대중문화 예술의 발전과 예술인의 사기진작을 위해 제정한 백상예술대상이 올해로 60회째를 맞이합니다. 본 상은 지난 1년간 방영, 상영 또는 공연된 TV/영화/연극 부문의 제작진과 출연자에게 시상하는 국내 유일의 종합 예술상입니다.', 12, 10,  '2024', '15회', 'detectivemain.png', 'prize.png', 'detectivemain.png','prize.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'N', 'Y', 'Y', 'Y', '백팩커', '백종원 시키신 분~? 우리가 가는 곳이 곧 주방! 극한의 출장 요리단이 간다!', 12, 10,  '2024', '15회', 'naturemain.png', 'backpack.png', 'naturemain.png','backpack.png');
+values(0, '교양(다큐)', 'N', 'Y', 'Y', 'N', '책 읽어 드립니다', '스테디셀러 책들을 알기 쉽게 풀어주는 독서 프로그램', 12, 10,  '2024', '15회', 'detectivemain.png', 'book.png', 'detectivemain.png','book.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '스포츠', 'N', 'Y', 'Y', 'Y', '대한민국 배드민턴', '국민 생활 스포츠 NO.1 배드민턴 배드민턴에 대한 관심과 즐거움을 다시 한 번! 배드민턴 레전드, 연예계 아마추어들과 함께 대한민국 전 연령 배드민턴으로 TURN~하는 프로젝트 배드민턴 시작부터 전국 대회 진출까지 이어지는 두 달간의 여정 남녀노소, 배드민턴 초보~고수 누구나 즐겁게 방구석 1열에서 직관하는 배드민턴 명승부, 짜릿한 빅 재미 온 국민이 다시 배드민턴으로 턴~ 하는 그날까지! 자, 지금부터 라켓 잡고 뛰어볼까?', 12, 10,  '2024', '15회', 'naturemain.png', 'badmin.png', 'naturemain.png','badmin.png');
+values(0, '애니메이션', 'N', 'Y', 'Y', 'N', '귀멸의 칼날', '귀살대 최강의 검사 ‘주’들과 귀살대원들. 다가오는 키부츠지 무잔과의 결전을 위한 ‘합동 강화 훈련’이 개막한다. 각자의 마음을 담아, 탄지로와 주들의 새로운 이야기가 막을 올린다.', 12, 10,  '2024', '15회', 'detectivemain.png', 'blade.jpg', 'detectivemain.png','blade.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'N', 'Y', 'Y', 'Y', '찐팬구역', '′그깟 공놀이′에 인생을 걸고 사는 찐팬들의 처절한 응원기', 12, 10,  '2024', '15회', 'naturemain.png', 'fanarea.png', 'naturemain.png','fanarea.png');
+values(0, '예능', 'N', 'Y', 'Y', 'N', '여고추리반', '무서운 저주가 떠도는 학교로 전학 간 추리반 학생들이 학교에 숨겨진 진실에 다가갈수록 더욱더 거대한 사건을 마주하면서 벌어지는 미스터리 어드벤처', 12, 10,  '2024', '15회', 'detectivemain.png', 'detectivemain.png', 'detectivemain.png','detectivemain.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '키즈', 'N', 'Y', 'Y', 'Y', '뽀로로', '뽀로로와 친구들은 전 우주를 통틀어 최고의 슈퍼스타를 뽑는 음악 축제 ‘파랑돌 슈퍼스타 선발대회’ 축제에 참가하기 위해 모험을 떠난다. 파랑돌 행성에 불시착한 뽀로로와 친구들 앞에 나타난 열정 가득한 매니저 ‘스캣’의 도움으로 ‘뽀로로 밴드’는 가까스로 설레는 예선 무대에 오른다. 한편, 악당 ‘빅벤’은 ‘스캣’과의 경쟁에서 이기기 위해 모든 것이 완벽한 AI 아이돌 ‘아이원’을 앞세워 대회에 참가하지만 ‘뽀로로 밴드’의 예상치 못한 인기에 위기감을 느껴 급기야 방해 공작을 벌이게 되고, 뽀로로와 친구들은 마지막 공연을 앞두고 갑작스러운 위기를 맞이하는데…', 12, 10,  '2024', '15회', 'naturemain.png', 'pororo.png', 'naturemain.png','pororo.png');
+values(0, '예능', 'N', 'Y', 'Y', 'N', '지락이의 뛰뛰빵빵', '지락이들 입맛 따라 100% 제멋대로 즐기는 더 자유롭고 더 리얼한 힐링 여행기! 지구오락실 스핀오프 <지락이의 뛰뛰빵빵>', 12, 10,  '2024', '15회', 'naturemain.png', 'nature.png', 'naturemain.png','nature.png');
+
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '키즈', 'N', 'Y', 'Y', 'Y', '똘똘이 동요', '매일매일이 새롭고 즐거워~. 꼭꼭 눌러쓴 똘똘이의 그림일기에는 똘똘이의 마음이 한가득 표현되어 있다. 오늘은 또 무슨 일이 있었을까? 재미있는 동요와 이야기로 똘똘이의 하루를 따라가 본다.', 12, 10,  '2024', '15회', 'naturemain.png', 'songsong.png', 'naturemain.png','songsong.png');
+values(0, '해외', 'N', 'Y', 'Y', 'N', '프롬', '′프롬′은 누구든 발을 들이면 나갈 수 없는 악몽 같은 마을의 미스터리를 다룬 작품이다. 어쩔 수 없이 마을에 사는 주민들은 어떻게든 평범한 삶을 잃지 않으려 하고, 나갈 방법을 찾는다. 거기다 해가 지면 나타나는 끔찍한 생명체같이 주변 숲에 도사리는 위협에서도 살아남아야 한다.', 12, 10,  '2024', '15회', 'naturemain.png', 'from.png', 'naturemain.png','from.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '해외', 'N', 'Y', 'Y', 'Y', '이블', '범죄 심리학자 크리스틴 부샤드는 법정에서 수련 사제 데이비드 어코스타를 만나 악마에 빙의된 사람과 정신 질환자를 구별하는 일을 맡는다. 초자연적인 현상과 의학으로 설명할 수 없는 사람들을 만나며 신의 존재를 믿지 않았던 크리스틴의 신념은 점차 흔들리고, 소중한 네 딸을 지키기 위해 점점 과감해진다.', 12, 10,  '2024', '15회', 'naturemain.png', 'evil.png', 'naturemain.png','evil.png');
+values(0, '애니메이션', 'N', 'Y', 'Y', 'N', '코난', '멈추지 않는 두뇌플레이. 코난의 2024 시즌 에피소드!', 12, 10,  '2024', '15회', 'naturemain.png', 'conan.png', 'naturemain.png','conan.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '애니메이션', 'N', 'Y', 'Y', 'N', '짱구는 못말려', '예쁜 누나와 초코비를 좋아하는 5살 짱구와 살인적인 발 냄새를 가진 아버지 그리고 세일과 미남을 좋아하는 엄마, 귀여운 여동생 짱아와 강아지 흰둥이가 함께 하는 짱구 가족과 유치원 친구들의 일상을 그린 애니메이션', 12, 10,  '2024', '15회', 'naturemain.png', 'sinjang.png', 'naturemain.png','singjang.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '오리지널', 'N', 'Y', 'Y', 'N', '히어로는 아닙니다만', '남다른 능력을 지녔지만 아무도 구하지 못했던 남자가 마침내 운명의 그녀를 구해내는 판타지 로맨스', 12, 10,  '2024', '15회', 'naturemain.png', 'hero.png', 'naturemain.png','hero.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '예능', 'N', 'Y', 'Y', 'N', '백팩커', '백종원 시키신 분~? 우리가 가는 곳이 곧 주방! 극한의 출장 요리단이 간다!', 12, 10,  '2024', '15회', 'naturemain.png', 'backpack.png', 'naturemain.png','backpack.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '스포츠', 'N', 'Y', 'Y', 'N', '대한민국 배드민턴', '국민 생활 스포츠 NO.1 배드민턴 배드민턴에 대한 관심과 즐거움을 다시 한 번! 배드민턴 레전드, 연예계 아마추어들과 함께 대한민국 전 연령 배드민턴으로 TURN~하는 프로젝트 배드민턴 시작부터 전국 대회 진출까지 이어지는 두 달간의 여정 남녀노소, 배드민턴 초보~고수 누구나 즐겁게 방구석 1열에서 직관하는 배드민턴 명승부, 짜릿한 빅 재미 온 국민이 다시 배드민턴으로 턴~ 하는 그날까지! 자, 지금부터 라켓 잡고 뛰어볼까?', 12, 10,  '2024', '15회', 'naturemain.png', 'badmin.png', 'naturemain.png','badmin.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '예능', 'N', 'Y', 'Y', 'N', '찐팬구역', '′그깟 공놀이′에 인생을 걸고 사는 찐팬들의 처절한 응원기', 12, 10,  '2024', '15회', 'naturemain.png', 'fanarea.png', 'naturemain.png','fanarea.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '키즈', 'N', 'Y', 'Y', 'N', '뽀로로', '뽀로로와 친구들은 전 우주를 통틀어 최고의 슈퍼스타를 뽑는 음악 축제 ‘파랑돌 슈퍼스타 선발대회’ 축제에 참가하기 위해 모험을 떠난다. 파랑돌 행성에 불시착한 뽀로로와 친구들 앞에 나타난 열정 가득한 매니저 ‘스캣’의 도움으로 ‘뽀로로 밴드’는 가까스로 설레는 예선 무대에 오른다. 한편, 악당 ‘빅벤’은 ‘스캣’과의 경쟁에서 이기기 위해 모든 것이 완벽한 AI 아이돌 ‘아이원’을 앞세워 대회에 참가하지만 ‘뽀로로 밴드’의 예상치 못한 인기에 위기감을 느껴 급기야 방해 공작을 벌이게 되고, 뽀로로와 친구들은 마지막 공연을 앞두고 갑작스러운 위기를 맞이하는데…', 12, 10,  '2024', '15회', 'naturemain.png', 'pororo.png', 'naturemain.png','pororo.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '키즈', 'N', 'Y', 'Y', 'N', '똘똘이 동요', '매일매일이 새롭고 즐거워~. 꼭꼭 눌러쓴 똘똘이의 그림일기에는 똘똘이의 마음이 한가득 표현되어 있다. 오늘은 또 무슨 일이 있었을까? 재미있는 동요와 이야기로 똘똘이의 하루를 따라가 본다.', 12, 10,  '2024', '15회', 'naturemain.png', 'songsong.png', 'naturemain.png','songsong.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '해외', 'N', 'Y', 'Y', 'N', '이블', '범죄 심리학자 크리스틴 부샤드는 법정에서 수련 사제 데이비드 어코스타를 만나 악마에 빙의된 사람과 정신 질환자를 구별하는 일을 맡는다. 초자연적인 현상과 의학으로 설명할 수 없는 사람들을 만나며 신의 존재를 믿지 않았던 크리스틴의 신념은 점차 흔들리고, 소중한 네 딸을 지키기 위해 점점 과감해진다.', 12, 10,  '2024', '15회', 'naturemain.png', 'evil.png', 'naturemain.png','evil.png');
 
 
 
@@ -534,13 +534,13 @@ select pseq, title, image, kind, genre, age, time, year, content, savefilename f
 -- 베스트 컨텐츠
 create or replace view best_pro_view
 as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' and kind=0 order by time asc limit 7;
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' and kind=0 and useyn='Y' order by count asc limit 7;
 
 
 -- 시리즈 컨텐츠 
 create or replace view new_pro_view
 as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' order by pseq desc limit 7;
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' and kind=0 and useyn='Y'order by pseq desc limit 7;
 
 
 
@@ -548,12 +548,12 @@ select pseq, title, image, kind, genre, age, time, year, content, savefilename f
 -- 베스트 컨텐츠2
 create or replace view best_pro_view2
 as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' order by pseq limit 7;
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y'and kind=1 and useyn='Y' order by count asc limit 7;
 
 
 
 -- 시리즈 컨텐츠2 
 create or replace view new_pro_view2
 as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' order by pseq limit 7;
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' and kind=1 and useyn='Y' order by pseq desc limit 7;
 
