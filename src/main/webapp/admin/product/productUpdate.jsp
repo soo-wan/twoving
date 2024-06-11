@@ -35,8 +35,15 @@
 				<select name="genre" id="genre" style="width:100px;">
 				    <option value="사극">사극</option>
 				    <option value="멜로">멜로</option>
+				    <option value="예능">예능</option>
 				    <option value="액션">액션</option>
 				    <option value="히어로">히어로</option>
+				    <option value="교양(다큐)">교양(다큐)</option>
+				    <option value="스포츠">스포츠</option>
+				    <option value="키즈">키즈</option>
+				    <option value="공연">공연</option>
+				    <option value="오리지널">오리지널</option>
+				    <option value="해외">해외</option>
 				    <option value="공포">공포</option>
 				    <option value="범죄">범죄</option>
 				    <option value="판타지">판타지</option>

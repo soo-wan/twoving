@@ -11,14 +11,14 @@
 				style="background-color : #282828;"></div>
 				<div id="container">
 					<div id="containerA">
-						<div id="title" >${productVO.title}</div>
-						<div id="tagtag">
-							<div id="tag" >${productVO.age} &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}</div>
+						<div id="title" style="margin:0px;" >${productVO.title}</div>
+						<div id="tagtag" style="margin:0px; padding:0px;">
+							<div id="tag" >${productVO.age} &nbsp; ${productVO.year} &nbsp;${productVO.genre} &nbsp;${productVO.time}분</div>
 							<div class="share">
 								<div class="shareclick"><img src="images/snsicons.png" ></div>
 							</div>					
 						</div>
-							
+						<br><br>
 						<div id="linkicon">
 							<div class="a" id="b"><a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}&action=view"  onClick="count();" >시청하기</a></div>
 							<c:choose>
@@ -33,7 +33,7 @@
 							
 							<div class="a" id="d"><a href="#" ><img src = images/공유.png style="width:55px; height:55px;"></a><br>공유</div>
 						</div>
-						
+						<br>
 						
 								
 						<div id="content" >${productVO.content}</div>
