@@ -1,10 +1,73 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="/admin/header.jsp"%>
-<%@ include file="/admin/sub_menu.jsp"%>
-
-<script src="/script/mypage.js"></script>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+    
+<link rel="stylesheet" href="admin/css/adminList.css" />
+<script src="admin/script/admin.js"></script>
+<script src="admin/script/mypage.js"></script>
+<link rel="stylesheet" type="text/css" href="css/mypage.css">
 <article>
+
+		  <div class="box">
+   
+   <div class="box1">
+   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer; color:red;" value="TWOVING" />
+               <div class="box1-2"><a href="twoving.do?command=kind&kind=0"  style="color:white;">시리즈</a></div>
+               <div class="box1-3"><a href="twoving.do?command=kind&kind=1" style="color:white;">영화</a></div>
+    </div>
+    <div class="box2">
+          <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
+          <div class="box2-1" ><a href="#"><img src="member/logo.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;
+          	<div class="profileclick" >
+                  <br><br>
+                  <div><a href="twoving.do?command=mypage">My페이지</a></div>
+                  <br>
+                  <div><a href="twoving.do?command=notice">고객센터</a></div>
+                  <br>
+                  <div><a href="twoving.do?command=logout">로그아웃</a></div>
+            </div>
+          
+          </div>
+	 </div>
+    
+<!--     <div class="box1">
+   <input type="button" class="logo" onclick="location.href='twoving.do?command=tMain'" style="cursor: pointer;"value="TWOVING" />
+               <div class="box1-2">시리즈</div>
+               <div class="box1-3">영화</div>
+       </div>
+      <div class="box2">
+          <div class="box2-2"><img src="member/돋보기.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
+          <div class="box2-1"><img src="member/logo.png" width="40px" height="40px"  />&nbsp;&nbsp;</div>
+	 </div>  -->
+	 
+      </div>
+      <div class="box22">
+         <div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
+         <div class="box22-2"><span>이름</span>&nbsp;&nbsp; ${loginUser.name} <br>
+         <a><img src="member/구름.png" width="30px" height="30px" /></a>&nbsp; 나의 이용권
+  
+         <a> <input type="button" onClick="updateDefuseCheck('${paymentVO.productname}')" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></a></p></div>
+         
+         <div class="box22-3" onClick="location.href='twoving.do?command=updateMemberForm'"><a><img src="member/톱니바퀴.png" width="30px" height="30px" /></a>회원정보 수정</div>
+         
+      </div>
+      <div class="box33">
+      <div class="box33-1">
+         이용권을 구독하고 <a>twoving</a> 등 인기 TV프로그램과 다양한 영화를 자유롭게 시청하세요!
+      </div>
+      </div>
+      
+      <div class="box44">
+      
+   
+      
+      <div class="box44-2" onClick="location.href='twoving.do?command=steamedList&kind=0'">찜 &nbsp;</div>
+      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권 &nbsp;</div>
+      <div class="box44-4" onclick="location.href='twoving.do?command=customerInquiryListMypage'">문의 내역 &nbsp;</div>
+
+      
+      
+      </div>
 	<form name="inquiryViewFrm" method="post"  enctype="multipart/form-data">
 	<input type="hidden" name="ciseq" value="${cvo.ciseq}" />
 			<input type="button" style="margin-left: auto; background-color: black; color:white; border:none; font-size: 90%; cursor: pointer;" 
@@ -74,7 +137,9 @@
 				</c:choose>
 			<input type="button" style="margin-left: auto; background-color: black; color:white; border:none; font-size: 90%; cursor: pointer;" 
 				value="목록으로" onclick="location.href='twoving.do?command=customerInquiryListMypage'">
+						<jsp:include page="../paging/passTicketPaging2.jsp">
+			<jsp:param value="twoving.do?command=customerInquiryListMypage" name="address" />
+		</jsp:include>
 	</form>
 </article>
 
-<%@ include file="/admin/footer.jsp"%>

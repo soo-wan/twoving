@@ -23,7 +23,7 @@
 				</c:if>
 			</div>
 	</div>
-	<div style="background-color: #353535; width: 80%; height: 200px;  border-radius: 5px; padding-top: 20px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
+	<div style="background-color: #353535; width: 90%; height: 230px;  border-radius: 5px; padding-top: 20px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px;">
 <div style=" text-align: center;">알아두세요!<br>
 - 정기결제란? 1개월 또는 1년 단위로 자동 결제가 이루어지는 서비스를 말합니다.<br>
 - 정기결제는 언제든 해지 및 결제수단 변경이 가능하며, 결제수단 변경은 모든 결제수단으로 변경 가능합니다. (휴대폰 결제로는 변경 불가)<br>

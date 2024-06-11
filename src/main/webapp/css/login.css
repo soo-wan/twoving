@@ -41,7 +41,7 @@ body {
 }
 
 input[type="checkbox"] {
-	content: '\2713';
+   content: '\2713';
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
@@ -62,7 +62,7 @@ input[type="checkbox"] {
   }
 
 
-	.field input[type="text"], .field input[type="password"] {
+   .field input[type="text"], .field input[type="password"] {
    width: 600px; /* Adjust width as needed */
    height: 80px; /* Adjust height as needed */
    padding: 10px; /* Adjust padding as needed */
@@ -132,9 +132,14 @@ h2 {
    font-weight: bold;
 }
 .msg{
-   margin-top:90px;
+   margin-top:600px;
+   margin-left:200px;
    font-size:90%; 
    font-weight:bold;
+   
     color: red;
-    
+      top: 20px;
+    /* left: 620; */
+    text-align: center;
 }
+    
