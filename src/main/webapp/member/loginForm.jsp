@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%-- <%@ include file="../header.jsp" %> --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <script src="script/member.js"></script>
 <link rel="stylesheet" href="css/login.css">
 <link rel="stylesheet" href="css/header_footer.css">
@@ -43,7 +45,7 @@
 				</div>
 				
 				<div class="auto">
-					<input type="checkbox" id="remember" name="remember"> 
+					<input type="checkbox" id="remember" name="remember" <%= !cookie.isEmpty() ? "checked" : "" %>>
 					<label for="remember" id="remember2" style=" color:gray; font-weight: bold;"> &nbsp;
 						아이디 저장
 					</label>

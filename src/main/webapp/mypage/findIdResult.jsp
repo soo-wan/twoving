@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <style>
 body {
    background-color: black;
@@ -116,7 +118,7 @@ body {
    </div>
    <div class="id">입력하신 정보와 일치하는 결과입니다.</div>
    <div class="id1">
-      개인정보 보호를 위해 <br>아이디 또는 이메일의 일부만 제공합니다.
+      해당 아이디로 로그인 하시길 바랍니다.
    </div>
    <div class="id3">※SNS 회원은 해당 SNS 아이디가 아닌 티빙 가입 시 등록한 이메일을 알려드립니다.</div>
    <div class="id4">
