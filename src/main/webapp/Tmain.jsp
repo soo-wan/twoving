@@ -32,7 +32,7 @@
 <br>
 <br>
 
-<h2 style="color:white; margin-left:55px;">인기있는 컨텐츠</h2>   
+<h2 style="color:white; margin-left:55px;">인기있는 시리즈 Top7</h2>   
 
 
 <div class="Bestlist">				
@@ -51,9 +51,44 @@
 <br>
 <br>
 
-<h2 style="color:white; margin-left:55px;">새로운 컨텐츠</h2>   
+<h2 style="color:white; margin-left:55px;">새로운 시리즈</h2>   
 <div class="Newlist">				
       <c:forEach items="${newList}"  var="productVO">
+                  <div id="item2">                        
+                  	<a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">
+                   		<img src="image2/${productVO.savefilename}" />
+                    </a>                                          
+                  </div>                 
+      </c:forEach>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<h2 style="color:white; margin-left:55px;">인기있는 영화 Top7</h2>   
+
+
+<div class="Bestlist">				
+      <c:forEach items="${bestList2}"  var="productVO"  varStatus="status"> 
+                  <div id="item1">                        
+                 	 <a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">
+                     	${status.index+1}<img src="image2/${productVO.savefilename}"/>
+                  	 </a>                                          
+                  </div>
+       </c:forEach>     
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+<h2 style="color:white; margin-left:55px;">새로운 영화</h2>   
+<div class="Newlist">				
+      <c:forEach items="${newList2}"  var="productVO">
                   <div id="item2">                        
                   	<a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}">
                    		<img src="image2/${productVO.savefilename}" />

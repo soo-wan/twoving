@@ -73,6 +73,54 @@ public class ProductDao {
 		}finally{DBman.close(con, pstmt, rs);}
 			return list;
 		}
+	
+	
+	public ArrayList<ProductVO> bestList2() {
+		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+		con = DBman.getConnection();
+		String sql = "select * from best_pro_view2 order by pseq desc";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				ProductVO pvo = new ProductVO();
+				pvo.setPseq(rs.getInt("pseq"));
+				pvo.setTitle(rs.getString("title"));
+				pvo.setImage(rs.getString("image"));
+				pvo.setSavefilename(rs.getString("savefilename"));
+				pvo.setKind(rs.getInt("kind"));
+				pvo.setGenre(rs.getString("genre"));				
+				list.add(pvo);
+			}
+		}catch(SQLException e){e.printStackTrace();
+		}finally{DBman.close(con, pstmt, rs);}
+			return list;
+		}
+
+	
+	public ArrayList<ProductVO> newList2() {
+		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+		con = DBman.getConnection();
+		String sql = "select * from new_pro_view2 order by pseq desc";
+
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				ProductVO pvo = new ProductVO();
+				pvo.setPseq(rs.getInt("pseq"));
+				pvo.setTitle(rs.getString("title"));
+				pvo.setImage(rs.getString("image"));
+				pvo.setSavefilename(rs.getString("savefilename"));
+				pvo.setKind(rs.getInt("kind"));
+				pvo.setGenre(rs.getString("genre"));
+				list.add(pvo);
+			}
+		}catch(SQLException e){e.printStackTrace();
+		}finally{DBman.close(con, pstmt, rs);}
+			return list;
+		}
 
 		
 	public ArrayList<ProductVO> selectKindProduct(int kind){

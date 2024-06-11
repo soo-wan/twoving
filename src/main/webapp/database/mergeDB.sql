@@ -407,48 +407,48 @@ values(1, '애니메이션', 'N', 'N', 'N', 'Y', '쿵푸팬더3', '영화 쿵푸
 
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'Y', 'Y', 'N', 'Y', '놀라운토요일', '놀라운토요일 입니다', 12, 10,  '2024', '15회', 'saturdaymain.jpg', 'saturday.jpg', 'sturdaymain.jpg','saturday.jpg');
+values(0, '예능', 'Y', 'Y', 'Y', 'Y', '놀라운토요일', '놀라운토요일 입니다', 12, 10,  '2024', '15회', 'saturdaymain.jpg', 'saturday.jpg', 'sturdaymain.jpg','saturday.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '멜로', 'Y', 'Y', 'N', 'Y', '선재 업고 튀어', '선재업고튀어 입니다', 12, 10,  '2024', '15회', 'sunjaemain.jpg', 'sunjae.png', 'sunjaemain.jpg','sunjae.png');
+values(0, '멜로', 'Y', 'Y', 'Y', 'Y', '선재 업고 튀어', '선재업고튀어 입니다', 12, 10,  '2024', '15회', 'sunjaemain.jpg', 'sunjae.png', 'sunjaemain.jpg','sunjae.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'Y', 'Y', 'N', 'Y', '유퀴즈 온더 블럭!', '유퀴즈 온더 블럭! 입니다', 12, 10,  '2024', '15회', 'uqzmain.jpg', 'uqz.png', 'uqzmain.jpg','uqz.png');
+values(0, '예능', 'Y', 'Y', 'Y', 'Y', '유퀴즈 온더 블럭!', '유퀴즈 온더 블럭! 입니다', 12, 10,  '2024', '15회', 'uqzmain.jpg', 'uqz.png', 'uqzmain.jpg','uqz.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '사극', 'Y', 'Y', 'N', 'Y', '뿌리깊은나무', '뿌리깊은나무', 12, 10,  '2024', '15회', 'woodmain.jpg', 'wood.png', 'woodmain.jpg','wood.png');
+values(0, '사극', 'Y', 'Y', 'Y', 'Y', '뿌리깊은나무', '뿌리깊은나무', 12, 10,  '2024', '15회', 'woodmain.jpg', 'wood.png', 'woodmain.jpg','wood.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '오리지널', 'Y', 'Y', 'N', 'Y', '플레이어2', '플레이어2 입니다', 12, 10,  '2024', '15회', 'player2main.jpg', 'player2.png', 'player2main.jpg','player2.png');
+values(0, '오리지널', 'Y', 'Y', 'Y', 'Y', '플레이어2', '플레이어2 입니다', 12, 10,  '2024', '15회', 'player2main.jpg', 'player2.png', 'player2main.jpg','player2.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '교양(다큐)', 'Y', 'Y', 'N', 'Y', '인간극장', '인간극장 입니다', 12, 10,  '2024', '15회', 'humanmain.jpg', 'human.png', 'humanmain.jpg','human.png');
+values(0, '교양(다큐)', 'Y', 'Y', 'Y', 'Y', '인간극장', '인간극장 입니다', 12, 10,  '2024', '15회', 'humanmain.jpg', 'human.png', 'humanmain.jpg','human.png');
 
 
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '키즈', 'N', 'Y', 'N', 'Y', '스폰지밥', '스폰지밥 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'bob.png', 'detectivemain.png','bob.png');
+values(0, '키즈', 'N', 'Y', 'Y', 'Y', '스폰지밥', '스폰지밥 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'bob.png', 'detectivemain.png','bob.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '스포츠', 'N', 'Y', 'N', 'Y', '최강야구', '최강야구 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'baseball.png', 'detectivemain.png','baseball.png');
+values(0, '스포츠', 'N', 'Y', 'Y', 'Y', '최강야구', '최강야구 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'baseball.png', 'detectivemain.png','baseball.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '해외', 'N', 'Y', 'N', 'Y', '헤일로2', '헤일로2 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'halo.png', 'detectivemain.png','halo.png');
+values(0, '해외', 'N', 'Y', 'Y', 'Y', '헤일로2', '헤일로2 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'halo.png', 'detectivemain.png','halo.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '공연', 'N', 'Y', 'N', 'Y', '백상예술대상', '백상예술대상 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'prize.png', 'detectivemain.png','prize.png');
+values(0, '공연', 'N', 'Y', 'Y', 'Y', '백상예술대상', '백상예술대상 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'prize.png', 'detectivemain.png','prize.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '교양(다큐)', 'N', 'Y', 'N', 'Y', '책책책!', '책 읽어 드립니다 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'book.png', 'detectivemain.png','book.png');
+values(0, '교양(다큐)', 'N', 'Y', 'Y', 'Y', '책책책!', '책 읽어 드립니다 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'book.png', 'detectivemain.png','book.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '애니메이션', 'N', 'Y', 'N', 'Y', '귀멸의 칼날', '귀멸의 칼날 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'blade.jpg', 'detectivemain.png','blade.jpg');
+values(0, '애니메이션', 'N', 'Y', 'Y', 'Y', '귀멸의 칼날', '귀멸의 칼날 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'blade.jpg', 'detectivemain.png','blade.jpg');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'N', 'Y', 'N', 'Y', '여고추리반', '여고추리반 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'detectivemain.png', 'detectivemain.png','detectivemain.png');
+values(0, '예능', 'N', 'Y', 'Y', 'Y', '여고추리반', '여고추리반 입니다', 12, 10,  '2024', '15회', 'detectivemain.png', 'detectivemain.png', 'detectivemain.png','detectivemain.png');
 
 insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
-values(0, '예능', 'N', 'Y', 'N', 'Y', '지락이의 뛰뛰빵빵', '지락이의 뛰뛰빵빵 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'nature.png', 'naturemain.png','nature.png');
+values(0, '예능', 'N', 'Y', 'Y', 'Y', '지락이의 뛰뛰빵빵', '지락이의 뛰뛰빵빵 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'nature.png', 'naturemain.png','nature.png');
 
 
 -- 메인화면 컨텐츠
