@@ -13,7 +13,7 @@
 <body>
 <form method="post" action="twoving.do?command=updateMember" name="updateForm">
 	<button class="logo" onclick="location.href='twoving.do?command=index'" style="cursor: pointer;">TWOVING</button>
-					<h2>회원정보 수정</h2>
+					<h2 style="margin-top: 50px;">회원정보 수정</h2>
 					<div class="field">
 						<label style="font-size: 130%; text-align: left;">아이디</label>
 						<input style="font-size: 130%; height: 85px;" name="userid" type="text" value="${loginUser.userid}" readonly/>

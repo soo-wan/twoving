@@ -118,17 +118,22 @@ body {
    </div>
    <div class="id">입력하신 정보와 일치하는 결과입니다.</div>
    <div class="id1">
-      해당 아이디로 로그인 하시길 바랍니다.
+   <c:if test="${!empty memberId}">
+		해당 아이디로 로그인 하시길 바랍니다.	 
+   </c:if>   
    </div>
    <div class="id3">※SNS 회원은 해당 SNS 아이디가 아닌 티빙 가입 시 등록한 이메일을 알려드립니다.</div>
    <div class="id4">
       <a href="#"><img src="member/logo.png" alt="로고" /></a>
-      <div class="id5" style="font-size: 150%;">TWOVING ID : </div>
-      <div class="id6" style="font-size: 150%; color:white;">${memberId}</div>
+      <div class="id5" style="font-size: 125%;">TWOVING ID : </div>
+      <div class="id6" style="font-size: 125%; color:white;">
+	      	<c:if test="${empty memberId}">
+			    해당 이메일로 조회되는 회원은 없습니다.
+			</c:if>    	
+	      	${memberId}
+      </div>
    </div>
    <input type="button" onClick="location.href='twoving.do?command=login'"
       class="btn1" value="로그인 하러 가기" />
-
-
 </body>
 </html>
