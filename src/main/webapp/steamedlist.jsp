@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/mypage.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/Theader.css"> -->
 <script src="script/jquery-3.7.1.min.js"></script>
 <script src="script/mypage.js"></script>
 <title>Insert title here</title>
