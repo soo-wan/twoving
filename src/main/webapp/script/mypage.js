@@ -91,6 +91,34 @@ function withdraw(){
 }
 
 
+
+$(function(){
+   $('.box2-1').click(function(){
+                $('.profileclick').slideToggle(300);
+            $(this).toggleClass('active');
+         });
+         });
+         
+$(function(){
+	$(".kjy").hover(
+                function(){
+                    $(this).css({
+                        "background" : "red",
+                        "color" : "white",
+                        
+                    });
+                }, 
+                function(){
+                    $(this).css({
+                        "background" : "#282828",
+                        "color" : "white",
+                        
+                    });
+                }
+             )            
+         });         
+
+
 /*function go_cart(){
 	if(document.formm.quantity.value==""){
 		alert("수량을 입력하세요");

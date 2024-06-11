@@ -8,6 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/mypage.css">
+<script src="script/jquery-3.7.1.min.js"></script>
+<script src="script/mypage.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -26,14 +28,13 @@
           <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
           <div class="box2-1" ><a href="#"><img src="member/logo.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;
           	<div class="profileclick" >
-                  <br><br>
-                  <div><a href="twoving.do?command=mypage">My페이지</a></div>
-                  <br>
-                  <div><a href="twoving.do?command=notice">고객센터</a></div>
-                  <br>
-                  <div><a href="twoving.do?command=logout">로그아웃</a></div>
-            </div>
-          
+                  <br><br><br><br><br><br>
+                  <div class ="kjy"><a href="twoving.do?command=mypage" >My페이지</a></div>
+                  <br><br><br><br><br><br>
+                  <div class ="kjy"><a href="twoving.do?command=notice">고객센터</a></div>
+                  <br><br><br><br><br><br>
+                  <div class ="kjy"><a href="twoving.do?command=logout">로그아웃</a></div>
+            </div>         
           </div>
 	 </div>
     
@@ -65,7 +66,7 @@
       
       <div class="box44">
       <div class="box44-2" onClick="location.href='twoving.do?command=steamedList&kind=0'">찜 &nbsp;</div>
-      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권/캐시 내역 &nbsp;</div>
+      <div class="box44-3" onClick="location.href='twoving.do?command=passTicketList'">이용권 &nbsp;</div>
       <div class="box44-4" onclick="location.href='twoving.do?command=customerInquiryListMypage'">문의 내역 &nbsp;</div>
       </div>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -78,7 +79,7 @@
 			<br>
 			<div id="hahaha">
 			<c:forEach var = "ssteamed" items="${steamedList1 }">
-						<div id="ssteamed"><a href=""><img src="image2/${ssteamed.savefilename}"></a></div>
+						<div id="ssteamed"><a href="twoving.do?command=Tdetail&pseq=${ssteamed.pseq}"><img src="image2/${ssteamed.savefilename}"></a></div>						
 					</c:forEach>
 			</div>					
 	 </div>
