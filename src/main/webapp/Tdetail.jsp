@@ -20,7 +20,7 @@
 						</div>
 							
 						<div id="linkicon">
-							<div class="a" id="b"><a href="#"  onClick="count()" >시청하기</a></div>
+							<div class="a" id="b"><a href="twoving.do?command=Tdetail&pseq=${productVO.pseq}&action=view"  onClick="count();" >시청하기</a></div>
 							<c:choose>
 							<c:when test="${ccc.isEmpty()}">
 							<div class="a" id="c"><a href="twoving.do?command=steamedInsert&pseq=${productVO.pseq}&result=Y"><img src = images/emptyheart.png style="width:55px; height:55px;" id="heart"></a><br>찜</div>				

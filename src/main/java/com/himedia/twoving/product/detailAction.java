@@ -38,9 +38,10 @@ public class detailAction implements Action {
 	   	ProductDao pdao = ProductDao.getInstance();
 	    ProductVO pvo = pdao.getProduct(pseq);
 	   
-	    //int	count = pdao.Count(pseq);
 	    
-	    
+	    if ("view".equals(request.getParameter("action"))){
+            pdao.Count(pseq);
+        }
 	    
 	      
 	    steamedDao sdao = steamedDao.getInstance();	    	 
@@ -49,7 +50,7 @@ public class detailAction implements Action {
 		
 		request.setAttribute("result", result);
 		request.setAttribute("ccc", list);
-		//request.setAttribute("count", count);
+		
 		request.setAttribute("productVO", pvo);
 
 		request.getRequestDispatcher("Tdetail.jsp").forward(request, response);
