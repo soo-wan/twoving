@@ -35,10 +35,10 @@
 #asdf img{ width:200px; height:200px;}
 
 #result {color:white; font-size:50px; display:flex;  justify-content:center;}
-#result1 {color:white; font-size:30px; display:flex;  justify-content:center;}
+#result1 {color:#797979; font-size:30px; display:flex;  justify-content:center;}
 
 .qwer{display:flex; flex-direction:column; display:flex;  justify-content:center;}
-.qwer a{color:white; font-size:25px; text-decoration-line:none; display:flex;  justify-content:center;}
+.qwer a{color:#AFAFAF; font-size:25px; text-decoration-line:none; display:flex;  justify-content:center;}
 
 
 @media (max-width: 1024px){

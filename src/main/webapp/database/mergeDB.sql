@@ -303,7 +303,7 @@ CREATE TABLE `product` (
 
 select * from product
 
-delete from product whreh pseq=;
+delete from product where pseq=;
 
 drop table product;
 
@@ -451,6 +451,38 @@ insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, a
 values(0, '예능', 'N', 'Y', 'Y', 'Y', '지락이의 뛰뛰빵빵', '지락이의 뛰뛰빵빵 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'nature.png', 'naturemain.png','nature.png');
 
 
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '해외', 'N', 'Y', 'Y', 'Y', '프롬', '프롬 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'from.png', 'naturemain.png','from.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '애니메이션', 'N', 'Y', 'Y', 'Y', '코난', '코난 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'conan.png', 'naturemain.png','conan.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '애니메이션', 'N', 'Y', 'Y', 'Y', '짱구는 못말려', '짱구는 못말려 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'sinjang.png', 'naturemain.png','singjang.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '오리지널', 'N', 'Y', 'Y', 'Y', '히어로는 아닙니다만', '히어로는 아닙니다만 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'hero.png', 'naturemain.png','hero.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '예능', 'N', 'Y', 'Y', 'Y', '백팩커', '백팩커 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'backpack.png', 'naturemain.png','backpack.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '스포츠', 'N', 'Y', 'Y', 'Y', '대한민국 배드민턴', '대한민국 배드민턴 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'badmin.png', 'naturemain.png','badmin.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '예능', 'N', 'Y', 'Y', 'Y', '찐팬구역', '찐팬구역 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'fanarea.png', 'naturemain.png','fanarea.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '키즈', 'N', 'Y', 'Y', 'Y', '뽀로로', '뽀로로 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'pororo.png', 'naturemain.png','pororo.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '키즈', 'N', 'Y', 'Y', 'Y', '똘똘이 동요', '똘똘이 동요 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'songsong.png', 'naturemain.png','songsong.png');
+
+insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, age, count, year, time, image, savefilename, image2, savefilename2) 
+values(0, '해외', 'N', 'Y', 'Y', 'Y', '이블', '이블 입니다', 12, 10,  '2024', '15회', 'naturemain.png', 'evil.png', 'naturemain.png','evil.png');
+
+
+
 -- 메인화면 컨텐츠
 create or replace view main_pro_view
 as
@@ -462,7 +494,7 @@ select pseq, title, image, kind, genre, age, time, year, content, savefilename f
 -- 베스트 컨텐츠
 create or replace view best_pro_view
 as
-select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' order by pseq desc limit 7;
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y' and kind=0 order by time asc limit 7;
 
 
 -- 시리즈 컨텐츠 

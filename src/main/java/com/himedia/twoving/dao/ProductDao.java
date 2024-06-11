@@ -30,7 +30,7 @@ public class ProductDao {
 	public ArrayList<ProductVO> bestList() {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
-		String sql = "select * from best_pro_view";
+		String sql = "select * from best_pro_view order by time desc";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
