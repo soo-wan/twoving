@@ -26,18 +26,19 @@ public class PaymentDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 
-	public ArrayList<PaymentVO> getAllList(Paging paging) {
+	public ArrayList<PaymentVO> getAllList(Paging paging, String userid) {
 		ArrayList<PaymentVO> list = new ArrayList<PaymentVO>();
 		
 		con = DBman.getConnection();
 		
-		String sql = "select* from payment order by pmseq desc limit ? offset ?";
+		String sql = "select* from payment where userid=? order by pmseq desc limit ? offset ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
 			
-			pstmt.setInt(1, paging.getDisplayRow());
-			pstmt.setInt(2, paging.getStartNum()-1);
+			pstmt.setString(1, userid);
+			pstmt.setInt(2, paging.getDisplayRow());
+			pstmt.setInt(3, paging.getStartNum()-1);
 			
 			rs = pstmt.executeQuery();
 			
@@ -45,7 +46,7 @@ public class PaymentDAO {
 				PaymentVO paymentVO = new PaymentVO();
 				
 				paymentVO.setPmseq(rs.getInt("pmseq"));
-//				paymentVO.setUserid(rs.getString("userid"));
+				paymentVO.setUserid(rs.getString("userid"));
 				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
 				paymentVO.setProductname(rs.getString("productname"));
 				paymentVO.setPaymentprice(rs.getString("paymentprice"));
@@ -107,7 +108,7 @@ public class PaymentDAO {
 				paymentVO = new PaymentVO();
 				
 				paymentVO.setPmseq(rs.getInt("pmseq"));
-//				paymentVO.setUserid(rs.getString("userid"));
+				paymentVO.setUserid(rs.getString("userid"));
 				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
 				paymentVO.setProductname(rs.getString("productname"));
 				paymentVO.setPaymentprice(rs.getString("paymentprice"));
@@ -130,14 +131,15 @@ public class PaymentDAO {
 	public void insertPayment(PaymentVO paymentVO) {
 		con = DBman.getConnection();
 		
-		String sql = "insert into payment(subscribeyn, productname, paymentprice) values(?,?,?)";
+		String sql = "insert into payment(userid, subscribeyn, productname, paymentprice) values(?,?,?,?)";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
 			
-			pstmt.setString(1, paymentVO.getSubscribeyn());
-			pstmt.setString(2, paymentVO.getProductname());
-			pstmt.setString(3, paymentVO.getPaymentprice());
+			pstmt.setString(1, paymentVO.getUserid());
+			pstmt.setString(2, paymentVO.getSubscribeyn());
+			pstmt.setString(3, paymentVO.getProductname());
+			pstmt.setString(4, paymentVO.getPaymentprice());
 			
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -164,7 +166,7 @@ public class PaymentDAO {
 				paymentVO = new PaymentVO();
 				
 				paymentVO.setPmseq(rs.getInt("pmseq"));
-//				paymentVO.setUserid(rs.getString("userid"));
+				paymentVO.setUserid(rs.getString("userid"));
 				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
 				paymentVO.setProductname(rs.getString("productname"));
 				paymentVO.setPaymentprice(rs.getString("paymentprice"));
@@ -217,7 +219,7 @@ public class PaymentDAO {
 				PaymentVO paymentVO = new PaymentVO();
 				
 				paymentVO.setPmseq(rs.getInt("pmseq"));
-//				paymentVO.setUserid(rs.getString("userid"));
+				paymentVO.setUserid(rs.getString("userid"));
 				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
 				paymentVO.setProductname(rs.getString("productname"));
 				paymentVO.setPaymentprice(rs.getString("paymentprice"));
@@ -245,12 +247,23 @@ public class PaymentDAO {
 		try {
 			pstmt = con.prepareStatement(sql);
 			
+			pstmt.setString(1, userid);
+			
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
 				paymentVO = new PaymentVO();
 				
 				paymentVO.setPmseq(rs.getInt("pmseq"));
+				paymentVO.setUserid(rs.getString("userid"));
+				paymentVO.setSubscribeyn(rs.getString("subscribeyn"));
+				paymentVO.setProductname(rs.getString("productname"));
+				paymentVO.setPaymentprice(rs.getString("paymentprice"));
+				paymentVO.setPaymentmeans(rs.getString("paymentmeans"));
+				paymentVO.setPaymentday(rs.getTimestamp("paymentday"));
+				paymentVO.setRunperiod1(rs.getTimestamp("runperiod1"));
+				paymentVO.setRunperiod2(rs.getTimestamp("runperiod2"));
+				
 			}
 			
 		} catch (SQLException e) {

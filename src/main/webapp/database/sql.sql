@@ -71,6 +71,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 CREATE TABLE `twoving`.`payment` (
   `pmseq` INT NOT NULL AUTO_INCREMENT,
+  `userid` VARCHAR(45) NOT NULL,
   `subscribeyn` CHAR(1) NOT NULL DEFAULT 'N',
   `productname` VARCHAR(50) NOT NULL,
   `paymentprice` VARCHAR(50) NOT NULL,
@@ -82,6 +83,8 @@ CREATE TABLE `twoving`.`payment` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+
+select* from payment;
 
 CREATE TABLE `twoving`.`passticket` (
   `ptseq` INT NOT NULL AUTO_INCREMENT,
@@ -110,6 +113,12 @@ ALTER TABLE member
    ON DELETE RESTRICT
 ;
 
+select* from member;
+select* from payment;
+
+
+update member set ptseq = null where userid='two';
+
 ALTER TABLE payment
    ADD FOREIGN KEY (userid)
    REFERENCES member (userid)
@@ -125,10 +134,13 @@ insert into member(userid, ptseq, pwd, name, phone, email)
 values('one',1, '1111','김나리','017-777-7777','acc@abc.com');
 
 insert into member(userid, ptseq, pwd, name, phone, email)
-values('two',2, '2222','김길동','017-7321-7777','acc312@abc.com');
+values('twotwo',2, '2222','김길동','017-7321-7777','acc312@abc.com');
+
+update member set ptseq = null where userid='twotwo';
 
 select* from member;
 select* from payment;
+
 
 
 insert into payment(productname, paymentprice, paymentmeans) values( '광고형 스탠다드', '5,500원','Toss Pay');

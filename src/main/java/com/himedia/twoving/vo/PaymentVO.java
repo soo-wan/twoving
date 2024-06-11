@@ -4,7 +4,7 @@ import java.sql.Timestamp;
 
 public class PaymentVO {
 	private int pmseq;
-//	private String userid;
+	private String userid;
 	private String subscribeyn;
 	private String productname;
 	private String paymentprice;
@@ -21,12 +21,12 @@ public class PaymentVO {
 	public String getSubscribeyn() {
 		return subscribeyn;
 	}
-//	public String getUserid() {
-//		return userid;
-//	}
-//	public void setUserid(String userid) {
-//		this.userid = userid;
-//	}
+public String getUserid() {
+		return userid;
+}
+public void setUserid(String userid) {
+		this.userid = userid;
+}
 	public void setSubscribeyn(String subscribeyn) {
 		this.subscribeyn = subscribeyn;
 	}

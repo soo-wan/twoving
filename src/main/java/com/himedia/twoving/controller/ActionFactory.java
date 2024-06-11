@@ -33,7 +33,9 @@ import com.himedia.twoving.controller.action.admin.AdminloginAction;
 import com.himedia.twoving.controller.action.help.AllPassTicketViewAction;
 import com.himedia.twoving.controller.action.help.CustomerInquiryAction;
 import com.himedia.twoving.controller.action.help.FaqAction;
+import com.himedia.twoving.controller.action.help.InsertPassTicket2Action;
 import com.himedia.twoving.controller.action.help.InsertPassTicketAction;
+import com.himedia.twoving.controller.action.help.InsertPassTicketPopup;
 import com.himedia.twoving.controller.action.help.LoadingErrorAction;
 import com.himedia.twoving.controller.action.help.MemberCustomerLoginAction;
 import com.himedia.twoving.controller.action.help.MyMembershipAction;
@@ -139,6 +141,8 @@ public class ActionFactory {
 		//mymembership
 		else if(command.equals("mymembership")) ac = new MyMembershipAction();
 		else if(command.equals("passTicketList")) ac = new PassTicketListAction();
+		else if(command.equals("insertPassTicket2")) ac = new InsertPassTicket2Action();
+		else if(command.equals("insertPassTicketPopup")) ac = new InsertPassTicketPopup();
 		else if(command.equals("updateDefuseCheck")) ac = new UpdateDefuseCheckAction();
 		else if(command.equals("allPassTicketView")) ac = new AllPassTicketViewAction();
 		else if(command.equals("insertPassTicket")) ac = new InsertPassTicketAction();

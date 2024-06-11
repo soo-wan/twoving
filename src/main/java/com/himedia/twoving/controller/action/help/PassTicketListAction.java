@@ -72,7 +72,7 @@ public class PassTicketListAction implements Action {
 			  
 			 PaymentVO paymentVO = paymentDAO.getSelectList();
 			
-			 ArrayList<PaymentVO> passTicket2List = paymentDAO.getAllList(paging);
+			 ArrayList<PaymentVO> passTicket2List = paymentDAO.getAllList(paging, memberVO.getUserid());
 			
 			request.setAttribute("paymentVO", paymentVO);
 			request.setAttribute("passTicketVO", passTicketVO);

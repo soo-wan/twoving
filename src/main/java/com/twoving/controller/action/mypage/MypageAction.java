@@ -41,6 +41,7 @@ public class MypageAction implements Action {
 		     request.setAttribute("kindList", kindList);
 		     request.setAttribute("paymentVO", paymentVO);
 		     request.setAttribute("passTicketVO", passTicketVO);
+		     request.setAttribute("memberVO", memberVO);
 			
 			request.getRequestDispatcher("mypage/mypage.jsp").forward(request, response);
 		}

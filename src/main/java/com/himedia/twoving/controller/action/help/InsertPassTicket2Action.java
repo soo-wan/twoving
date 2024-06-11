@@ -14,11 +14,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-public class InsertPassTicketAction implements Action {
+public class InsertPassTicket2Action implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		HttpSession session = request.getSession();
 		MemberVO memberVO = (MemberVO)session.getAttribute("loginUser");
 		
@@ -26,39 +25,35 @@ public class InsertPassTicketAction implements Action {
 			RequestDispatcher rd = request.getRequestDispatcher("member/loginForm.jsp");
 			rd.forward(request, response);
 		}else {
-			int pmseq = Integer.parseInt(request.getParameter("pmseq"));
+//			int pmseq = Integer.parseInt(request.getParameter("pmseq"));
+//			System.out.println("pmseq : " + pmseq);
 			int ptseq = Integer.parseInt(request.getParameter("ptseq"));
+			System.out.println("ptseq : " + ptseq);
 			
 			String subscribeyn = request.getParameter("subscribeyn");
 			String productname = request.getParameter("productname");
 			String paymentprice = request.getParameter("paymentprice");
-
+			
+			PassTicketDAO passTicketDAO = PassTicketDAO.getInstance();
+			
+			
 			System.out.println("productname : " + productname);
+			
 			PaymentVO paymentVO = new PaymentVO();
 			
-			paymentVO.setUserid(memberVO.getUserid());
 			paymentVO.setSubscribeyn(subscribeyn);
 			paymentVO.setProductname(productname);
 			paymentVO.setPaymentprice(paymentprice);
+			paymentVO.setUserid(memberVO.getUserid());
 			
 			PaymentDAO paymentDAO = PaymentDAO.getInstance();
-			PassTicketDAO passTicketDAO = PassTicketDAO.getInstance();
-			
 			paymentDAO.insertPayment(paymentVO);
 			
-			if(subscribeyn.equals("Y")) {
-				System.out.println("현재 subscribeyn : " + subscribeyn);
-				paymentDAO.updatePayment(pmseq);
-			}
-			
 			passTicketDAO.updateMemberPassTicket(memberVO.getUserid(), ptseq);
-			
-			
 			
 			RequestDispatcher rd = request.getRequestDispatcher("insertPassTicketSuccess.jsp");
 			rd.forward(request, response);
 		}
-		
 	}
 
 }
