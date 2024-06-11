@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
 <%@ include file="/admin/header.jsp" %>
 <%@ include file="/admin/sub_menu.jsp" %>
 <article>
@@ -31,10 +33,11 @@
 			</div>
 		</div>
 		<div class="field" style="border-top:1px dotted black;">
-			<label>Best 유무</label>
+			<label>조회수</label>
 			<div>
-				<c:if test="${productVO.bestyn eq 'Y'}"><span style="font-weight: bold; color:magenta;">Best</span></c:if>
-				<c:if test="${productVO.bestyn eq 'N'}"><span style="font-weight: bold; color:black;">일반</span></c:if>
+				<%-- <c:if test="${productVO.bestyn eq 'Y'}"><span style="font-weight: bold; color:magenta;">Best</span></c:if>
+				<c:if test="${productVO.bestyn eq 'N'}"><span style="font-weight: bold; color:black;">일반</span></c:if> --%>
+			${productVO.count}
 			</div>
 		</div>
 		<div class="field" style="border-top:1px dotted black;">
@@ -50,7 +53,11 @@
 			<label>시리즈/영화명</label><div>${productVO.title}</div>
 		</div>
 		<div class="field" style="border-top:1px dotted black;">
-			<label>상세설명</label><div><pre>${productVO.content}</pre></div>
+			<label>상세설명</label>
+			<div style="height:200px;">
+				<!-- 상세설명 부분에 pre 태그를 사용하여 줄바꿈 및 공백 유지 -->
+				<pre style="white-space: pre-wrap;">${productVO.content}</pre>
+			</div>
 		</div>
 		
 		<!-- C:\Users\hi\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\SmallProject\product_images -->

@@ -4,6 +4,17 @@
 
 <!-- <script src="script/jquery-3.7.1.min.js"></script> -->
 
+<style>
+    /* 텍스트영역의 스타일을 설정하여 줄바꿈을 보존하고, 컨테이너 내에서 텍스트가 적절히 줄바꿈 되도록 함 */
+    textarea {
+        width: 100%;
+        height: 200px;
+        word-wrap: break-word;
+        white-space: pre-wrap; /* 줄바꿈 및 공백을 유지 */
+        overflow-wrap: break-word; /* 텍스트가 컨테이너 내에서 줄바꿈되도록 설정 */
+    }
+</style>
+
 <article>
 	<form name="productWriteFrm" method="post"  enctype="multipart/form-data">
 			<h1 style="text-align: center;"> 시리즈 / 영화 작성 </h1>
@@ -28,23 +39,23 @@
 			<div class="field" >
 				<label>장르</label>
 				<select name="genre" id="genre" style="width:100px;">
-				<option value="사극">사극</option>
-                <option value="멜로">멜로</option>
-                <option value="예능">예능</option>
-                <option value="액션">액션</option>
-                <option value="히어로">히어로</option>
-                <option value="교양(다큐)">교양(다큐)</option>
-                <option value="스포츠">스포츠</option>
-                <option value="키즈">키즈</option>
-                <option value="공연">공연</option>
-                <option value="오리지널">오리지널</option>
-                <option value="해외">해외</option>
-                <option value="공포">공포</option>
-                <option value="범죄">범죄</option>
-                <option value="판타지">판타지</option>
-                <option value="코미디">코미디</option>
-                <option value="애니메이션">애니메이션</option>
-                <option value="스릴러">스릴러</option>
+				    <option value="사극">사극</option>
+				    <option value="멜로">멜로</option>
+				    <option value="예능">예능</option>
+				    <option value="액션">액션</option>
+				    <option value="히어로">히어로</option>
+				    <option value="교양(다큐)">교양(다큐)</option>
+				    <option value="스포츠">스포츠</option>
+				    <option value="키즈">키즈</option>
+				    <option value="공연">공연</option>
+				    <option value="오리지널">오리지널</option>
+				    <option value="해외">해외</option>
+				    <option value="공포">공포</option>
+				    <option value="범죄">범죄</option>
+				    <option value="판타지">판타지</option>
+				    <option value="코미디">코미디</option>
+				    <option value="애니메이션">애니메이션</option>
+				    <option value="스릴러">스릴러</option>
 			  	</select>	
 			</div>
 			<!-- <div class="field" >
@@ -59,35 +70,28 @@
 			</div> -->
 			<div class="field" >
 					<label style="color:blue;">사용 유무</label>
-					<div style="border: 1px solid black;">
 					<input type="radio" name="useyn" value="Y" checked>
 					<input type="radio" name="useyn" value="N">
-					</div>
 			</div>
 			<div class="field" >
 					<label style="color:red;">New 유무</label>
-					<div style="border: 1px solid black;">
 					<input type="radio" name="newyn" value="Y" checked>
 					<input type="radio" name="newyn" value="N">
-			</div></div>
+			</div>
 			<div class="field" >
-			
 					<label style="color:green;">Best 유무</label>
-					<div style="border: 1px solid black;">
 					<input type="radio" name="bestyn" value="Y">
 					<input type="radio" name="bestyn" value="N" checked>
-			</div></div>
+			</div>
 			<div class="field" >
-		
 					<label>관람 나이 제한</label>
-						<div style="border: 1px solid black;">
 					<select name="age" id="age">
 					    <option value="ALL">ALL</option>
 					    <option value="12">12</option>
 					    <option value="15">15</option>
 					    <option value="18">18</option>
 			  		</select>	
-			</div></div>
+			</div>
 			<div class="field" >
 					<label>년도</label> <input type="text" name="year"  />
 			</div>

@@ -402,6 +402,7 @@ public class AdminDao {
 			pvo.setSavefilename(rs.getString("savefilename"));
 			pvo.setImage2( rs.getString("image2"));
 			pvo.setSavefilename2(rs.getString("savefilename2"));
+			pvo.setCount(rs.getInt("count"));
 		}
 		} catch (SQLException e) { e.printStackTrace();
 		}finally{ DBman.close(con, pstmt, rs); } 
