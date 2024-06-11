@@ -57,13 +57,13 @@
 		<div class="field" style="border-top:1px dotted black;">
 			<label>상품이미지</label>
 			<div>
-				<img src="product_images/${productVO.savefilename}" width="300">
+				<img src="image2/${productVO.savefilename}" width="300">
 			</div>
 		</div>
 		<div class="field" style="border-top:1px dotted black; border-bottom:2px solid black;">
 			<label>상품이미지(디테일)</label>
 			<div>
-				<img src="product_images/${productVO.savefilename2}" width="300">
+				<img src="image2/${productVO.savefilename2}" width="300">
 			</div>
 		</div>
 		<div class="btn">

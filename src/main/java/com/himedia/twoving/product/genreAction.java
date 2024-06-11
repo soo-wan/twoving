@@ -23,13 +23,14 @@ public class genreAction implements Action{
 		String kind = request.getParameter("kind");
 		
 		ProductDao pdao = ProductDao.getInstance();
+		ArrayList<Integer> kindList = pdao.getKindList();
 		ArrayList<ProductVO> slist = pdao.selectSeriesProduct(genre);
 		ArrayList<ProductVO> mlist = pdao.selectMovieProduct(genre);
 		
 		
 		
 		
-		
+		request.setAttribute("kindList", kindList);
 		request.setAttribute("sProduct", slist);
 		request.setAttribute("mProduct", mlist);
 		

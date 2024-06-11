@@ -17,6 +17,9 @@ public class TmainAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	      ProductDao pdao = ProductDao.getInstance();
+	      
+	      ArrayList<Integer> kindList = pdao.getKindList();
+	      
 	      ArrayList<ProductVO> list = pdao.mainList(); 
 	      
 	      ArrayList<ProductVO> blist = pdao.bestList(); 
@@ -25,6 +28,9 @@ public class TmainAction implements Action {
 	      ArrayList<ProductVO> blist2 = pdao.bestList2(); 
 	      ArrayList<ProductVO> nlist2 = pdao.newList2();
 	      
+	      
+	      
+	      request.setAttribute("kindList", kindList);
 	      
 	      request.setAttribute("bestList", blist);	     
 	      request.setAttribute("newList", nlist);

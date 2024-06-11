@@ -44,10 +44,11 @@ public class detailAction implements Action {
         }
 	    
 	      
-	    steamedDao sdao = steamedDao.getInstance();	    	 
+	    steamedDao sdao = steamedDao.getInstance();
+	    ArrayList<Integer> kindList = pdao.getKindList();
 	    ArrayList<steamedVO> list = sdao.steamedview(mvo.getUserid(), pseq);
 	    
-		
+	    request.setAttribute("kindList", kindList);
 		request.setAttribute("result", result);
 		request.setAttribute("ccc", list);
 		

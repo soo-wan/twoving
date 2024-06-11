@@ -54,7 +54,7 @@ public class ProductDao {
 	public ArrayList<ProductVO> newList() {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		con = DBman.getConnection();
-		String sql = "select * from new_pro_view";
+		String sql = "select * from new_pro_view order by pseq asc";
 
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -333,4 +333,22 @@ public class ProductDao {
 	  }catch (SQLException e) { e.printStackTrace(); 
 	  }finally{ DBman.close(con,pstmt, rs);} 
 	  }
-}
+
+
+
+	public ArrayList<Integer> getKindList() {
+		con = DBman.getConnection();
+		ArrayList<Integer> kindList = new ArrayList<>();
+		String sql = "SELECT DISTINCT kind FROM product";
+				
+		try {
+			pstmt = con.prepareStatement(sql);			
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				kindList.add(rs.getInt("kind"));			
+		}
+	}catch(SQLException e){e.printStackTrace();
+	}finally{DBman.close(con, pstmt, rs);}
+		return kindList;
+	}	
+	}

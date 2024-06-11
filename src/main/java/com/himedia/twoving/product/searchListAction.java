@@ -32,10 +32,13 @@ public class searchListAction implements Action {
 			 */
 
 		
-		ProductDao pdao = ProductDao.getInstance();	
+		ProductDao pdao = ProductDao.getInstance();
+		
+		ArrayList<Integer> kindList = pdao.getKindList();
+		
 		ArrayList<ProductVO> searchList = pdao.searchList( key );
 
-		
+		request.setAttribute("kindList", kindList);
 		request.setAttribute("key", key);		
 		request.setAttribute("searchList",searchList);
 		request.getRequestDispatcher("searchlist.jsp").forward(request, response);

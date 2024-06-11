@@ -33,7 +33,7 @@
 					</div>
 					<h2 style="color:white; margin-left:55px;">이번주 TOP7</h2>
 					<div id="productproduct">
-						<c:forEach items="${newList}" var="newList" varStatus="status">
+						<c:forEach items="${newList2}" var="newList" varStatus="status">
 							<div class="productproduct"><a href="twoving.do?command=Tdetail&pseq=${newList.pseq}">
 								${status.index+1}<img src="image2/${newList.savefilename}"></a>
 							</div>					

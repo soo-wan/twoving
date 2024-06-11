@@ -36,10 +36,11 @@
          <div id="logo">         
             <a href="twoving.do?command=tMain">TWOVING</a>
          </div>&nbsp;&nbsp;&nbsp;&nbsp;
-         <div id ="Category">
-            <a href="twoving.do?command=kind&kind=0" >시리즈</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="twoving.do?command=kind&kind=1" >영화</a>   
-         </div>
+         <div id="Category">
+            <c:forEach var="kind" items="${kindList}">
+                <a href="twoving.do?command=kind&kind=${kind}">${kind == 0 ? '시리즈' : '영화'}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </c:forEach>
+		</div>
       </nav>
       <nav id ="search">                     
          <form method="post" name="form">                     
@@ -53,10 +54,6 @@
             <div class="profileclick" >
                   <br>
                   <div class ="kjy"><a href="twoving.do?command=mypage" >My페이지</a></div>
-                  <br>
-                  <div class ="kjy"><a href="twoving.do?command=mypage">이용권</a></div>
-                  <br>
-                  <div class ="kjy"><a href="twoving.do?command=mypage">쿠폰등록</a></div>
                   <br>
                   <div class ="kjy"><a href="twoving.do?command=notice">고객센터</a></div>
                   <br>
