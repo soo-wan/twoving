@@ -26,8 +26,11 @@ public class MypageAction implements Action {
 		MemberVO memberVO = (MemberVO)session.getAttribute("loginUser");
 		
 		if(memberVO == null) {
-			RequestDispatcher rd = request.getRequestDispatcher("member/loginForm.jsp");
-			rd.forward(request, response);
+			/*
+			 * RequestDispatcher rd = request.getRequestDispatcher("member/loginForm.jsp");
+			 * rd.forward(request, response);
+			 */
+			response.sendRedirect("twoving.do?command=loginForm");
 		}else {
 			ProductDao pdao = ProductDao.getInstance();
 			PassTicketDAO passTicketDAO = PassTicketDAO.getInstance();

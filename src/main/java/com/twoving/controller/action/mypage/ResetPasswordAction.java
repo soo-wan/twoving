@@ -14,7 +14,6 @@ public class ResetPasswordAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("마지막 아이디 불러오냐? : " + request.getParameter("userid"));
 		String userid = request.getParameter("userid");
 		String pwd = request.getParameter("pwd");
 		MemberDao mdao = MemberDao.getInstance();

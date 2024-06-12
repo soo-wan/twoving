@@ -29,7 +29,8 @@ public class steamedListAction implements Action {
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		
 		if( mvo == null ) {
-			response.sendRedirect("shop.do?command=loginForm");
+			/* response.sendRedirect("shop.do?command=loginForm"); */
+			response.sendRedirect("twoving.do?command=loginForm");
 		} else {
 			steamedDao sdao = steamedDao.getInstance();
 			ProductDao pdao = ProductDao.getInstance();

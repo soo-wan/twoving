@@ -45,7 +45,7 @@
 		<div class="row">
 			<div class="col">
 		 		<jsp:include page="/admin/paging/paging.jsp" >
-					<jsp:param value="shop.do?command=adminMemberList" name="address"/>
+					<jsp:param value="twoving.do?command=adminMemberList" name="address"/>
 				</jsp:include>
 			</div>
 		</div>
