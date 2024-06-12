@@ -1,8 +1,10 @@
 @charset "UTF-8";
 
-
+hr{
+	color:gray;
+}
 .clear { width:100%; margin-left:55px; }
 #footer{}
 #admintag { }
-#admintag a{color:white; font-weight:bold; text-decoration-line:none; font-size:20px; }
-#copy {color:white; }
+#admintag a{color:rgb(192, 192, 192); font-weight:bold; text-decoration-line:none; font-size:95%; }
+#copy {color:gray; font-size: 85%; }

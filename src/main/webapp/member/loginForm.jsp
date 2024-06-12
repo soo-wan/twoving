@@ -3,6 +3,17 @@
 <%-- <%@ include file="../header.jsp" %> --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<style>
+
+hr{
+	color:gray;
+}
+.clear { width:100%; margin-left:55px; }
+#footer{}
+#admintag { }
+#admintag a{color:rgb(192, 192, 192); font-weight:bold; text-decoration-line:none; font-size:95%; }
+#copy {color:gray; font-size: 85%; }
+</style>
 <script src="script/member.js"></script>
 <link rel="stylesheet" href="css/login.css">
 <link rel="stylesheet" href="css/header_footer.css">
@@ -71,4 +82,4 @@
    <!-- </div> -->
    <!-- nav 와 article 의 부모 끝 -->
 </section>
-<%@ include file="../footer.jsp" %>
+<%@ include file="../Tfooter.jsp" %>
