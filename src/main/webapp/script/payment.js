@@ -87,7 +87,7 @@ function insertAndUpdatePassTicket(){
 	var ans = window.confirm('정말로 이 이용권을 선택하시겠습니까?');
 	
 	if(ans == 1){
-		var url = "twoving.do?command=insertPassTicket";
+		var url = "twoving.do?command=UpdatePassTicket1";
 		document.passTicketForm.action = url;
 		document.passTicketForm.submit();
 	}

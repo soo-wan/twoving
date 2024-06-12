@@ -1,7 +1,6 @@
 package com.himedia.twoving.controller;
 
 import com.himedia.twoving.action.Action;
-
 import com.himedia.twoving.controller.action.IndexAction;
 import com.himedia.twoving.controller.action.TmainAction;
 import com.himedia.twoving.controller.action.admin.AdminAction;
@@ -35,6 +34,7 @@ import com.himedia.twoving.controller.action.help.AllPassTicketViewAction;
 import com.himedia.twoving.controller.action.help.CustomerInquiryAction;
 import com.himedia.twoving.controller.action.help.FaqAction;
 import com.himedia.twoving.controller.action.help.InsertPassTicket2Action;
+import com.himedia.twoving.controller.action.help.InsertPassTicket3Action;
 import com.himedia.twoving.controller.action.help.InsertPassTicketAction;
 import com.himedia.twoving.controller.action.help.InsertPassTicketPopup;
 import com.himedia.twoving.controller.action.help.LoadingErrorAction;
@@ -50,6 +50,8 @@ import com.himedia.twoving.controller.action.help.QnaListAction;
 import com.himedia.twoving.controller.action.help.ServicePolicyAction;
 import com.himedia.twoving.controller.action.help.ServiceRunAction;
 import com.himedia.twoving.controller.action.help.UpdateDefuseCheckAction;
+import com.himedia.twoving.controller.action.help.UpdateMemberPassTicketAction;
+import com.himedia.twoving.controller.action.help.UpdatePassTicket1Action;
 import com.himedia.twoving.product.detailAction;
 import com.himedia.twoving.product.genreAction;
 import com.himedia.twoving.product.kindAction;
@@ -147,6 +149,10 @@ public class ActionFactory {
 		else if(command.equals("updateDefuseCheck")) ac = new UpdateDefuseCheckAction();
 		else if(command.equals("allPassTicketView")) ac = new AllPassTicketViewAction();
 		else if(command.equals("insertPassTicket")) ac = new InsertPassTicketAction();
+		  
+		else if(command.equals("UpdatePassTicket1")) ac = new UpdatePassTicket1Action();
+		else if(command.equals("insertPassTicket3")) ac = new InsertPassTicket3Action();
+		else if(command.equals("updateMemberPassTicket")) ac = new UpdateMemberPassTicketAction();
 		
 		//------------------------------------------------------------오수완--------------------------------------------------
 		  //그 외 추가 화면(오수완)
