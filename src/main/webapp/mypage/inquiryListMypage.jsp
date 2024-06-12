@@ -18,7 +18,7 @@
                <div class="box1-3"><a href="twoving.do?command=kind&kind=1" style="color:white;">영화</a></div>
     </div>
     <div class="box2">
-          <%-- <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div> --%>
+          <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
           <div class="box2-1" ><a href="#"><img src="member/logo.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;
           	<div class="profileclick" >
                   <br><br>
@@ -71,8 +71,8 @@
       
       </div>
 		
-	<form method = "post" name="frm" style="margin-top: 800px; width: 1900px;">
-	<div class="tb" >
+	<form method = "post" name="frm" style="width: 1900px;">
+	<div class="tb" style="margin-top: 1000px; " >
 		<div class="row" style="margin-top: 220px;">
 			<div class="col" style="display:flex; align-items : center; border:3px solid black; background-color: #353535; height: 50px; ">
 				<div class="search">제목 검색  :   &nbsp;</div> &nbsp;

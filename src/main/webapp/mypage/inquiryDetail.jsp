@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     
-<link rel="stylesheet" href="admin/css/adminList.css" />
+<link rel="stylesheet" href="admin/css/adminList2.css" />
 <script src="admin/script/admin.js"></script>
 <script src="admin/script/mypage.js"></script>
 <link rel="stylesheet" type="text/css" href="css/mypage.css">
@@ -57,7 +57,7 @@
       </div>
       </div>
       
-      <div class="box44">
+      <div class="box44" >
       
    
       
@@ -68,19 +68,26 @@
       
       
       </div>
-	<form name="inquiryViewFrm" method="post"  enctype="multipart/form-data">
-	<input type="hidden" name="ciseq" value="${cvo.ciseq}" />
-			<input type="button" style="margin-left: auto; background-color: black; color:white; border:none; font-size: 90%; cursor: pointer;" 
-				value="문의하기" onclick="location.href='twoving.do?command=customerInquiryListMypage'">
+      
+      
+      
+      
+      <!-- 여기부터 -->
+	<form name="inquiryViewFrm" method="post"  enctype="multipart/form-data" style=" color:white; ">
+	<div style="margin-top: 1150px;">
+	<input type="hidden" name="ciseq" value="${cvo.ciseq}"/>
+		   <div style="float: right;"> <!-- Container for positioning -->
+        <input type="button" style="color:white; border:none; font-size: 90%; cursor: pointer; background-color: #353535; text-align: right;" value="문의하기" onclick="location.href='twoving.do?command=customerinquiry'">
+    </div>
 				<!-- 고객문의로 가기 -->
-			<div class="field" >
-					<label style="font-weight: bold; font-size: 180%;">${cvo.inquirytitle}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<div class="field" style="height: 50px; ">
+					<label style=" font-size: 180%;  padding-top: 5px;text-align: left"> ${cvo.inquirytitle}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					${cvo.indate}</label>
 			</div>
-			<div class="field" >
+			<div class="field" style="padding : 10px; text-align: left; color:gray;">
 					<c:choose>
 					<c:when test="${empty cvo.reply }"> 
 						<label style="font-size: 115%;">처리중&nbsp;
@@ -96,50 +103,53 @@
 					</c:otherwise>
 				</c:choose>
 			</div>
-			<div class="field" >
+
+			<div class="field" style="text-align: left; color:gray;">
 					<label></label>
 			</div>
-			<div class="field" >
-					<label>1.디바이스 : ${cvo.devicephone} / 디바이스명 : ${cvo.devicemodelname}</label>
+			<div class="field" style="text-align: left; color:gray;">
+					<label>1.디바이스 :  ${cvo.devicephone} / 디바이스명 : ${cvo.devicemodelname}</label>
 			</div>
-			<div class="field" >
-					<label>2.통신 환경 :${cvo.runenvironment}</label>
+			<div class="field" style="text-align: left; color:gray;">
+					<label>2.통신 환경 : ${cvo.runenvironment}</label>
 			</div>
-			<div class="field" >
-					<label>3.이용장소 : ${cvo.runplace}</label>
+			<div class="field" style="text-align: left; color:gray;">
+					<label>3.이용장소 :  ${cvo.runplace}</label>
 			</div>
-			<div class="field" >
-					<label>4.이용시간 : ${cvo.runtime1}~${cvo.runtime2}</label>
+			<div class="field" style="text-align: left; color:gray;">
+					<label>4.이용시간 :  ${cvo.runtime1}~${cvo.runtime2}</label>
 			</div>
-			<div class="field" >
-					<label>5.이용 콘텐츠 : ${cvo.runcontent}</label>
+			<div class="field" style="text-align: left; color:gray;">
+					<label>5.이용 콘텐츠 :  ${cvo.runcontent}</label>
 			</div>
-			<div class="field" >
-					<label>6.상세내용 : ${cvo.inquirycontent}</label>
+			<div class="field" style="text-align: left; color:gray;">
+					<label>6.상세내용 :  ${cvo.inquirycontent}</label>
 			</div>
 			<p>
-			<hr style="overflow: visible; border-style: solid;">
-			<label style="font-size: 140%;">-------------------------------------------------------------------------------------------------------------</label>
+			
+			<label style="font-size: 140%; color: gray">-------------------------------------------------------------------------------------------------------------</label>
 			<p>
 			<c:choose>
-					<c:when test="${empty cvo.reply }"> <!-- 관리자 답변 전 표시 -->
+					<c:when test="${empty cvo.reply }" > <!-- 관리자 답변 전 표시 -->
 					</c:when>
 					<c:otherwise>	<!-- 관리자 답변 후 표시 -->
-						<div class="field" >
-								<label style="font-weight: bold; font-size: 180%;">
+						<div class="field" style="text-align: left" >
+								<label style="font-weight: bold; font-size: 180%; text-align: left;">
 								답변드립니다.
 								</label>
 						</div>
-						<div class="field" >
-								<label style="font-size: 130%;"><pre>${cvo.reply}</pre></label>
+						<div class="field" style="text-align: left">
+								<label style="font-size: 130%;  color:gray;"><pre>${cvo.reply}</pre></label>
 						</div>	
 					</c:otherwise>
 				</c:choose>
-			<input type="button" style="margin-left: auto; background-color: black; color:white; border:none; font-size: 90%; cursor: pointer;" 
-				value="목록으로" onclick="location.href='twoving.do?command=customerInquiryListMypage'">
+				<div style="text-align: right;">
+			<input type="button" style="margin-left: auto;  background-color: #353535; color:white; border:none; font-size: 90%; cursor: pointer;" 
+				value="목록으로" onclick="location.href='twoving.do?command=customerInquiryListMypage'"></div>
 						<jsp:include page="../paging/passTicketPaging2.jsp">
 			<jsp:param value="twoving.do?command=customerInquiryListMypage" name="address" />
 		</jsp:include>
+		</div>
 	</form>
 </article>
 
