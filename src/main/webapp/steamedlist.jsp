@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/Theader.css">
 <script src="script/jquery-3.7.1.min.js"></script>
 <script src="script/mypage.js"></script>
+<script src="script/Tmain.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -26,7 +27,8 @@
 			</div>
     </div>
     <div class="box2">
-          <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;</div>
+          <div class="box2-2" id="input"><input type="text" placeholder="검색"  name="key" value="${key}" ></div>
+          <div><a href="#" onClick="go_search('searchList')"><img src="member/돋보기.png" width="40px" height="40px"/></a>&nbsp;&nbsp;</div>
           <div class="box2-1" ><a href="#"><img src="member/logo.png" width="40px" height="40px"  /></a>&nbsp;&nbsp;
           	<div class="profileclick" >
                   <br><br><br><br><br><br>
@@ -87,5 +89,6 @@
       <%-- <jsp:include page="../paging/passTicketPaging2.jsp">
 				<jsp:param value="twoving.do?command=steamedList" name="address"/>
 			</jsp:include> --%>
+
 </body>
 </html>
