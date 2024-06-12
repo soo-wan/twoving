@@ -7,6 +7,7 @@
 <script src="admin/script/admin.js"></script>
 <script src="admin/script/mypage.js"></script>
 <link rel="stylesheet" type="text/css" href="css/mypage.css">
+<link rel="stylesheet" type="text/css" href="css/inquiry.css">
 <article>
 
 		  <div class="box">
@@ -72,27 +73,29 @@
 		
 	<form method = "post" name="frm" style="margin-top: 800px; width: 1900px;">
 	<div class="tb" >
-		<div class="row" style="margin-top: 400px;">
+		<div class="row" style="margin-top: 220px;">
 			<div class="col" style="display:flex; align-items : center; border:3px solid black; background-color: #353535; height: 50px; ">
-				고객문의 제목 검색 : &nbsp;<input type="text" placeholder="검색" style="border:1px solid white; background-color:#353535; width: 200px; height: 30px;"  name="key" value="${key}">
+				<div class="search">제목 검색  :   &nbsp;</div> &nbsp;
+				<input type="text" style="border:1px solid white; background-color:#353535; width: 200px; height: 30px; color:white;"  name="key" value="${key}">
 				&nbsp;&nbsp;&nbsp;
 				<div>
-				<img src="admin/images/search.png" style="width:30px; cursor: pointer;" onClick="go_search( 'adminCustomerInquiryList' )">
+				<!-- <img src="admin/images/search.png" style="width:30px; cursor: pointer;" onClick="go_search( 'adminCustomerInquiryList' )"> -->
+				<img src="member/돋보기.png" style="width:30px; cursor: pointer;" onClick="go_search( 'customerInquiryListMypage' )">
 				</div>
 				&nbsp;&nbsp;&nbsp;
 			</div>
 		</div>
 		<!-- <br> -->
 <div class="row" style="display: flex; flex-direction: row; background-color: #353535; height: 50px;border: 1px solid gray;">
-    <div class="coltitle" style="flex: 1.5;">상태</div>
-    <div class="coltitle" style="flex: 2;">구분</div>
+    <div class="coltitle" style="flex: 1	;">상태</div>
+    <div class="coltitle" style="flex: 1.5;">구분</div>
     <div class="coltitle" style="flex: 6;">제목</div>
     <div class="coltitle" style="flex: 1;">등록일</div>
 </div>
 
 <c:forEach items="${inquiryList}" var="inquiryVO" >
     <div class="row" style="border: 1px solid gray;">
-        <div class="col" style="flex: 1.5; border-right: 1px solid gray;" >
+        <div class="col" style="flex: 1; border-right: 1px solid gray;" >
             <c:choose>
                 <c:when test='${empty inquiryVO.reply}'>
                     <span style="color: red;">처리중</span> 
@@ -103,12 +106,14 @@
                 </c:otherwise>
             </c:choose>
         </div>
-        <div class="col" style="flex: 2; border-right: 1px solid gray;">${inquiryVO.inquiryList}</div> <!-- Adjust this to display the correct category -->
-        <div class="col" style="flex: 6;">
-            <a href="#" onClick="go_detailInquiryMypage('${inquiryVO.ciseq}')">
+        <div class="col" style="flex: 1.5; border-right: 1px solid gray;">${inquiryVO.inquiryList}</div> <!-- Adjust this to display the correct category -->
+        
+        <div class="col" style="flex: 6; color:white;">
+            <a href="#" onClick="go_detailInquiryMypage('${inquiryVO.ciseq}')" style="color:white;">
                 ${inquiryVO.inquirytitle}
             </a>
         </div>
+        
         <div class="col" style="flex: 1;border-left: 1px solid gray;">
             <fmt:formatDate value="${inquiryVO.indate}" />
         </div>
