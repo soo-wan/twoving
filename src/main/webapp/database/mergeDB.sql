@@ -1,7 +1,17 @@
 select * from member
-drop table product;
-
+select * from admins
+select * from notice
+select * from customerinquiry
+select * from faq
+select * from passticket
 select * from payment
+
+
+drop table passticket;
+
+
+
+
 drop table payment;
 --결제내역
 
