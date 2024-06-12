@@ -6,7 +6,7 @@
 <%@ include file="header.jsp" %>
 <title>이용권 선택</title>
 
-<div class="popup" style="display:flex; flex-direction: column; margin-top: 3200px;">
+<div class="popup" style="display:flex; flex-direction: column; margin-top: 500px;">
 	<div class="popupheader">
 		<h1 style="color: white; margin: 0 auto; margin-top: 100px; margin-bottom: 30px;">변경할 이용권을 선택하세요</h1>
 	</div>
@@ -96,7 +96,7 @@
 					<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 				</tr>
 				
-					<tr>
+					<!-- <tr>
 						<th>월간요금</th>
 					</tr>
 					<tr>
@@ -157,9 +157,9 @@
 					<td style=""><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 					<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 					<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
-				</tr>
+				</tr> -->
 				
-					<tr>
+					<!-- <tr>
 						<th>월간요금</th>
 					</tr>
 					<tr>
@@ -220,8 +220,8 @@
 					<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 					<td style=""><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 					<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
-				</tr>
-				<tr>
+				</tr> -->
+				<!-- <tr>
 						<th>월간요금</th>
 					</tr>
 					<tr>
@@ -282,7 +282,7 @@
 					<td><img src="images/checks.jpg" style="width:20px; border-radius:50%;"></td>
 					<td><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
 					<td style=""><img src="images/x.png" style="width:30px; border-radius:50%;"></td>
-				</tr>
+				</tr> -->
 			</table>
 		</div>
 		<div class="updatePassTicketBtn" style="margin-top: 15px;">

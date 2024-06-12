@@ -3,6 +3,7 @@ drop table notice;
 drop table customerinquiry;
 drop table faq;
 drop table payment;
+drop table steamed;
 
 select * from member
 

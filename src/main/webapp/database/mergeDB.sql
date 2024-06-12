@@ -1,23 +1,21 @@
-select * from member
-select * from admins
-select * from notice
-select * from customerinquiry
-select * from faq
-select * from passticket
-select * from payment
-
-
-drop table passticket;
+--
 
 
 delete from payment;
 
 select* from member;
+
+delete from member;
+
 update member set ptseq=null where userid="two";
 
 select* from payment;
 
+select * from product
+
 delete from payment;
+delete from product;
+
 
 select* from member;
 select* from payment;
@@ -41,6 +39,10 @@ CREATE TABLE `twoving`.`member` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+
+
+delete from member;
+
 
 ALTER TABLE member modify phone varchar(45)
 
@@ -78,6 +80,8 @@ CREATE TABLE admins
    PRIMARY KEY (adminid)
 );
 
+select* from admins;
+
 insert into admins values('admin', 'admin', '관리자', '010-7777-7777');
 insert into admins values('scott', '1234', '홍길동', '010-6400-6068');
 
@@ -105,6 +109,12 @@ CREATE TABLE `twoving`.`notice` (
 --COLLATE = utf8mb4_0900_ai_ci;
 
 select * from notice
+
+insert into notice(userid, title, content) values('scott', '6월 2주 신규 영화 안내', '안녕하세요 티빙입니다. 6월 2주 새롭게 공개되는 영화를 안내해 드립니다.
+- 06월 12일 <당신의 자리에 서다>, <최적화>, <무럭무럭>, <인생은 실전이야 종만아>, <메리제인>, <풀이 나지 않는 땅>, <런드리, 파레트>, <나는 나무였고>, <점박이 한반도의 공룡 3D>');
+insert into notice(userid, title, content) values('admin', '6월 2주 신규 프로그램 안내', '안녕하세요 티빙입니다. 6월 2주 새롭게 공개되는 프로그램을 안내해 드립니다. - 06/10(월)
+JTBC <내 몸을 살리는 흥신소>
+- 06/11(화) 중화TV <안녕, 오랜만이야>');
 
 insert into notice(userid, title, content) values('hong1', '제목입니다.', '내용입니다');
 insert into notice(userid, title, content) values('hong2', '제목입니다.', '내용입니다');
@@ -821,6 +831,7 @@ insert into faq(inquirylist, subject, content) values('서비스/이용',
 
 ALTER TABLE member modify phone varchar(45) 
 
+select* from member;
 
 insert into member(userid, pwd, name, phone, email)
 values('one','1111','김나리','017-777-7777','acc@abc.com');
@@ -852,6 +863,8 @@ ALTER TABLE payment
    ON DELETE RESTRICT
 ;
 
+select* from payment;
+
 ------------------------------------------------------------------------------------------------------------------------
 
 -- passticket
@@ -870,6 +883,9 @@ DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
 
+select* from passticket;
+select* from faq;
+delete from passticket;
 
 
 insert into passticket(productname, monthcost, doubleview, profile, imagequality, contentdownload) values('광고형 스탠다드', '5,500원', '2대', '4개', '1080p', '15회');
@@ -1158,6 +1174,7 @@ insert into product(kind, genre, mainyn, bestyn, newyn, useyn, title, content, a
 values(0, '해외', 'N', 'Y', 'Y', 'N', '이블', '범죄 심리학자 크리스틴 부샤드는 법정에서 수련 사제 데이비드 어코스타를 만나 악마에 빙의된 사람과 정신 질환자를 구별하는 일을 맡는다. 초자연적인 현상과 의학으로 설명할 수 없는 사람들을 만나며 신의 존재를 믿지 않았던 크리스틴의 신념은 점차 흔들리고, 소중한 네 딸을 지키기 위해 점점 과감해진다.', 12, 10,  '2024', '15회', 'naturemain.png', 'evil.png', 'naturemain.png','evil.png');
 
 
+delete from member;
 
 -- 메인화면 컨텐츠
 create or replace view main_pro_view
@@ -1192,4 +1209,40 @@ select pseq, title, image, kind, genre, age, time, year, content, savefilename f
 create or replace view new_pro_view2
 as
 select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' and kind=1 and useyn='Y' order by pseq desc limit 7;
+
+
+
+DROP VIEW best_pro_view
+DROP VIEW new_pro_view
+DROP VIEW best_pro_view2
+DROP VIEW new_pro_view2
+-- 베스트 컨텐츠
+create or replace view best_pro_view
+as
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product 
+where bestyn='Y' and kind=0 and useyn='Y' order by count asc limit 7;
+
+
+-- 시리즈 컨텐츠 
+create or replace view new_pro_view
+as
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' and kind=0 and useyn='Y'order by pseq desc limit 7;
+
+
+select * from product
+update product set useyn="Y" WHERE PSEQ="41"
+update product set useyn="Y" WHERE PSEQ="42"
+update product set useyn="Y" WHERE PSEQ="43"
+-- 베스트 컨텐츠2
+create or replace view best_pro_view2
+as
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where bestyn='Y'and kind=1 and useyn='Y' order by count asc limit 7;
+
+
+
+-- 시리즈 컨텐츠2 
+create or replace view new_pro_view2
+as
+select pseq, title, image, kind, genre, age, time, year, content, savefilename from product where newyn='Y' and kind=1 and useyn='Y' order by pseq desc limit 7;
+
 
