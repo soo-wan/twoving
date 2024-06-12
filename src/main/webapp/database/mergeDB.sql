@@ -10,6 +10,17 @@ select * from payment
 drop table passticket;
 
 
+delete from payment;
+
+select* from member;
+update member set ptseq=null where userid="two";
+
+select* from payment;
+
+delete from payment;
+
+select* from member;
+select* from payment;
 
 
 drop table payment;

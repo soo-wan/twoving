@@ -296,4 +296,23 @@ public class PaymentDAO {
 		}				
 	}
 
+//	public void updateNpayment(int pmseq) {
+//		con = DBman.getConnection();
+//		
+//		String sql="update payment set subscribeyn='N' where pmseq <>'?' ";
+//		
+//		try {
+//			pstmt = con.prepareStatement(sql);
+//			
+//			pstmt.setInt(1, pmseq);
+//			
+//			pstmt.executeUpdate();
+//			
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} finally {
+//			DBman.close(con, pstmt, rs);
+//		}	
+//	}
+
 }

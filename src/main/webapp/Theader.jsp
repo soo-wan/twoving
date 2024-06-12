@@ -53,8 +53,8 @@
          <div class="mypage"><a href="#"><img src="images/logo.png"  style="width:40px; height:40px; "></a>
             <div class="profileclick" >
                   <br>
-                  <div class ="kjy"><a href="twoving.do?command=passTicketList" >My페이지</a></div>
-                  <!-- <div class ="kjy"><a href="twoving.do?command=steamedList&kind=0" >My페이지</a></div> -->
+                  <!-- <div class ="kjy"><a href="twoving.do?command=passTicketList" >My페이지</a></div> -->
+                  <div class ="kjy"><a href="twoving.do?command=steamedList&kind=0" >My페이지</a></div>
                   <br>
                   <div class ="kjy"><a href="twoving.do?command=notice">고객센터</a></div>
                   <br>

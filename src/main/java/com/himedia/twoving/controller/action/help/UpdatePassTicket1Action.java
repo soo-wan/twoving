@@ -34,6 +34,7 @@ public class UpdatePassTicket1Action implements Action {
 
 			if(subscribeyn.equals("Y")) {
 				System.out.println("현재 subscribeyn : " + subscribeyn);
+				System.out.println("현재 pmseq : " + pmseq);
 				paymentDAO.updatePayment(pmseq);
 			}
 			
