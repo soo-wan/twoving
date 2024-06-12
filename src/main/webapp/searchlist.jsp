@@ -16,17 +16,17 @@
 							<br>
 							<div id="result1">요즘 인기있는 검색어를 추천해 드릴께요.</div>
 							<br><br>
-							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=34">유퀴즈 온더 블럭!</a></div>
+							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=59">유퀴즈 온더 블럭!</a></div>
 							<br>
-							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=44">여고추리반</a></div>
+							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=69">여고추리반</a></div>
 							<br>
-							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=32">놀라운토요일</a></div>
+							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=57">놀라운토요일</a></div>
 							<br>
-							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=33">선재업고튀어</a></div>
+							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=58">선재업고튀어</a></div>
 							<br>
-							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=36">Player2</a></div>
+							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=61">Player2</a></div>
 							<br>
-							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=45">지락이의 뛰뛰빵빵</a></div>
+							<div class="qwer"><a href="twoving.do?command=Tdetail&pseq=70">지락이의 뛰뛰빵빵</a></div>
 							<br>
 						</div>
 					</c:when>
