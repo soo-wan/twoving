@@ -51,8 +51,8 @@ text-align: left;
 
 
 
-#containerB { display:flex; flex-direction:column;  width:500px; height:700px; margin-right:150px; margin-top:20px; z-index: 1;}
-#containerB img{ width:500px; height:700px;}
+#containerB { display:flex; flex-direction:column;  width:500px; height:700px; margin-right:150px; margin-top:20px; z-index: 1; border-radius:20px;}
+#containerB img{ width:500px; height:700px;border-radius:20px;}
 
 
 .share {

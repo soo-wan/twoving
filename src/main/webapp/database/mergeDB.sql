@@ -1,5 +1,8 @@
 select * from member
+drop table product;
+
 select * from payment
+drop table payment;
 --결제내역
 
 --이용권구독에 대한 테이블
@@ -844,6 +847,8 @@ CREATE TABLE `twoving`.`passticket` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
+
+
 
 insert into passticket(productname, monthcost, doubleview, profile, imagequality, contentdownload) values('광고형 스탠다드', '5,500원', '2대', '4개', '1080p', '15회');
 insert into passticket(productname, monthcost, doubleview, profile, imagequality, contentdownload) values('베이직', '9,500원', '1대', '4개', '720p', '200회');
