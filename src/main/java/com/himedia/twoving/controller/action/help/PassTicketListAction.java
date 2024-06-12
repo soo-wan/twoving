@@ -64,7 +64,7 @@ public class PassTicketListAction implements Action {
 			  
 			  PassTicketVO passTicketVO = passTicketDAO.selectOnePassTicket(memberVO.getUserid());
 				
-			  int count = paymentDAO.getAllCount();
+			  int count = paymentDAO.getAllCount(memberVO.getUserid());
 				 
 			  System.out.println("count : " + count);
 				 

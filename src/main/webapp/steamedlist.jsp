@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/mypage.css">
 <link rel="stylesheet" type="text/css" href="css/Theader.css">
 <script src="script/jquery-3.7.1.min.js"></script>
+<script src="script/payment.js"></script>
 <script src="script/mypage.js"></script>
 <!-- <script src="script/Tmain.js"></script> -->
 <title>Insert title here</title>
@@ -55,8 +56,32 @@
       <div class="box22">
          <div class="box22-1"><img src="member/logo.png" width="120px" height="120px"  /></div>
          <div class="box22-2"><span>이름</span>&nbsp;&nbsp; ${loginUser.name}
-         <p><a><img src="member/구름.png" width="30px" height="30px" /></a>&nbsp; 나의 이용권&nbsp;&nbsp;
-         <a> <input type="button" onClick="location.href='twoving.do?command=ticket'" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/></a></p></div>
+         <p><a><img src="member/구름.png" width="30px" height="30px" /></a>&nbsp; 나의 이용권
+         <c:choose>
+         		<c:when test="${passTicketVO.ptseq == 1}">
+         			&nbsp;광고형 스탠다드
+         		</c:when>
+         		<c:when test="${passTicketVO.ptseq == 2}">
+         			&nbsp;베이직
+         		</c:when>
+         		<c:when test="${passTicketVO.ptseq == 3}">
+         			&nbsp;스탠다드
+         		</c:when>
+         		<c:when test="${passTicketVO.ptseq == 4}">
+         			&nbsp;프리미엄
+         		</c:when>
+         	</c:choose>
+         
+         <a>
+         	<c:choose>
+         		<c:when test="${empty memberVO.userid}">
+         			<input type="button" onClick="updateDefuseCheck2()" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/>
+         		</c:when>
+         		<c:otherwise>
+         		     <input type="button" onClick="updateDefuseCheck('${paymentVO.productname}')" value="이용권 구독"   style="background-color: #191919; border-radius: 3px; border:1px solid gray; color: white; cursor: pointer;"/>
+         		</c:otherwise>
+         	</c:choose>
+         </a></p></div>
          
          <div class="box22-3" onClick="location.href='twoving.do?command=updateMemberForm'"><a><img src="member/톱니바퀴.png" width="30px" height="30px" /></a>회원정보 수정</div>
          

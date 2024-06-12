@@ -35,7 +35,6 @@ public class InsertPassTicketPopup implements Action {
 			PaymentDAO paymentDAO = PaymentDAO.getInstance();
 			// PaymentVO paymentVO = paymentDAO.getOneSelectList(memberVO.getUserid());
 			
-			
 			// request.setAttribute("paymentVO", paymentVO);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("updateDefuseCheck2.jsp");

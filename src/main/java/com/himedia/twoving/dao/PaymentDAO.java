@@ -66,15 +66,17 @@ public class PaymentDAO {
 		return list;
 	}
 
-	public int getAllCount() {
+	public int getAllCount(String userid) {
 		int count = 0;
 		
 		con = DBman.getConnection();
 		
-		String sql = "select count(*) as cnt  from payment";
+		String sql = "select count(*) as cnt  from payment where userid=?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, userid);
 			
 			rs = pstmt.executeQuery();
 			
